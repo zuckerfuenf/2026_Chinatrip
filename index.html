@@ -1213,6 +1213,146 @@ body.hn{background:#F4EBD8;color:#2A1A12}
 .steam .desc{display:none;max-width:240px;font-size:14.5px;line-height:1.45;color:var(--ink);background:#FBF5E6;border:1px solid #D9C69C;padding:10px 12px;margin-top:2px}
 .steam[aria-expanded="true"] .desc{display:block}
 .steamers{align-items:start}
+
+/* Übersicht · Handy-Korrekturen */
+@media (max-width:900px){
+  .bw-bg{position:absolute;inset:0 0 auto 0;height:100vh}
+  .bw .inkchar{filter:none!important;opacity:.85}
+  .bw .frame.station{aspect-ratio:auto!important;padding:20px 20px 22px;display:flex;flex-direction:column;gap:10px}
+  .bw .frame.station .inkchar{position:static!important;display:block;font-size:20vw!important;line-height:1;white-space:nowrap}
+  .bw .frame.station .credit{position:static!important}
+  .bw .frame.station .credit .nm{font-size:26px}
+  .bw .frame.station .credit .ln{font-size:15px;max-width:none}
+  .bw .frame.station .credit .lab{font-size:11.5px}
+  .bw .frame.station .go{position:static;align-self:flex-end;margin-top:4px}
+  .bw-map .frame.paper{aspect-ratio:auto;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch}
+  .bw-map .frame.paper svg.fill{position:static;width:760px;height:auto;display:block}
+  .bw-map .caption{margin-top:-40px}
+}
+
+/* Chengdu · Store-Liste */
+.stores{background:var(--fbj-d);border-radius:32px;padding:22px clamp(14px,3vw,30px) 10px}
+.st-filter{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.st-filter button{all:unset;cursor:pointer;font-family:"Anton",Impact,sans-serif;text-transform:uppercase;font-size:14px;letter-spacing:.02em;padding:7px 14px;border-radius:999px;border:2px solid var(--mustard);color:var(--mustard)}
+.st-filter button[aria-pressed="true"]{background:var(--mustard);color:#000}
+.st-filter button:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.st-list{list-style:none;margin:0;padding:0}
+.st-row{display:grid;grid-template-columns:44px minmax(0,1fr) 190px;gap:16px;align-items:start;padding:16px 0;border-top:2px solid rgba(255,205,53,.25)}
+.st-row[hidden]{display:none}
+.st-no{font-family:"DM Mono",monospace;font-size:13px;color:var(--mustard);padding-top:6px}
+.st-main b{display:block;font-weight:400;font-size:26px;line-height:1.05;color:#fff}
+.st-where{display:block;font-size:15.5px;color:var(--mustard);margin-top:4px}
+.st-main p{margin:6px 0 0;font-size:16px;color:#FBE3DA;line-height:1.45}
+.st-brands{display:block;margin-top:8px;font-family:"DM Mono",monospace;font-size:12px;letter-spacing:.02em;text-transform:uppercase;color:var(--cream);line-height:1.6}
+.st-side{display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+.st-tag{font-family:"Anton",Impact,sans-serif;text-transform:uppercase;font-size:13px;padding:4px 12px;border-radius:999px}
+.st-ok{background:var(--mustard);color:#000}
+.st-chk{background:var(--cream);color:#000}
+.st-na{background:#000;color:var(--mustard)}
+.st-area{font-family:"DM Mono",monospace;font-size:11.5px;text-transform:uppercase;color:var(--cream);text-align:right}
+.st-map{font-family:"Anton",Impact,sans-serif;text-transform:uppercase;font-size:15px;color:#fff!important;background:var(--coral);padding:6px 16px;border-radius:999px;text-decoration:none}
+.st-map:hover{background:#F37F58}
+@media (max-width:700px){
+  .st-row{grid-template-columns:30px minmax(0,1fr);gap:10px}
+  .st-side{grid-column:2;flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:flex-start}
+  .st-main b{font-size:23px}
+}
+
+@media (max-width:520px){.fbj-bar .pill{display:none}.fbj-bar .in{grid-template-columns:auto 1fr}}
+
+/* Chengdu · Karte */
+.cdmap{background:var(--fbj-d);border-radius:32px;padding:20px clamp(12px,3vw,26px) 18px}
+.cm-filter{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.cm-filter button{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:8px;font-family:"Anton",Impact,sans-serif;text-transform:uppercase;font-size:14px;padding:7px 14px;border-radius:999px;border:2px solid var(--cream);color:var(--cream);opacity:.45}
+.cm-filter button[aria-pressed="true"]{opacity:1;background:rgba(255,242,212,.08)}
+.cm-filter button i{width:12px;height:12px;border-radius:50%;display:inline-block}
+.cm-filter button:focus-visible{outline:2px solid var(--mustard);outline-offset:2px}
+.cm-wrap{border-radius:20px;overflow:auto;background:#5E1114;-webkit-overflow-scrolling:touch}
+.cm-wrap svg{display:block;width:100%;min-width:640px;height:auto}
+.cm-pin{cursor:pointer}
+.cm-pin:focus{outline:none}
+.cm-pin:focus-visible circle,.cm-pin.on circle{stroke:#fff;stroke-width:3}
+.cm-info{margin-top:12px;background:#000;border-radius:18px;padding:14px 18px;font-size:16.5px;min-height:56px}
+.cm-info b{color:var(--mustard)}
+.cm-info .cm-t{display:inline-block;font-family:"Anton",Impact,sans-serif;text-transform:uppercase;font-size:12.5px;background:var(--cream);color:#000;border-radius:999px;padding:2px 10px;margin-left:8px;vertical-align:2px}
+.cm-info a{margin-left:10px}
+.cm-note{margin:10px 4px 0;font-size:13.5px;color:#EBD6B3}
+.zh-b{display:block;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif;font-weight:700;font-size:22px;line-height:1.2;color:#fff}
+
+/* Generische Karten */
+.gm-filter{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.gm-filter button{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;font-size:14px;opacity:.45}
+.gm-filter button[aria-pressed="true"]{opacity:1}
+.gm-filter button i{width:12px;height:12px;border-radius:50%;display:inline-block}
+.gm-wrap{overflow:auto;-webkit-overflow-scrolling:touch}
+.gm-wrap svg{display:block;width:100%;height:auto}
+.gm-pin{cursor:pointer}.gm-pin:focus{outline:none}
+.gm-pin.on circle,.gm-pin:focus-visible circle{stroke-width:4}
+.gm-info{margin-top:12px;padding:12px 16px;font-size:15.5px;min-height:52px}
+.gm-t{display:inline-block;font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;border-radius:999px;padding:2px 9px;margin-left:8px;vertical-align:2px}
+.gm-off{list-style:none;margin:12px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:6px 18px;font-size:14px}
+.gm-off li b{margin-right:4px}
+.gm-off li span{opacity:.8}
+.gm-a{white-space:nowrap}
+/* Xi'an-Variante */
+.gmap.xa .gm-filter button{background:#fff;color:#231F20;font-family:"Space Grotesk",sans-serif;font-weight:700;border:2px solid #231F20}
+.gmap.xa .gm-wrap{background:#F1EEE2}
+.gmap.xa .gm-wrap svg{max-height:none}
+.gmap.xa .gm-info{background:#fff;color:#231F20}
+.gmap.xa .gm-info b{color:#8E0808}
+.gmap.xa .gm-t{background:#FFCD15;color:#231F20}
+.gmap.xa .gm-a{display:inline-block;margin-left:6px;background:#FFCD15;color:#231F20;border:2px solid #231F20;border-radius:6px;padding:1px 10px;font-family:"Space Grotesk",sans-serif;font-weight:700;text-decoration:none}
+.gmap.xa .gm-off{color:#fff}
+.gmap.xa .gm-off b{font-family:"Space Grotesk",sans-serif}
+/* Chongqing-Variante */
+.gmap.cq{border:1px solid rgba(55,225,255,.28);background:rgba(16,11,24,.78);padding:16px}
+.gmap.cq .gm-filter button{font-family:"IBM Plex Mono",monospace;text-transform:uppercase;font-size:12.5px;color:#E7DCEB;border:1px solid rgba(55,225,255,.4)}
+.gmap.cq .gm-wrap svg{min-width:640px}
+.gmap.cq .gm-info{background:#07060B;border:1px solid #2A2238;color:#E7DCEB}
+.gmap.cq .gm-info b{color:#37E1FF}
+.gmap.cq .gm-t{background:#FF3D8B;color:#07060B;font-family:"IBM Plex Mono",monospace}
+.gmap.cq .gm-a{color:#FFA640;font-family:"IBM Plex Mono",monospace;margin-left:6px}
+.gmap.cq .gm-off{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:#DCCFE0}
+.gmap.cq .gm-off b{color:#FFA640}
+
+/* Karten-Varianten */
+.gmap.lj{background:#fff;border-radius:20px;padding:18px;box-shadow:0 4px 16px rgba(20,40,80,.07);margin-top:34px}
+.gmap.lj .gm-filter button{font-family:"Almendra",Georgia,serif;font-size:15px;border:1.5px solid #1E4E8C;color:#1F2A3A}
+.gmap.lj .gm-wrap{border-radius:14px;background:#F6F9FC}
+.gmap.lj .gm-wrap svg{max-width:600px;margin:0 auto}
+.gmap.lj .gm-info{background:#F6F9FC;border-radius:12px}
+.gmap.lj .gm-info b{color:#1E4E8C}
+.gmap.lj .gm-t{background:#E07A2E;color:#fff}
+.gmap.lj .gm-a{margin-left:6px;color:#1E4E8C;font-weight:700}
+.gmap.lj .gm-off{color:#51607A}
+.gmap.szc{padding:20px}
+.gmap.szc .gm-filter button{background:#fff;border:1px solid #DCE5F0;color:#0E1B33;font-weight:500}
+.gmap.szc .gm-wrap{border-radius:16px}
+.gmap.szc .gm-wrap svg{min-width:600px}
+.gmap.szc .gm-info{background:rgba(255,255,255,.8);border-radius:14px;border:1px solid #DCE5F0}
+.gmap.szc .gm-info b{color:#2F6BFF}
+.gmap.szc .gm-t{background:rgba(47,107,255,.12);color:#2F6BFF;font-family:"JetBrains Mono",monospace}
+.gmap.szc .gm-a{margin-left:6px;color:#2F6BFF;font-weight:600}
+.gmap.szc .gm-off{color:#56657F}
+.gmap.gzc{background:#FBF5E6;border:1px solid #D9C69C;padding:18px;box-shadow:0 12px 30px rgba(90,14,16,.12)}
+.gmap.gzc .gm-filter button{font-family:"Cormorant SC",serif;font-size:16px;letter-spacing:.08em;border:1px solid #9B1B1E;color:#2A1A12}
+.gmap.gzc .gm-wrap svg{min-width:640px}
+.gmap.gzc .gm-info{background:#1A0C0A;color:#EADCC0;border:2px solid #C9A04A}
+.gmap.gzc .gm-info b{color:#F0D48A}
+.gmap.gzc .gm-t{background:#9B1B1E;color:#FBE9C8;font-family:"Cormorant SC",serif}
+.gmap.gzc .gm-a{margin-left:6px;color:#F0D48A}
+.gmap.gzc .gm-off{color:#6A5140}
+.gmap.hkc{margin-bottom:60px}
+.gmap.hkc .gm-filter{justify-content:center}
+.gmap.hkc .gm-filter button{font-family:"Cormorant Garamond",serif;font-size:16px;letter-spacing:.14em;text-transform:uppercase;border:1px solid rgba(224,165,70,.5);color:#E9DCC0}
+.gmap.hkc .gm-wrap svg{min-width:600px}
+.gmap.hkc .gm-info{background:#0A0605;border:1px solid rgba(224,165,70,.35);color:#E9DCC0;font-family:"Cormorant Garamond",serif;font-size:18px}
+.gmap.hkc .gm-info b{color:#E0A546;font-family:"Bodoni Moda",serif;font-style:italic;font-weight:400}
+.gmap.hkc .gm-t{background:#8C1419;color:#E9DCC0}
+.gmap.hkc .gm-a{margin-left:6px;color:#E0A546}
+.gmap.hkc .gm-off{color:#E9DCC0;font-size:15px}
+.gmap.hkc .gm-info,.gmap.hkc .gm-off{margin-left:16px;margin-right:16px}
+.gmap.hkc .gm-off b{color:#E0A546}
 </style>
 </head>
 <body>
@@ -1313,7 +1453,7 @@ body.hn{background:#F4EBD8;color:#2A1A12}
           </g>
         <g class="maplinks"><a href="#/xian" aria-label="Zur Seite Xi'an"><rect x="830" y="90" width="200" height="70" rx="10"/></a><a href="#/chongqing" aria-label="Zur Seite Chongqing"><rect x="685" y="395" width="240" height="75" rx="10"/></a><a href="#/chengdu" aria-label="Zur Seite Chengdu"><rect x="360" y="320" width="225" height="100" rx="10"/></a><a href="#/lijiang" aria-label="Zur Seite Lijiang"><rect x="280" y="590" width="300" height="135" rx="10"/></a><a href="#/guangzhou" aria-label="Zur Seite Guangzhou"><rect x="1000" y="745" width="195" height="75" rx="10"/></a><a href="#/shenzhen" aria-label="Zur Seite Shenzhen"><rect x="1215" y="790" width="240" height="50" rx="10"/></a><a href="#/hongkong" aria-label="Zur Seite Hongkong"><rect x="1240" y="845" width="220" height="55" rx="10"/></a></g></svg>
       </figure>
-      <div class="caption"><span>Tusche: Zug. Punkte: Flug. Auf eine Stadt tippen, um ihre Seite zu öffnen.</span><span>Lage ungefähr, nach Längen- und Breitengrad</span></div>
+      <div class="caption"><span>Tusche: Zug. Punkte: Flug. Auf eine Stadt tippen, um ihre Seite zu öffnen. Auf dem Handy lässt sich die Karte seitlich wischen.</span><span>Lage ungefähr, nach Längen- und Breitengrad</span></div>
   </div>
 
 
@@ -1481,7 +1621,7 @@ body.hn{background:#F4EBD8;color:#2A1A12}
       <span class="pill anton">Station 3 / 7</span>
     </div></div>
     <nav class="fbj-sub" aria-label="Abschnitte"><div class="in">
-      <button data-jump="cd-plan">Plan 🗺</button><button data-jump="cd-fashion">Fashion 👕</button><button data-jump="cd-food">Essen 🌶</button><button data-jump="cd-michelin">Michelin ⭐</button><button data-jump="cd-design">Design 🏛</button><button data-jump="cd-more">Viertel &amp; Ausflüge 🐼</button><button data-jump="cd-city">Die Stadt 📜</button>
+      <button data-jump="cd-plan">Plan 📅</button><button data-jump="cd-karte">Karte 🗺</button><button data-jump="cd-fashion">Fashion 👕</button><button data-jump="cd-food">Essen 🌶</button><button data-jump="cd-michelin">Michelin ⭐</button><button data-jump="cd-design">Design 🏛</button><button data-jump="cd-more">Viertel &amp; Ausflüge 🐼</button><button data-jump="cd-city">Die Stadt 📜</button>
     </div></nav>
   </div>
 
@@ -1513,21 +1653,88 @@ body.hn{background:#F4EBD8;color:#2A1A12}
       </div>
     </section>
 
+
+    <section class="sec" id="cd-karte">
+      <h2 class="sec-h anton">Karte <span class="amp">&amp;</span> Kategorien <span class="zh">地图</span></h2>
+      <p class="sec-sub">Alle Adressen auf einen Blick, mit den gleichen Nummern wie in den Listen. Kategorien lassen sich ein- und ausblenden, ein Tipp auf einen Punkt zeigt die Details.</p>
+      <div class="cdmap">
+        <div class="cm-filter" role="group" aria-label="Kategorien">
+          <button aria-pressed="true" data-c="mode"><i style="background:#FFCD35"></i>Mode</button>
+          <button aria-pressed="true" data-c="food"><i style="background:#EB6C44"></i>Fliegen-Lokale</button>
+          <button aria-pressed="true" data-c="mich"><i style="background:#FFF2D4"></i>Michelin</button>
+          <button aria-pressed="true" data-c="des"><i style="background:#6FB7E0"></i>Design</button>
+          <button aria-pressed="true" data-c="hood"><i style="background:#7FC48A"></i>Viertel</button>
+        </div>
+        <div class="cm-wrap"><svg id="cd-map" viewBox="0 0 920 660" role="img" aria-label="Schematische Karte von Chengdu mit Mode, Fliegen-Lokalen, Michelin, Design und Vierteln"></svg></div>
+        <div class="cm-info" id="cd-map-info" aria-live="polite"><b>Tipp auf einen Punkt.</b> Unser Hotel (H) liegt im Taikoo Li, fast alles in Block A ist von dort zu Fuß erreichbar.</div>
+        <p class="cm-note">Schematisch nach ungefähren Koordinaten, nicht maßstäblich genau. Maßgeblich ist der Link „Karte“, er öffnet Amap mit der Suche. Stores ohne Adresse (04, 09–11) und 老妈蹄花 (mehrere Filialen, F5) stehen nicht auf der Karte.</p>
+      </div>
+    </section>
+
     <section class="sec" id="cd-fashion">
       <h2 class="sec-h anton">Fashion <span class="amp">&amp;</span> Buyer Stores <span class="zh">买手店</span></h2>
       <p class="sec-sub">In keiner Stadt der Reise gibt es mehr Mode. Lane Crawford und der erste MUJI-Weltflagship sind beide nach Chengdu gegangen.</p>
-      <div class="cards" data-set="fashion"></div>
-      <div class="box" style="margin-top:26px">
-        <span class="k">Weitere Adressen</span>
-        <ul class="list" style="margin-top:10px">
-          <li><b>X-select</b>MixC, 2. OG, Bauteil 2</li>
-          <li><b>Le Sélect</b>Yintai in99, eingekauft wird in Paris</li>
-          <li><b>Luxemporium</b>科华中路 9 (Kehua-Mittelstraße 9), Wangfujing 1. OG</li>
-          <li><b>Gaku Gaku</b>Laden, Designstudio und Showroom in einem</li>
-          <li><b>Duier</b>Von Zwillingsschwestern, anprobiert wird auf einem Laufsteg-Korridor</li>
-          <li><b>cuncun</b>Chinesische Designer, mit Ladenkatze</li>
-          <li><b>OUTOFSTOCK</b>交子大道 500 (Jiaozi-Allee 500), Streetwear</li>
-        </ul>
+      <div class="stores">
+        <div class="st-filter" role="group" aria-label="Stores filtern">
+          <button aria-pressed="true" data-f="all">Alle 11</button><button aria-pressed="false" data-f="ok">Sichere Wetten</button><button aria-pressed="false" data-f="a">Block A · Jinjiang</button><button aria-pressed="false" data-f="b">Block B · Osten</button><button aria-pressed="false" data-f="na">Adresse fehlt</button>
+        </div>
+        <ol class="st-list">
+          <li class="st-row" data-s="ok" data-a="a">
+            <span class="st-no">01</span>
+            <div class="st-main"><b class="anton">hug</b><span class="st-where">晶融汇 (Jingronghui) · Jinjiang</span><p>Die wichtigste Adresse, seit 2015. Einrichtung von ATMOSPHERE Architects (2022): Glasfassade bis zum Boden, Estrich, rohe Oberflächen.</p><span class="st-brands">JACQUEMUS · JIL SANDER · UMA WANG · RUO HAN · Chalayan · Lemaire · Undercover · Yirantian</span></div>
+            <div class="st-side"><span class="st-tag st-ok">Sichere Wette</span><span class="st-area">Block A · Jinjiang</span><a class="st-map" href="https://uri.amap.com/search?keyword=%E6%99%B6%E8%9E%8D%E6%B1%87&city=510100&callnative=0" target="_blank" rel="noopener">Karte</a></div>
+          </li>
+          <li class="st-row" data-s="ok" data-a="a">
+            <span class="st-no">02</span>
+            <div class="st-main"><b class="anton">(SO)WHAT</b><span class="st-where">Im selben Haus wie hug, EG</span><p>Seit 2012. Einrichtung von 万社 (Various Associates): tiefes, geschichtetes Schwarz. Die Fassade aus Polycarbonat reagiert mit Licht von hinten auf das Tageslicht.</p><span class="st-brands">Designer-Mix</span></div>
+            <div class="st-side"><span class="st-tag st-ok">Sichere Wette</span><span class="st-area">Block A · Jinjiang</span><a class="st-map" href="https://uri.amap.com/search?keyword=%E6%99%B6%E8%9E%8D%E6%B1%87&city=510100&callnative=0" target="_blank" rel="noopener">Karte</a></div>
+          </li>
+          <li class="st-row" data-s="ok" data-a="a">
+            <span class="st-no">03</span>
+            <div class="st-main"><b class="anton">Dressing For Fun</b><span class="st-where">干槐树街 (Straße der trockenen Akazie) · Hongxing Lu</span><p>Seit Sommer 2012, seit 2016 in der BoF 500. Einmal im Jahr wird das ganze Programm ausgetauscht.</p><span class="st-brands">wechselt jährlich</span></div>
+            <div class="st-side"><span class="st-tag st-ok">Sichere Wette</span><span class="st-area">Block A · Jinjiang</span><a class="st-map" href="https://uri.amap.com/search?keyword=%E5%B9%B2%E6%A7%90%E6%A0%91%E8%A1%97&city=510100&callnative=0" target="_blank" rel="noopener">Karte</a></div>
+          </li>
+          <li class="st-row" data-s="na" data-a="x">
+            <span class="st-no">04</span>
+            <div class="st-main"><b class="anton">Triple Major & Co.</b><span class="st-where">Adresse fehlt · Xiaohongshu: 成都 Triple Major</span><p>Vier Läden nebeneinander, auch Proper, Woodenship und AHHH.</p><span class="st-brands">Triple Major: UNDERCOVER · Walter Van Beirendonck · Our Legacy · Proper: nanamica · BEAMS+ · YMC</span></div>
+            <div class="st-side"><span class="st-tag st-na">Adresse fehlt</span></div>
+          </li>
+          <li class="st-row" data-s="chk" data-a="b">
+            <span class="st-no">05</span>
+            <div class="st-main"><b class="anton">X-select</b><span class="st-where">MixC, 2. OG, Bauteil 2 · Osten</span><p>Eine Adresse für den Tag im Osten.</p></div>
+            <div class="st-side"><span class="st-tag st-chk">Prüfen</span><span class="st-area">Block B · Osten</span><a class="st-map" href="https://uri.amap.com/search?keyword=%E6%88%90%E9%83%BD%E4%B8%87%E8%B1%A1%E5%9F%8E&city=510100&callnative=0" target="_blank" rel="noopener">Karte</a></div>
+          </li>
+          <li class="st-row" data-s="chk" data-a="x">
+            <span class="st-no">06</span>
+            <div class="st-main"><b class="anton">Le Sélect</b><span class="st-where">Yintai in99</span><p>Das Einkaufsteam sitzt in Paris.</p></div>
+            <div class="st-side"><span class="st-tag st-chk">Prüfen</span><a class="st-map" href="https://uri.amap.com/search?keyword=%E9%93%B6%E6%B3%B0in99&city=510100&callnative=0" target="_blank" rel="noopener">Karte</a></div>
+          </li>
+          <li class="st-row" data-s="chk" data-a="x">
+            <span class="st-no">07</span>
+            <div class="st-main"><b class="anton">Luxemporium</b><span class="st-where">科华中路 9 (Kehua-Mittelstraße 9), Wangfujing 1. OG</span></div>
+            <div class="st-side"><span class="st-tag st-chk">Prüfen</span><a class="st-map" href="https://uri.amap.com/search?keyword=%E7%A7%91%E5%8D%8E%E4%B8%AD%E8%B7%AF9%E5%8F%B7&city=510100&callnative=0" target="_blank" rel="noopener">Karte</a></div>
+          </li>
+          <li class="st-row" data-s="chk" data-a="x">
+            <span class="st-no">08</span>
+            <div class="st-main"><b class="anton">OUTOFSTOCK</b><span class="st-where">交子大道 500 (Jiaozi-Allee 500)</span><p>Streetwear.</p></div>
+            <div class="st-side"><span class="st-tag st-chk">Prüfen</span><a class="st-map" href="https://uri.amap.com/search?keyword=%E4%BA%A4%E5%AD%90%E5%A4%A7%E9%81%93500%E5%8F%B7&city=510100&callnative=0" target="_blank" rel="noopener">Karte</a></div>
+          </li>
+          <li class="st-row" data-s="na" data-a="x">
+            <span class="st-no">09</span>
+            <div class="st-main"><b class="anton">Gaku Gaku</b><span class="st-where">Adresse fehlt</span><p>Buyer Store, Designstudio und Showroom in einem.</p></div>
+            <div class="st-side"><span class="st-tag st-na">Adresse fehlt</span></div>
+          </li>
+          <li class="st-row" data-s="na" data-a="x">
+            <span class="st-no">10</span>
+            <div class="st-main"><b class="anton">Duier</b><span class="st-where">Adresse fehlt</span><p>Von Zwillingsschwestern. Anprobiert wird auf einem Laufsteg-Korridor.</p></div>
+            <div class="st-side"><span class="st-tag st-na">Adresse fehlt</span></div>
+          </li>
+          <li class="st-row" data-s="na" data-a="x">
+            <span class="st-no">11</span>
+            <div class="st-main"><b class="anton">cuncun</b><span class="st-where">Adresse fehlt</span><p>Chinesische Designer, mit Ladenkatze.</p></div>
+            <div class="st-side"><span class="st-tag st-na">Adresse fehlt</span></div>
+          </li>
+        </ol>
       </div>
       <div class="box" style="margin-top:26px">
         <span class="k">Nach diesen Labels fragen</span>
@@ -1539,7 +1746,38 @@ body.hn{background:#F4EBD8;color:#2A1A12}
     <section class="sec" id="cd-food">
       <h2 class="sec-h anton">Fliegen <span class="amp">&amp;</span> Feuer <span class="zh">苍蝇馆子</span></h2>
       <p class="sec-sub">Ein 苍蝇馆子 (Fliegen-Lokal) braucht drei Dinge: einen winzigen Raum, einen schrulligen Chef und ein Gericht, für das man kommt. Einrichtung und Service gibt es nicht.</p>
-      <div class="cards" data-set="food"></div>
+      <div class="stores"><ol class="st-list">
+          <li class="st-row">
+            <span class="st-no">F1</span>
+            <div class="st-main"><b class="zh-b">老刘烧烤 (Lao Lius Grill)</b><span class="st-where">玉林三巷 (Dritte Yulin-Gasse) · Yulin</span><p>Grillbude seit 21 Jahren. Ab 18 Uhr offen, ab 20 Uhr sitzt man an der Hauswand. Spieße von woanders nimmt einem die Grillmeisterin wieder weg.</p><span class="st-brands">Hühnerflügel · Ochsenfrosch · Schweinebauch · Karausche</span></div>
+            <div class="st-side"><span class="st-tag st-ok">Pflicht</span><a class="st-map" href="https://uri.amap.com/search?keyword=%E8%80%81%E5%88%98%E7%83%A7%E7%83%A4%20%E7%8E%89%E6%9E%97&city=510100&callnative=0" target="_blank" rel="noopener">Karte</a></div>
+          </li>
+          <li class="st-row">
+            <span class="st-no">F2</span>
+            <div class="st-main"><b class="zh-b">爱恨怪豆花 (Liebe-Hass-Tofupudding)</b><span class="st-where">芳华街 (Fanghua-Straße) · Yulin</span><p>Douhua-Hotpot mit saurer Brühe aus Guizhou, vier Stufen. Tofu und Gemüse gibt es gratis nach.</p><span class="st-brands">三品 (drei Sorten) ≈ 36 ¥ p. P. · zu zweit unter 100 ¥</span></div>
+            <div class="st-side"><span class="st-tag st-ok">Best Value</span><a class="st-map" href="https://uri.amap.com/search?keyword=%E7%88%B1%E6%81%A8%E6%80%AA%E8%B1%86%E8%8A%B1&city=510100&callnative=0" target="_blank" rel="noopener">Karte</a></div>
+          </li>
+          <li class="st-row">
+            <span class="st-no">F3</span>
+            <div class="st-main"><b class="zh-b">何眼镜芋儿鸡 (Taro-Huhn beim Brillen-He)</b><span class="st-where">双桥路 (Doppelbrückenstraße) · Osten</span><p>Im Hof einer Altbausiedlung, man sitzt unter freiem Himmel. Das Huhn wird erst nach der Bestellung geschlachtet.</p><span class="st-brands">Taro-Huhn · Kaninchen im Bambusrohr</span></div>
+            <div class="st-side"><span class="st-tag st-chk">Open Air</span><a class="st-map" href="https://uri.amap.com/search?keyword=%E4%BD%95%E7%9C%BC%E9%95%9C%E8%8A%8B%E5%84%BF%E9%B8%A1&city=510100&callnative=0" target="_blank" rel="noopener">Karte</a></div>
+          </li>
+          <li class="st-row">
+            <span class="st-no">F4</span>
+            <div class="st-main"><b class="zh-b">明婷饭店 (Restaurant Mingting)</b><span class="st-where">外曹家巷 (Äußere Caojia-Gasse) · Norden</span><p>Das Vorbild aller Fliegen-Lokale. Laut einem Einheimischen war es früher besser.</p><span class="st-brands">Mapo Doufu · Kaninchen</span></div>
+            <div class="st-side"><span class="st-tag st-chk">Klassiker</span><a class="st-map" href="https://uri.amap.com/search?keyword=%E6%98%8E%E5%A9%B7%E9%A5%AD%E5%BA%97&city=510100&callnative=0" target="_blank" rel="noopener">Karte</a></div>
+          </li>
+          <li class="st-row">
+            <span class="st-no">F5</span>
+            <div class="st-main"><b class="zh-b">老妈蹄花 (Mamas Schweinsfuß)</b><span class="st-where">Mehrere Filialen</span><p>Schweinshaxe in klarer Brühe mit Saubohnen. Die Pause zwischen den scharfen Tagen.</p><span class="st-brands">Schweinshaxe · Saubohnen</span></div>
+            <div class="st-side"><span class="st-tag st-chk">Nicht scharf</span><a class="st-map" href="https://uri.amap.com/search?keyword=%E8%80%81%E5%A6%88%E8%B9%84%E8%8A%B1&city=510100&callnative=0" target="_blank" rel="noopener">Karte</a></div>
+          </li>
+          <li class="st-row">
+            <span class="st-no">F6</span>
+            <div class="st-main"><b class="zh-b">电台巷火锅 (Radiogassen-Hotpot)</b><span class="st-where">Kehua Bei Lu · Süden</span><p>Brühe nur aus Rindertalg.</p><span class="st-brands">鹅肠 (Gänsedarm) · 毛肚 (Pansen) · 黄喉 (Rinderaorta)</span></div>
+            <div class="st-side"><span class="st-tag st-chk">Hotpot</span><a class="st-map" href="https://uri.amap.com/search?keyword=%E7%94%B5%E5%8F%B0%E5%B7%B7%E7%81%AB%E9%94%85&city=510100&callnative=0" target="_blank" rel="noopener">Karte</a></div>
+          </li>
+        </ol></div>
       <div class="warn"><span class="ic">!</span><span><b>马路边边 (Straßenrand)</b> ist das Gegenmodell: ein Konzept, das ein 苍蝇馆子 (Fliegen-Lokal) mit Retro-Kulisse nachbaut. Handwerklich stark, aber eben Kulisse.</span></div>
     </section>
 
@@ -1605,7 +1843,7 @@ body.hn{background:#F4EBD8;color:#2A1A12}
   </div></div>
   <header class="xf-head"><div class="in">
     <a class="xf-logo" href="#/xian"><span class="lbox" aria-hidden="true"><span>西</span><span>安</span><span>咥</span><span>饭</span></span><span class="t">Xi'an<br>Food<br>Station</span></a>
-    <nav aria-label="Abschnitte"><a href="#/">Übersicht</a><button data-jump="xf-menu">Menü</button><button data-jump="xf-markt">Markt</button><button data-jump="xf-rest">Restaurants</button><button data-jump="xf-sehen">Sehen</button><button data-jump="xf-tv">TV</button><button data-jump="xf-stadt">Stadt</button></nav>
+    <nav aria-label="Abschnitte"><a href="#/">Übersicht</a><button data-jump="xf-karte">Karte</button><button data-jump="xf-menu">Menü</button><button data-jump="xf-markt">Markt</button><button data-jump="xf-rest">Restaurants</button><button data-jump="xf-sehen">Sehen</button><button data-jump="xf-tv">TV</button><button data-jump="xf-stadt">Stadt</button></nav>
   </div></header>
 
   <section class="xf-hero">
@@ -1660,6 +1898,18 @@ body.hn{background:#F4EBD8;color:#2A1A12}
         <li><span class="c">III</span><div><b>Weiter am Montag</b>Zug G3763 ab 西安北 (Xi'an Nord) 08:02, an 重庆北 (Chongqing Nord) 13:34. Fährt über Guangyuan durch die Qinling-Tunnel.</div></li>
         <li><span class="c">IV</span><div><b>Mit der Freundin abstimmen</b>Sie zeigt uns die Stadt. Nur der Sonntag ist ein voller Tag.</div></li>
       </ul>
+    </div>
+  </section>
+
+
+  <section class="xf-sec" id="xf-karte">
+    <h2>Die Karte</h2><span class="zh-k zh">地图 (Karte)</span>
+    <p class="lead">Die Altstadt in der Mauer mit den Codes aus den Menükarten. Nicht alle Adressen haben eine sichere Lage, S1–S5 und R4–R8 stehen deshalb nur in den Listen. Für die Wege immer den Link „Karte“ nehmen, er öffnet Amap.</p>
+    <div class="tray gmap xa">
+      <div class="gm-filter" id="xa-mapf" role="group" aria-label="Kategorien"><button aria-pressed="true" data-c="markt"><i style="background:#FFCD15"></i>Markt</button><button aria-pressed="true" data-c="food"><i style="background:#D0342C;box-shadow:0 0 0 2px #fff"></i>Essen</button><button aria-pressed="true" data-c="see"><i style="background:#fff"></i>Sehen</button><button aria-pressed="true" data-c="bar"><i style="background:#7FB6E6"></i>Bars</button></div>
+      <div class="gm-wrap"><svg id="xa-map" viewBox="0 0 800 1030" role="img" aria-label="Schematische Karte von Xi'an mit Stadtmauer, Märkten, Essen, Sehenswürdigkeiten und Bars"></svg></div>
+      <div class="gm-info" id="xa-map-info" aria-live="polite"><b>Auf einen Punkt tippen.</b> Die Codes sind dieselben wie in den Menükarten.</div>
+      <ul class="gm-off" id="xa-off"><li data-c="see"><b>A7</b> 兵马俑 (Terrakotta-Armee) <span>↗ ca. 35 km östlich</span> <a class="gm-a" href="https://uri.amap.com/search?keyword=%E5%85%B5%E9%A9%AC%E4%BF%91&city=610100&callnative=0" target="_blank" rel="noopener">Karte</a></li><li data-c="see"><b>A3</b> 考古博物馆 (Archäologisches Museum) <span>↓ südlich, Chang'an</span> <a class="gm-a" href="https://uri.amap.com/search?keyword=%E9%99%95%E8%A5%BF%E8%80%83%E5%8F%A4%E5%8D%9A%E7%89%A9%E9%A6%86&city=610100&callnative=0" target="_blank" rel="noopener">Karte</a></li><li data-c="base"><b>Zug</b> 西安北 (Xi'an Nord) <span>↑ nördlich, Abfahrt Mo 08:02</span> <a class="gm-a" href="https://uri.amap.com/search?keyword=%E8%A5%BF%E5%AE%89%E5%8C%97%E7%AB%99&city=610100&callnative=0" target="_blank" rel="noopener">Karte</a></li><li data-c="base"><b>XIY</b> Flughafen Xianyang <span>↖ nordwestlich, Ankunft Sa 14:15</span> <a class="gm-a" href="https://uri.amap.com/search?keyword=%E8%A5%BF%E5%AE%89%E5%92%B8%E9%98%B3%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA&city=610100&callnative=0" target="_blank" rel="noopener">Karte</a></li></ul>
     </div>
   </section>
 
@@ -1845,7 +2095,7 @@ body.hn{background:#F4EBD8;color:#2A1A12}
 <div id="hongkong" class="hkp" hidden>
   <header class="hk-bar"><div class="in">
     <a class="home" href="#/">← Übersicht</a>
-    <nav aria-label="Abschnitte"><button data-jump="hk-plan">Plan</button><button data-jump="hk-szenen">Szenen</button><button data-jump="hk-zimmer">Zimmer</button><button data-jump="hk-stadt">Stadt</button><button data-jump="hk-reise">Reise</button></nav>
+    <nav aria-label="Abschnitte"><button data-jump="hk-plan">Plan</button><button data-jump="hk-karte">Karte</button><button data-jump="hk-szenen">Szenen</button><button data-jump="hk-zimmer">Zimmer</button><button data-jump="hk-stadt">Stadt</button><button data-jump="hk-reise">Reise</button></nav>
   </div></header>
 
   <div class="hk-wrap">
@@ -1906,6 +2156,14 @@ body.hn{background:#F4EBD8;color:#2A1A12}
       <div class="clock"><span data-clock="11:00"></span><span class="w">Mittwoch</span><span class="d">2. Dezember</span><p>Der Flug geht nachmittags, es bleibt also noch der Vormittag.</p></div>
     </div>
     <p class="drop">Was bei zwei Nächten wegfällt: The Mills, das Blaue Haus und Quarry Bay. Wenn Guangzhou gekürzt wird, haben wir mehr Zeit.</p>
+
+    <div id="hk-karte" class="gmap hkc" style="scroll-margin-top:70px">
+      <div class="inter" style="padding-block:40px 30px"><p>Die Stadt auf einem Blatt.</p><span class="tc">地圖</span></div>
+      <div class="gm-filter" id="hk-mapf" role="group" aria-label="Kategorien"><button aria-pressed="true" data-c="scene"><i style="background:#8C1419"></i>Szenen</button><button aria-pressed="true" data-c="hotel"><i style="background:#E0A546"></i>Zimmer</button><button aria-pressed="true" data-c="base"><i style="background:#6FA08E"></i>Orientierung</button></div>
+      <div class="gm-wrap"><svg id="hk-map" viewBox="0 0 840 790" role="img" aria-label="Schematische Karte von Hongkong: Kowloon, Victoria Harbour, Hongkong Island mit Szenen und Hotels"></svg></div>
+      <div class="gm-info" id="hk-map-info" aria-live="polite"><b>Auf einen Punkt tippen.</b> Die Szenennummern sind dieselben wie unten. In Hongkong öffnet der Link Google Maps, denn dort funktioniert es.</div>
+      <ul class="gm-off" id="hk-off"><li data-c="scene"><b>7</b> The Mills · 南豐紗廠 (Nan-Fung-Spinnerei) <span>↖ Tsuen Wan, außerhalb</span> <a class="gm-a" href="https://www.google.com/maps/search/The%20Mills%20Tsuen%20Wan" target="_blank" rel="noopener">Karte</a></li><li data-c="base"><b>HKG</b> Flughafen Hongkong <span>← Lantau · Rückflug 02.12. nach Bangkok</span> <a class="gm-a" href="https://www.google.com/maps/search/Hong%20Kong%20International%20Airport" target="_blank" rel="noopener">Karte</a></li></ul>
+    </div>
 
     <div id="hk-szenen"></div>
 
@@ -2528,7 +2786,7 @@ body.hn{background:#F4EBD8;color:#2A1A12}
   <header class="br-bar"><div class="in">
     <a href="#/">← Übersicht</a>
     <span class="br-var"><a href="#/chongqing-a">A · Ghost in the Shell</a><b>B · Blade Runner</b></span>
-    <nav aria-label="Abschnitte"><button data-jump="cqb-ebenen">Ebenen</button><button data-jump="cqb-hang">Hang</button><button data-jump="cqb-essen">Essen</button><button data-jump="cqb-kunst">Kunst</button><button data-jump="cqb-mode">Mode</button><button data-jump="cqb-archiv">Archiv</button></nav>
+    <nav aria-label="Abschnitte"><button data-jump="cqb-karte">Karte</button><button data-jump="cqb-ebenen">Ebenen</button><button data-jump="cqb-hang">Hang</button><button data-jump="cqb-essen">Essen</button><button data-jump="cqb-kunst">Kunst</button><button data-jump="cqb-mode">Mode</button><button data-jump="cqb-archiv">Archiv</button></nav>
   </div></header>
 
   <section class="br-hero">
@@ -2553,6 +2811,17 @@ body.hn{background:#F4EBD8;color:#2A1A12}
         <div><span class="t">DI 17.11.</span><p>Voller Tag.</p></div>
         <div><span class="t">MI 18.11.</span><p>Voller Tag. Optional der Ausflug nach 大足石刻 (Felsskulpturen von Dazu).</p></div>
         <div><span class="t">DO 19.11.</span><p>Zug nach 成都东 (Chengdu Ost), 1–1,5 h, fährt laufend.</p></div>
+      </div>
+    </section>
+
+    <section class="gs-sec" id="cqb-karte">
+      <div class="gs-h"><span class="n">00.5</span><h2>Karte</h2><span class="zh">地图 (Karte)</span></div>
+      <p class="gs-lede">Die Halbinsel 渝中 (Yuzhong) zwischen Jialing und Jangtse, gegenüber das Südufer mit unserem Hotel. Die Codes sind dieselben wie in den Karten unten.</p>
+      <div class="gmap cq">
+        <div class="gm-filter" id="cq-mapf" role="group" aria-label="Kategorien"><button aria-pressed="true" data-c="hang"><i style="background:#37E1FF"></i>Hangstadt</button><button aria-pressed="true" data-c="food"><i style="background:#FF3D8B"></i>Essen</button><button aria-pressed="true" data-c="art"><i style="background:#FFA640"></i>Kunst</button><button aria-pressed="true" data-c="mode"><i style="background:#F6EEF8"></i>Mode</button></div>
+        <div class="gm-wrap"><svg id="cq-map" viewBox="0 0 840 525" role="img" aria-label="Schematische Karte von Chongqing mit Hangstadt, Essen, Kunst und Mode"></svg></div>
+        <div class="gm-info" id="cq-map-info" aria-live="polite"><b>Auf einen Punkt tippen.</b> H ist das Hotel in Longmenhao, die Seilbahn führt hinüber nach Jiefangbei.</div>
+        <ul class="gm-off" id="cq-off"><li data-c="food"><b>03.2</b> 地下之城老火锅 (Stadt unter der Erde) <span>↑ Yubei, Longtousi-Park</span> <a class="gm-a" href="https://uri.amap.com/search?keyword=%E5%9C%B0%E4%B8%8B%E4%B9%8B%E5%9F%8E%E8%80%81%E7%81%AB%E9%94%85&city=500000&callnative=0" target="_blank" rel="noopener">Karte</a></li><li data-c="art"><b>04.2</b> 黄桷坪 (Huangjueping) · 交通茶馆 <span>↙ südwestlich, Jiulongpo</span> <a class="gm-a" href="https://uri.amap.com/search?keyword=%E9%BB%84%E6%A1%B7%E5%9D%AA%E6%B6%82%E9%B8%A6%E8%A1%97&city=500000&callnative=0" target="_blank" rel="noopener">Karte</a></li><li data-c="base"><b>Zug</b> 重庆北 (Chongqing Nord) <span>↑ nördlich, Ankunft Mo 13:34</span> <a class="gm-a" href="https://uri.amap.com/search?keyword=%E9%87%8D%E5%BA%86%E5%8C%97%E7%AB%99&city=500000&callnative=0" target="_blank" rel="noopener">Karte</a></li><li data-c="art"><b>04.4</b> 大足石刻 (Dazu) <span>← 1,5 h westlich</span> <a class="gm-a" href="https://uri.amap.com/search?keyword=%E5%A4%A7%E8%B6%B3%E7%9F%B3%E5%88%BB&city=500000&callnative=0" target="_blank" rel="noopener">Karte</a></li></ul>
       </div>
     </section>
 
@@ -2745,42 +3014,11 @@ body.hn{background:#F4EBD8;color:#2A1A12}
         </div>
       </div>
 
-      <div class="mapcard">
-        <svg viewBox="0 0 1000 560" role="img" aria-label="Schematische Karte: Lijiang, Shuhe, Baisha, Yuhu, Yulong Xueshan und Tigersprungschlucht mit Wanderroute">
-          <defs><filter id="lmink"><feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="3" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="3"/></filter></defs>
-          <g filter="url(#lmink)">
-            <!-- Berge als Tuschezeichen -->
-            <g fill="none" stroke="#3B2A1A" stroke-width="1.6">
-              <path d="M560 200 L600 140 L625 165 L650 110 L680 160 L705 135 L740 200"/><path d="M600 140 l8 14 M650 110 l10 20 M705 135 l6 12" stroke-width="1"/>
-              <path d="M260 150 L300 95 L325 120 L350 80 L390 150"/><path d="M300 95 l8 12 M350 80 l8 16" stroke-width="1"/>
-            </g>
-            <!-- Jinsha -->
-            <path d="M60 470 C140 440 200 380 250 330 S360 230 430 190 S560 90 640 30" fill="none" stroke="#6E97B3" stroke-width="7" stroke-linecap="round"/>
-            <!-- Busweg -->
-            <path d="M780 430 C700 480 560 480 440 440 S300 380 245 320" fill="none" stroke="#6B5238" stroke-width="2" stroke-dasharray="6 6"/>
-            <!-- Hochroute -->
-            <path d="M245 320 C270 300 290 285 300 262 C340 250 380 236 405 222 C430 212 455 204 475 196" fill="none" stroke="#E07A2E" stroke-width="4" stroke-linecap="round"/>
-            <path d="M475 196 L510 172" fill="none" stroke="#E07A2E" stroke-width="3" stroke-dasharray="3 5"/>
-          </g>
-          <g font-family="Almendra, Georgia, serif" fill="#3B2A1A" font-size="17">
-            <text x="585" y="95" font-size="19">玉龙雪山 (Jadedrachen-Schneeberg)</text><text x="630" y="116" font-size="14" fill="#6B5238">5.596 m</text>
-            <text x="250" y="70" font-size="18">哈巴雪山 (Haba-Schneeberg)</text>
-            <text x="120" y="470" fill="#4A7391" font-style="italic" transform="rotate(-24 120 470)">金沙江 (Jinsha, Goldsandfluss)</text>
-            <circle cx="780" cy="430" r="8" fill="#B5412B"/><text x="796" y="436">丽江 (Lijiang) · 2.400 m</text>
-            <circle cx="835" cy="520" r="5" fill="#3B2A1A"/><text x="850" y="525" font-size="15">Flughafen LJG</text>
-            <circle cx="735" cy="365" r="5" fill="#3B2A1A"/><text x="750" y="370" font-size="15">束河 (Shuhe)</text>
-            <circle cx="712" cy="295" r="5" fill="#3B2A1A"/><text x="728" y="300" font-size="15">白沙 (Baisha)</text>
-            <circle cx="672" cy="258" r="5" fill="#3B2A1A"/><text x="520" y="262" font-size="15">玉湖村 (Yuhu)</text>
-            <circle cx="245" cy="320" r="6" fill="#E07A2E"/><text x="96" y="352" font-size="15">Einstieg · Naxi Family GH</text>
-            <circle cx="300" cy="262" r="6" fill="#E07A2E"/><text x="150" y="280" font-size="15">28 Kehren · 2.670 m</text>
-            <circle cx="405" cy="222" r="8" fill="#B5412B"/><text x="330" y="252" font-size="15">中途客栈 (Halfway)</text>
-            <circle cx="475" cy="196" r="6" fill="#E07A2E"/><text x="490" y="215" font-size="15">Tina's</text>
-            <text x="520" y="140" font-size="13" fill="#B5412B">Mittlere Schlucht, Abstieg gesperrt</text>
-            <text x="520" y="470" font-size="14" fill="#6B5238" font-style="italic">Bus / Shuttle ca. 2–2,5 h</text>
-          </g>
-          <g transform="translate(930 70)" fill="none" stroke="#3B2A1A"><circle r="22"/><path d="M0 -30 L5 0 L0 30 L-5 0 Z" fill="#3B2A1A"/><text y="-36" text-anchor="middle" font-family="Almendra, serif" font-size="14" fill="#3B2A1A" stroke="none">N</text></g>
-        </svg>
-        <p class="cap">Die Stadt im Süden, der Berg in der Mitte, die Schlucht im Nordwesten. Orange ist die Hochroute. Schematisch, nicht maßstäblich.</p>
+      <div class="gmap lj">
+        <div class="gm-filter" id="lj-mapf" role="group" aria-label="Kategorien"><button aria-pressed="true" data-c="trek"><i style="background:#E07A2E"></i>Trek</button><button aria-pressed="true" data-c="ort"><i style="background:#F2D7B0"></i>Freier Tag</button><button aria-pressed="true" data-c="food"><i style="background:#B5412B"></i>Essen</button><button aria-pressed="true" data-c="base"><i style="background:#1E4E8C"></i>Orientierung</button></div>
+        <div class="gm-wrap"><svg id="lj-map" viewBox="0 0 800 1230" role="img" aria-label="Schematische Karte: Lijiang, Shuhe, Baisha, Yuhu, Yulong Xueshan und Tigersprungschlucht"></svg></div>
+        <div class="gm-info" id="lj-map-info" aria-live="polite"><b>Auf einen Punkt tippen.</b> Unten die Altstadt 大研 (Dayan), im Nordwesten die Schlucht, dazwischen der Jadedrachen.</div>
+        <ul class="gm-off" id="lj-off"><li data-c="base"><b>LJG</b> Flughafen Lijiang <span>↓ ca. 25 km südlich · an So 10:25 · ab Mi 21:55</span> <a class="gm-a" href="https://uri.amap.com/search?keyword=%E4%B8%BD%E6%B1%9F%E4%B8%89%E4%B9%89%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA&city=530700&callnative=0" target="_blank" rel="noopener">Karte</a></li></ul>
       </div>
 
       <div class="profile">
@@ -2910,7 +3148,7 @@ body.hn{background:#F4EBD8;color:#2A1A12}
 <div id="shenzhen" class="scp" hidden>
   <header class="sc-bar"><div class="in">
     <a href="#/">← Übersicht</a>
-    <nav aria-label="Abschnitte"><button data-jump="sc-ablauf">Ablauf</button><button data-jump="sc-messe">Messe</button><button data-jump="sc-orte">Orte</button><button data-jump="sc-nacht">Nacht</button><button data-jump="sc-stadt">Stadt</button></nav>
+    <nav aria-label="Abschnitte"><button data-jump="sc-ablauf">Ablauf</button><button data-jump="sc-karte">Karte</button><button data-jump="sc-messe">Messe</button><button data-jump="sc-orte">Orte</button><button data-jump="sc-nacht">Nacht</button><button data-jump="sc-stadt">Stadt</button></nav>
     <a class="alt" href="#/shenzhen-a">Frühere Fassung</a>
   </div></header>
 
@@ -2942,6 +3180,16 @@ body.hn{background:#F4EBD8;color:#2A1A12}
         <div><span class="d">DO 26.11.</span><b>CHTF, Tag 1</b><p>Nach der kurzen Nacht nicht um neun starten, sondern gegen Mittag.</p></div>
         <div><span class="d">FR 27.11.</span><b>CHTF, Tag 2 → Nantou</b><p>Ruhiger als der Eröffnungstag. Morgens auschecken, abends nach 南头 (Nantou).</p></div>
         <div><span class="d">SA 28.11.</span><b>Huaqiangbei → Zug</b><p>Vormittags 华强北 (Huaqiangbei), mittags Zug nach Guangzhou ab 福田 (Futian) oder 深圳北 (Shenzhen Nord).</p></div>
+      </div>
+    </section>
+
+    <section class="sc-sec" id="sc-karte">
+      <div class="sc-h"><span class="n">01·5</span><h2>Die Stadt als <b>Karte</b></h2><span class="zh">地图 (Karte)</span></div>
+      <div class="glass gmap szc">
+        <div class="gm-filter" id="sz-mapf" role="group" aria-label="Kategorien"><button aria-pressed="true" data-c="fair"><i style="background:#2F6BFF"></i>Messe</button><button aria-pressed="true" data-c="city"><i style="background:#2ED8A8"></i>Stadt</button><button aria-pressed="true" data-c="night"><i style="background:#7C6CFF"></i>Nacht</button><button aria-pressed="true" data-c="base"><i style="background:#DCE5F0"></i>Orientierung</button></div>
+        <div class="gm-wrap"><svg id="sz-map" viewBox="0 0 800 660" role="img" aria-label="Schematische Karte von Shenzhen: Messe in Bao'an, Nantou, Huaqiangbei, Nachtleben"></svg></div>
+        <div class="gm-info" id="sz-map-info" aria-live="polite"><b>Auf einen Punkt tippen.</b> Die Messe liegt ganz im Nordwesten, weit weg vom Zentrum. Metro 12 verbindet Nanshan direkt mit dem Gelände.</div>
+        <ul class="gm-off" id="sz-off"><li data-c="base"><b>HK</b> Hongkong <span>↓ südlich, hinter der Shenzhen Bay</span> <a class="gm-a" href="https://uri.amap.com/search?keyword=%E9%A6%99%E6%B8%AF&city=440300&callnative=0" target="_blank" rel="noopener">Karte</a></li></ul>
       </div>
     </section>
 
@@ -3017,7 +3265,7 @@ body.hn{background:#F4EBD8;color:#2A1A12}
 <div id="guangzhou" class="hnp" hidden>
   <header class="hn-bar"><div class="in">
     <a href="#/">← Übersicht</a>
-    <nav aria-label="Abschnitte"><button data-jump="hn-buch">Handelsbuch</button><button data-jump="hn-dimsum">Dim Sum</button><button data-jump="hn-arkaden">Arkaden</button><button data-jump="hn-shamian">Shamian</button><button data-jump="hn-villen">Villen</button><button data-jump="hn-export">Export</button></nav>
+    <nav aria-label="Abschnitte"><button data-jump="hn-buch">Handelsbuch</button><button data-jump="hn-karte">Karte</button><button data-jump="hn-dimsum">Dim Sum</button><button data-jump="hn-arkaden">Arkaden</button><button data-jump="hn-shamian">Shamian</button><button data-jump="hn-villen">Villen</button><button data-jump="hn-export">Export</button></nav>
     <a class="alt" href="#/guangzhou-a">Frühere Fassung</a>
   </div></header>
 
@@ -3057,6 +3305,18 @@ body.hn{background:#F4EBD8;color:#2A1A12}
         <span class="chop">未定</span>
         <div><b>Noch nicht im Buch verbucht:</b> Ob Guangzhou bleibt, ist offen.
           <ol><li>Zwei Nächte behalten. Die Küche kommt von hier, und die Stadt liegt direkt auf dem Weg nach Hongkong.</li><li>Nur eine Nacht, dafür drei in Hongkong.</li><li>Streichen und vier Nächte Hongkong. Die Arkaden und Buyer Stores wären nach Chongqing und Chengdu eine Wiederholung, und wir sparen zwei Umzüge.</li></ol></div>
+      </div>
+    </section>
+
+    <section class="hn-sec" id="hn-karte">
+      <div class="hn-h"><span class="k">Karte</span><h2>Die Stadtkarte<span class="zh">地圖 (Karte)</span></h2>
+        <svg class="orn" viewBox="0 0 180 14" aria-hidden="true"><path d="M0 7 H70 M110 7 H180" stroke="#C9A04A" stroke-width="1.5"/><path d="M80 7 l10 -6 l10 6 l-10 6 Z" fill="#9B1B1E" stroke="#C9A04A"/></svg>
+        <p>Die Zeichen auf der Karte sind die Stempel der Adressen: 陶 für Taotaoju, 集 für die Esshalle und so weiter.</p></div>
+      <div class="gmap gzc">
+        <div class="gm-filter" id="gz-mapf" role="group" aria-label="Kategorien"><button aria-pressed="true" data-c="food"><i style="background:#9B1B1E"></i>Dim Sum & Essen</button><button aria-pressed="true" data-c="arch"><i style="background:#1A0C0A"></i>Arkaden & Shamian</button><button aria-pressed="true" data-c="mode"><i style="background:#F0D48A"></i>Dongshankou</button><button aria-pressed="true" data-c="base"><i style="background:#EADCC0"></i>Orientierung</button></div>
+        <div class="gm-wrap"><svg id="gz-map" viewBox="0 0 840 400" role="img" aria-label="Schematische Karte von Guangzhou: Liwan mit Shamian, Yongqingfang und Shangxiajiu, Dongshankou im Osten"></svg></div>
+        <div class="gm-info" id="gz-map-info" aria-live="polite"><b>Auf ein Zeichen tippen.</b> Links liegt Liwan mit Shamian, dort geht alles zu Fuß. Rechts Dongshankou, dahin besser mit der Metro.</div>
+        <ul class="gm-off" id="gz-off"><li data-c="base"><b>南</b> 广州南 (Guangzhou Süd) <span>↓ Panyu · an Sa, ab Mo nach HK</span> <a class="gm-a" href="https://uri.amap.com/search?keyword=%E5%B9%BF%E5%B7%9E%E5%8D%97%E7%AB%99&city=440100&callnative=0" target="_blank" rel="noopener">Karte</a></li><li data-c="arch"><b>佛</b> 佛山 (Foshan) <span>← 15 min Zug ab Guangzhou Süd</span> <a class="gm-a" href="https://uri.amap.com/search?keyword=%E4%BD%9B%E5%B1%B1&city=440100&callnative=0" target="_blank" rel="noopener">Karte</a></li></ul>
       </div>
     </section>
 
@@ -3758,6 +4018,188 @@ body.hn{background:#F4EBD8;color:#2A1A12}
     document.querySelectorAll('#guangzhou .steam').forEach(function(b){ b.addEventListener('click',function(){ b.setAttribute('aria-expanded', b.getAttribute('aria-expanded')==='true'?'false':'true'); }); });
   })();
 
+
+  // ---------- Chengdu: Store-Filter ----------
+  document.querySelectorAll('.st-filter button').forEach(function(b){ b.addEventListener('click',function(){
+    var f=b.dataset.f; b.parentNode.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});
+    document.querySelectorAll('.st-row').forEach(function(r){ r.hidden = !(f==='all' || r.dataset.s===f || r.dataset.a===f); });
+  }); });
+
+
+  // ---------- Chengdu: Karte ----------
+  (function(){
+    var svg=document.getElementById('cd-map'); if(!svg) return;
+    var D=[{"c": "mode", "k": "01", "n": "hug", "w": "晶融汇 (Jingronghui)", "t": "Sichere Wette", "lat": 30.6556, "lon": 104.0838, "u": "https://uri.amap.com/search?keyword=%E6%99%B6%E8%9E%8D%E6%B1%87&city=510100&callnative=0"}, {"c": "mode", "k": "02", "n": "(SO)WHAT", "w": "晶融汇, EG", "t": "Sichere Wette", "lat": 30.655, "lon": 104.0848, "u": "https://uri.amap.com/search?keyword=%E6%99%B6%E8%9E%8D%E6%B1%87&city=510100&callnative=0"}, {"c": "mode", "k": "03", "n": "Dressing For Fun", "w": "干槐树街 (Straße der trockenen Akazie)", "t": "Sichere Wette", "lat": 30.6612, "lon": 104.0856, "u": "https://uri.amap.com/search?keyword=%E5%B9%B2%E6%A7%90%E6%A0%91%E8%A1%97&city=510100&callnative=0"}, {"c": "mode", "k": "05", "n": "X-select", "w": "MixC, 2. OG", "t": "Prüfen", "lat": 30.659, "lon": 104.1035, "u": "https://uri.amap.com/search?keyword=%E6%88%90%E9%83%BD%E4%B8%87%E8%B1%A1%E5%9F%8E&city=510100&callnative=0"}, {"c": "mode", "k": "07", "n": "Luxemporium", "w": "科华中路 9 (Kehua-Mittelstraße 9)", "t": "Prüfen", "lat": 30.6385, "lon": 104.0775, "u": "https://uri.amap.com/search?keyword=%E7%A7%91%E5%8D%8E%E4%B8%AD%E8%B7%AF9%E5%8F%B7&city=510100&callnative=0"}, {"c": "mode", "k": "06", "n": "Le Sélect", "w": "Yintai in99, weiter südlich", "t": "Prüfen", "lat": 30.579, "lon": 104.068, "u": "https://uri.amap.com/search?keyword=%E9%93%B6%E6%B3%B0in99&city=510100&callnative=0"}, {"c": "mode", "k": "08", "n": "OUTOFSTOCK", "w": "交子大道 500, weiter südlich", "t": "Prüfen", "lat": 30.58, "lon": 104.059, "u": "https://uri.amap.com/search?keyword=%E4%BA%A4%E5%AD%90%E5%A4%A7%E9%81%93500%E5%8F%B7&city=510100&callnative=0"}, {"c": "food", "k": "F1", "n": "老刘烧烤 (Lao Lius Grill)", "w": "玉林三巷 (Dritte Yulin-Gasse)", "t": "Pflicht", "lat": 30.6312, "lon": 104.0588, "u": "https://uri.amap.com/search?keyword=%E8%80%81%E5%88%98%E7%83%A7%E7%83%A4%20%E7%8E%89%E6%9E%97&city=510100&callnative=0"}, {"c": "food", "k": "F2", "n": "爱恨怪豆花 (Liebe-Hass-Tofupudding)", "w": "芳华街 (Fanghua-Straße)", "t": "Best Value", "lat": 30.6334, "lon": 104.0622, "u": "https://uri.amap.com/search?keyword=%E7%88%B1%E6%81%A8%E6%80%AA%E8%B1%86%E8%8A%B1&city=510100&callnative=0"}, {"c": "food", "k": "F3", "n": "何眼镜芋儿鸡 (Taro-Huhn)", "w": "双桥路 (Doppelbrückenstraße)", "t": "Open Air", "lat": 30.6562, "lon": 104.1162, "u": "https://uri.amap.com/search?keyword=%E4%BD%95%E7%9C%BC%E9%95%9C%E8%8A%8B%E5%84%BF%E9%B8%A1&city=510100&callnative=0"}, {"c": "food", "k": "F4", "n": "明婷饭店 (Restaurant Mingting)", "w": "外曹家巷 (Äußere Caojia-Gasse)", "t": "Klassiker", "lat": 30.6762, "lon": 104.0792, "u": "https://uri.amap.com/search?keyword=%E6%98%8E%E5%A9%B7%E9%A5%AD%E5%BA%97&city=510100&callnative=0"}, {"c": "food", "k": "F6", "n": "电台巷火锅 (Radiogassen-Hotpot)", "w": "Kehua Bei Lu", "t": "Hotpot", "lat": 30.633, "lon": 104.077, "u": "https://uri.amap.com/search?keyword=%E7%94%B5%E5%8F%B0%E5%B7%B7%E7%81%AB%E9%94%85&city=510100&callnative=0"}, {"c": "mich", "k": "★1", "n": "谧寻茶室 (Mi Xun Teehaus)", "w": "Im Upper House", "t": "★ + Grüner Stern", "lat": 30.6531, "lon": 104.082, "u": "https://uri.amap.com/search?keyword=%E8%B0%A7%E5%AF%BB%E8%8C%B6%E5%AE%A4&city=510100&callnative=0"}, {"c": "mich", "k": "★2", "n": "玉芝兰 (Yu Zhi Lan)", "w": "Qingyang", "t": "★★ · reservieren", "lat": 30.6682, "lon": 104.0552, "u": "https://uri.amap.com/search?keyword=%E7%8E%89%E8%8A%9D%E5%85%B0&city=510100&callnative=0"}, {"c": "mich", "k": "★3", "n": "马旺子 (Ma's Kitchen)", "w": "Gegenüber vom Upper House", "t": "★", "lat": 30.6546, "lon": 104.0812, "u": "https://uri.amap.com/search?keyword=%E9%A9%AC%E6%97%BA%E5%AD%90&city=510100&callnative=0"}, {"c": "des", "k": "D1", "n": "方所 (Fangsuo)", "w": "Taikoo Li, UG", "t": "Stärkster Innenraum", "lat": 30.6528, "lon": 104.0845, "u": "https://uri.amap.com/search?keyword=%E6%96%B9%E6%89%80%20%E8%BF%9C%E6%B4%8B%E5%A4%AA%E5%8F%A4%E9%87%8C&city=510100&callnative=0"}, {"c": "des", "k": "D2", "n": "东郊记忆 (Erinnerung an die Ostvorstadt)", "w": "Fabrikgelände", "t": "Werktags", "lat": 30.6702, "lon": 104.1148, "u": "https://uri.amap.com/search?keyword=%E4%B8%9C%E9%83%8A%E8%AE%B0%E5%BF%86&city=510100&callnative=0"}, {"c": "hood", "k": "V1", "n": "玉林 (Yulin)", "w": "Wuhou · abends", "t": "Viertel zum Herumlaufen", "lat": 30.6322, "lon": 104.0602, "u": "https://uri.amap.com/search?keyword=%E7%8E%89%E6%9E%97%E7%94%9F%E6%B4%BB%E5%B9%BF%E5%9C%BA&city=510100&callnative=0"}, {"c": "hood", "k": "V2", "n": "建设巷 (Aufbaugasse)", "w": "Osten", "t": "Streetfood", "lat": 30.6772, "lon": 104.1062, "u": "https://uri.amap.com/search?keyword=%E5%BB%BA%E8%AE%BE%E5%B7%B7&city=510100&callnative=0"}, {"c": "hood", "k": "V3", "n": "香香巷 (Duftgasse)", "w": "bei Taikoo Li", "t": "voll, aber vielfältig", "lat": 30.656, "lon": 104.0878, "u": "https://uri.amap.com/search?keyword=%E9%A6%99%E9%A6%99%E5%B7%B7&city=510100&callnative=0"}, {"c": "base", "k": "H", "n": "博舍 (The Upper House)", "w": "Taikoo Li", "t": "Unser Hotel", "lat": 30.6536, "lon": 104.083, "u": "https://uri.amap.com/search?keyword=%E5%8D%9A%E8%88%8D%E9%85%92%E5%BA%97&city=510100&callnative=0"}, {"c": "base", "k": "T", "n": "天府广场 (Tianfu-Platz)", "w": "Stadtmitte", "t": "Orientierung", "lat": 30.6573, "lon": 104.066, "u": "https://uri.amap.com/search?keyword=%E5%A4%A9%E5%BA%9C%E5%B9%BF%E5%9C%BA&city=510100&callnative=0"}, {"c": "base", "k": "B", "n": "成都东站 (Chengdu Ost)", "w": "Ankunft Do 19.11.", "t": "Bahnhof", "lat": 30.6292, "lon": 104.141, "u": "https://uri.amap.com/search?keyword=%E6%88%90%E9%83%BD%E4%B8%9C%E7%AB%99&city=510100&callnative=0"}];
+    var COL={mode:'#FFCD35',food:'#EB6C44',mich:'#FFF2D4',des:'#6FB7E0',hood:'#7FC48A',base:'#FFFFFF'};
+    var CAT={mode:'Mode',food:'Fliegen-Lokal',mich:'Michelin',des:'Design',hood:'Viertel',base:'Orientierung'};
+    var L0=104.035,A0=30.685,K=8000,KY=9280;
+    function X(lon){return (lon-L0)*K;} function Y(lat){return (A0-lat)*KY;}
+    function path(pts){return pts.map(function(p,i){return (i?'L':'M')+X(p[1]).toFixed(1)+' '+Y(p[0]).toFixed(1);}).join(' ');}
+    var cx=X(104.0660), cy=Y(30.6573);
+    var g='<rect width="920" height="660" fill="#5E1114"/>';
+    g+='<g fill="none" stroke="#FFF2D4" stroke-opacity=".22" stroke-width="10" stroke-linejoin="round"><rect x="'+(cx-250)+'" y="'+(cy-250)+'" width="500" height="500" rx="170"/></g>';
+    g+='<g fill="none" stroke="#FFF2D4" stroke-opacity=".14" stroke-width="10"><rect x="'+(cx-420)+'" y="'+(cy-420)+'" width="840" height="840" rx="300"/></g>';
+    g+='<text x="'+(cx+172)+'" y="'+(cy-236)+'" font-family="DM Mono,monospace" font-size="11" fill="#FFF2D4" opacity=".6">一环 (1. Ring)</text>';
+    g+='<text x="'+(cx+320)+'" y="'+(cy-380)+'" font-family="DM Mono,monospace" font-size="11" fill="#FFF2D4" opacity=".5">二环 (2. Ring)</text>';
+    var fu=[[30.690,104.040],[30.681,104.052],[30.677,104.070],[30.670,104.084],[30.659,104.090],[30.6475,104.0892]];
+    var nan=[[30.662,104.035],[30.650,104.048],[30.643,104.064],[30.643,104.079],[30.6475,104.0892]];
+    var jin=[[30.6475,104.0892],[30.638,104.095],[30.626,104.100],[30.612,104.106]];
+    g+='<g fill="none" stroke="#6FA8DC" stroke-opacity=".75" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="'+path(fu)+'"/><path d="'+path(nan)+'"/><path d="'+path(jin)+'"/></g>';
+    g+='<text x="'+X(104.098)+'" y="'+Y(30.633)+'" font-family="PingFang SC,sans-serif" font-size="13" fill="#9CC6EC">锦江 (Brokatfluss)</text>';
+    // Blöcke
+    g+='<ellipse cx="'+X(104.0842)+'" cy="'+Y(30.6560)+'" rx="62" ry="54" fill="#FFCD35" fill-opacity=".08" stroke="#FFCD35" stroke-opacity=".6" stroke-dasharray="5 5"/>';
+    g+='<text x="'+(X(104.0842)-58)+'" y="'+(Y(30.6560)-60)+'" font-family="Anton,Impact,sans-serif" font-size="14" fill="#FFCD35">BLOCK A · JINJIANG</text>';
+    g+='<ellipse cx="'+X(104.108)+'" cy="'+Y(30.665)+'" rx="70" ry="70" fill="#FFCD35" fill-opacity=".05" stroke="#FFCD35" stroke-opacity=".45" stroke-dasharray="5 5"/>';
+    g+='<text x="'+(X(104.108)-40)+'" y="'+(Y(30.665)+88)+'" font-family="Anton,Impact,sans-serif" font-size="14" fill="#FFCD35">BLOCK B · OSTEN</text>';
+    // Rand-Hinweise
+    g+='<g font-family="DM Mono,monospace" font-size="11" fill="#FFF2D4" opacity=".75"><text x="8" y="650">↙ Flughafen 双流 (Shuangliu)</text><text x="440" y="650" text-anchor="middle">↓ in99 · Jiaozi-Allee (06, 08), ca. 6 km südlich</text><text x="912" y="18" text-anchor="end">N ↑</text></g>';
+    // Positionen berechnen und Überlappungen auseinanderschieben (mit Führungslinie zum echten Ort)
+    D.forEach(function(p){ p.x0=X(p.lon); p.y0=Y(p.lat); if(p.lat<30.615){ p.y0=620; p.x0+=(p.k==='06'?30:-30); } p.x=p.x0; p.y=p.y0; p.r=p.c==='hood'?26:17; });
+    for(var it=0;it<160;it++){ for(var a=0;a<D.length;a++) for(var b2=a+1;b2<D.length;b2++){ var A=D[a],B=D[b2];
+      if((A.c==='hood')!==(B.c==='hood')) continue;
+      var dx=B.x-A.x, dy=B.y-A.y, d=Math.sqrt(dx*dx+dy*dy)||.01, m=A.r+B.r+2; if(d<m){ var f=(m-d)/2; dx/=d; dy/=d; A.x-=dx*f; A.y-=dy*f; B.x+=dx*f; B.y+=dy*f; } } }
+    D.forEach(function(p){ if(Math.abs(p.x-p.x0)+Math.abs(p.y-p.y0)>3 && p.c!=='hood'){ g+='<g class="cm-lead" data-c="'+p.c+'"><line x1="'+p.x0.toFixed(1)+'" y1="'+p.y0.toFixed(1)+'" x2="'+p.x.toFixed(1)+'" y2="'+p.y.toFixed(1)+'" stroke="#FFF2D4" stroke-opacity=".55" stroke-width="1.2"/><circle cx="'+p.x0.toFixed(1)+'" cy="'+p.y0.toFixed(1)+'" r="2.5" fill="#FFF2D4"/></g>'; } });
+    var order=D.map(function(p,i){return i;}).sort(function(a,b){return (D[b].c==='hood')-(D[a].c==='hood');});
+    order.forEach(function(i){ var p=D[i];
+      var x=p.x, y=p.y;
+      var r=p.c==='hood'?24:(p.c==='base'?15:13), col=COL[p.c];
+      var inner=p.c==='hood'?'<circle r="30" fill="'+col+'" fill-opacity=".16" stroke="'+col+'" stroke-width="2" stroke-dasharray="4 3"/>':'<circle r="'+r+'" fill="'+col+'" stroke="#1D0E0A" stroke-width="2"/>';
+      var tc=(p.c==='hood')?col:'#1D0E0A';
+      g+='<g class="cm-pin" data-i="'+i+'" data-c="'+p.c+'" tabindex="0" role="button" aria-label="'+p.k+' '+p.n+'" transform="translate('+x.toFixed(1)+' '+y.toFixed(1)+')">'+inner+
+        (p.c==='hood'?'<text text-anchor="middle" dy="40" font-family="Anton,Impact,sans-serif" font-size="12" fill="'+col+'">'+p.k+'</text>':'<text text-anchor="middle" dy="4" font-family="Anton,Impact,sans-serif" font-size="'+(p.k.length>2?10:11.5)+'" fill="'+tc+'">'+p.k+'</text>')+'</g>';
+    });
+    svg.innerHTML=g;
+    var info=document.getElementById('cd-map-info'), cur=null;
+    function show(el){ if(cur) cur.classList.remove('on'); cur=el; el.classList.add('on'); var p=D[+el.dataset.i];
+      info.innerHTML='<b>'+p.k+' · '+p.n+'</b><span class="cm-t">'+CAT[p.c]+'</span><br>'+p.w+' · '+p.t+'<a class="st-map" href="'+p.u+'" target="_blank" rel="noopener">Karte</a>'; }
+    svg.querySelectorAll('.cm-pin').forEach(function(el){ el.addEventListener('click',function(){show(el);}); el.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();show(el);} }); });
+    document.querySelectorAll('.cm-filter button').forEach(function(b){ b.addEventListener('click',function(){
+      var on=b.getAttribute('aria-pressed')!=='true'; b.setAttribute('aria-pressed',on);
+      svg.querySelectorAll('.cm-pin[data-c="'+b.dataset.c+'"],.cm-lead[data-c="'+b.dataset.c+'"]').forEach(function(el){ el.style.display=on?'':'none'; }); }); });
+  })();
+
+
+  // ---------- Generische Karten ----------
+  window.makeMap=function(cfg){
+    var svg=document.getElementById(cfg.svg); if(!svg) return;
+    var D=cfg.pts, X=function(lon){return (lon-cfg.L0)*cfg.K;}, Y=function(lat){return (cfg.A0-lat)*cfg.KY;};
+    var g=cfg.bg(X,Y);
+    D.forEach(function(p){ p.x0=X(p.lon); p.y0=Y(p.lat); p.x=p.x0; p.y=p.y0; p.r=cfg.r||16; });
+    for(var it=0;it<200;it++){ for(var a=0;a<D.length;a++) for(var b=a+1;b<D.length;b++){ var A=D[a],B=D[b];
+      var dx=B.x-A.x, dy=B.y-A.y, d=Math.sqrt(dx*dx+dy*dy)||.01, m=A.r+B.r+2; if(d<m){ var f=(m-d)/2; dx/=d; dy/=d; A.x-=dx*f; A.y-=dy*f; B.x+=dx*f; B.y+=dy*f; } } }
+    D.forEach(function(p){ if(Math.abs(p.x-p.x0)+Math.abs(p.y-p.y0)>3){ g+='<g class="gm-lead" data-c="'+p.c+'"><line x1="'+p.x0.toFixed(1)+'" y1="'+p.y0.toFixed(1)+'" x2="'+p.x.toFixed(1)+'" y2="'+p.y.toFixed(1)+'" stroke="'+cfg.lead+'" stroke-opacity=".6" stroke-width="1.2"/><circle cx="'+p.x0.toFixed(1)+'" cy="'+p.y0.toFixed(1)+'" r="2.5" fill="'+cfg.lead+'"/></g>'; } });
+    D.forEach(function(p,i){ var col=cfg.col[p.c], closed=/GESCHLOSSEN/.test(p.t);
+      g+='<g class="gm-pin" data-i="'+i+'" data-c="'+p.c+'" tabindex="0" role="button" aria-label="'+p.k+' '+p.n+'" transform="translate('+p.x.toFixed(1)+' '+p.y.toFixed(1)+')">'+
+        '<circle r="'+p.r+'" fill="'+(closed?'none':col)+'" stroke="'+(closed?col:cfg.stroke)+'" stroke-width="'+(closed?2.5:2)+'"'+(cfg.glow?' style="filter:drop-shadow(0 0 5px '+col+')"':'')+'/>'+
+        (closed?'<line x1="-11" y1="-11" x2="11" y2="11" stroke="'+col+'" stroke-width="2.5"/>':'')+
+        '<text text-anchor="middle" dy="4" font-family="'+cfg.font+'" font-size="'+(p.k.length>3?9.5:(p.k.length>2?10.5:12))+'" font-weight="700" fill="'+(closed?col:((cfg.txtc&&cfg.txtc[p.c])||cfg.txt))+'">'+p.k+'</text></g>'; });
+    svg.innerHTML=g;
+    var info=document.getElementById(cfg.info), cur=null;
+    function show(el){ if(cur) cur.classList.remove('on'); cur=el; el.classList.add('on'); var p=D[+el.dataset.i];
+      info.innerHTML='<b>'+p.k+' · '+p.n+'</b><span class="gm-t">'+cfg.cat[p.c]+'</span><br>'+p.w+(p.t?' · '+p.t:'')+' <a class="gm-a" href="'+p.u+'" target="_blank" rel="noopener">Karte</a>'; }
+    svg.querySelectorAll('.gm-pin').forEach(function(el){ el.addEventListener('click',function(){show(el);}); el.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();show(el);} }); });
+    document.querySelectorAll(cfg.filter+' button').forEach(function(b){ b.addEventListener('click',function(){
+      var on=b.getAttribute('aria-pressed')!=='true'; b.setAttribute('aria-pressed',on);
+      svg.querySelectorAll('[data-c="'+b.dataset.c+'"]').forEach(function(el){ el.style.display=on?'':'none'; });
+      document.querySelectorAll(cfg.off+' [data-c="'+b.dataset.c+'"]').forEach(function(el){ el.hidden=!on; }); }); });
+  };
+  function riv(X,Y,pts,w,col,op){ return '<path d="'+pts.map(function(p,i){return (i?'L':'M')+X(p[1]).toFixed(1)+' '+Y(p[0]).toFixed(1);}).join(' ')+'" fill="none" stroke="'+col+'" stroke-opacity="'+op+'" stroke-width="'+w+'" stroke-linecap="round" stroke-linejoin="round"/>'; }
+  // Xi'an
+  makeMap({svg:'xa-map',info:'xa-map-info',filter:'#xa-mapf',off:'#xa-off',pts:[{"c": "markt", "k": "M1", "n": "西仓集市 (Xicang-Markt)", "w": "in der Altstadt, Nordwesten", "t": "So 15.11. vormittags", "lat": 34.268, "lon": 108.938, "u": "https://uri.amap.com/search?keyword=%E8%A5%BF%E4%BB%93%E9%9B%86%E5%B8%82&city=610100&callnative=0"}, {"c": "markt", "k": "M2", "n": "小南门早市 (Morgenmarkt am Kleinen Südtor)", "w": "an der Stadtmauer", "t": "7–9 Uhr", "lat": 34.2528, "lon": 108.9385, "u": "https://uri.amap.com/search?keyword=%E5%B0%8F%E5%8D%97%E9%97%A8%E6%97%A9%E5%B8%82&city=610100&callnative=0"}, {"c": "food", "k": "S6", "n": "洒金桥 (Sajinqiao)", "w": "westlich des Muslimviertels", "t": "Hier essen die Einheimischen", "lat": 34.2662, "lon": 108.9335, "u": "https://uri.amap.com/search?keyword=%E6%B4%92%E9%87%91%E6%A1%A5&city=610100&callnative=0"}, {"c": "food", "k": "S7", "n": "永兴坊 (Yongxingfang)", "w": "Nordosten, am Osttor", "t": "Kuratierte Fressgasse", "lat": 34.2645, "lon": 108.9665, "u": "https://uri.amap.com/search?keyword=%E6%B0%B8%E5%85%B4%E5%9D%8A&city=610100&callnative=0"}, {"c": "food", "k": "S8", "n": "回民街 (Straße der Hui)", "w": "hinter dem Trommelturm", "t": "Seitengassen 大皮院 und 北广济街", "lat": 34.264, "lon": 108.942, "u": "https://uri.amap.com/search?keyword=%E5%9B%9E%E6%B0%91%E8%A1%97&city=610100&callnative=0"}, {"c": "food", "k": "R1", "n": "西安饭庄 (Xi'an-Restaurant)", "w": "东大街 (Ost-Straße)", "t": "Institution seit 1929", "lat": 34.2603, "lon": 108.9565, "u": "https://uri.amap.com/search?keyword=%E8%A5%BF%E5%AE%89%E9%A5%AD%E5%BA%84%20%E4%B8%9C%E5%A4%A7%E8%A1%97&city=610100&callnative=0"}, {"c": "food", "k": "R2", "n": "同盛祥 (Tongshengxiang)", "w": "am Glockenturm", "t": "Paomo seit 1920", "lat": 34.2614, "lon": 108.9455, "u": "https://uri.amap.com/search?keyword=%E5%90%8C%E7%9B%9B%E7%A5%A5%20%E9%92%9F%E6%A5%BC&city=610100&callnative=0"}, {"c": "food", "k": "R3", "n": "醉长安 (Trunkenes Chang'an)", "w": "湘子庙街 (Xiangzi-Tempel-Gasse)", "t": "Hofhaus", "lat": 34.2546, "lon": 108.9462, "u": "https://uri.amap.com/search?keyword=%E9%86%89%E9%95%BF%E5%AE%89%20%E6%B9%98%E5%AD%90%E5%BA%99&city=610100&callnative=0"}, {"c": "see", "k": "A1", "n": "万象城 · 生命之树 (MixC · Baum des Lebens)", "w": "am Fernsehturm, Metro 2 电视塔", "t": "Heatherwick 2024", "lat": 34.2055, "lon": 108.949, "u": "https://uri.amap.com/search?keyword=%E8%A5%BF%E5%AE%89%E4%B8%87%E8%B1%A1%E5%9F%8E&city=610100&callnative=0"}, {"c": "see", "k": "A2", "n": "大华1935 (Dahua 1935)", "w": "nordöstlich der Mauer", "t": "Umgebaute Weberei", "lat": 34.28, "lon": 108.975, "u": "https://uri.amap.com/search?keyword=%E5%A4%A7%E5%8D%8E1935&city=610100&callnative=0"}, {"c": "see", "k": "A4", "n": "碑林博物馆 (Stelenwald-Museum)", "w": "Altstadt, Süden", "t": "Steinstelen", "lat": 34.2546, "lon": 108.957, "u": "https://uri.amap.com/search?keyword=%E7%A2%91%E6%9E%97%E5%8D%9A%E7%89%A9%E9%A6%86&city=610100&callnative=0"}, {"c": "see", "k": "A5", "n": "陕西历史博物馆 (Historisches Museum Shaanxi)", "w": "südlich der Mauer", "t": "Tickets vorher online", "lat": 34.224, "lon": 108.954, "u": "https://uri.amap.com/search?keyword=%E9%99%95%E8%A5%BF%E5%8E%86%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A6%86&city=610100&callnative=0"}, {"c": "see", "k": "A8", "n": "钟楼 (Glockenturm)", "w": "Mitte", "t": "", "lat": 34.261, "lon": 108.947, "u": "https://uri.amap.com/search?keyword=%E9%92%9F%E6%A5%BC&city=610100&callnative=0"}, {"c": "see", "k": "A9", "n": "广仁寺 (Guangren-Tempel)", "w": "Altstadt, Nordwestecke", "t": "Tibetischer Tempel", "lat": 34.2722, "lon": 108.9295, "u": "https://uri.amap.com/search?keyword=%E5%B9%BF%E4%BB%81%E5%AF%BA&city=610100&callnative=0"}, {"c": "see", "k": "A9", "n": "兴善寺 (Xingshan-Tempel)", "w": "südlich", "t": "", "lat": 34.2362, "lon": 108.9452, "u": "https://uri.amap.com/search?keyword=%E5%A4%A7%E5%85%B4%E5%96%84%E5%AF%BA&city=610100&callnative=0"}, {"c": "see", "k": "A9", "n": "八仙庵 (Acht-Unsterbliche-Kloster)", "w": "östlich der Mauer", "t": "", "lat": 34.2622, "lon": 108.98, "u": "https://uri.amap.com/search?keyword=%E5%85%AB%E4%BB%99%E5%AE%AB&city=610100&callnative=0"}, {"c": "see", "k": "A10", "n": "大唐不夜城 (Tang-Stadt ohne Nacht)", "w": "Süden, am Großen Wildganspagode", "t": "abends", "lat": 34.215, "lon": 108.964, "u": "https://uri.amap.com/search?keyword=%E5%A4%A7%E5%94%90%E4%B8%8D%E5%A4%9C%E5%9F%8E&city=610100&callnative=0"}, {"c": "see", "k": "A8", "n": "曲江遗址公园 (Ruinenpark Qujiang)", "w": "Südosten", "t": "", "lat": 34.206, "lon": 108.978, "u": "https://uri.amap.com/search?keyword=%E6%9B%B2%E6%B1%9F%E6%B1%A0%E9%81%97%E5%9D%80%E5%85%AC%E5%9B%AD&city=610100&callnative=0"}, {"c": "bar", "k": "B1", "n": "襄子craft beer · Niwowo", "w": "顺城南路 (Shuncheng Nanlu), an der Mauer", "t": "100 m auseinander · Lage ungefähr", "lat": 34.2524, "lon": 108.9505, "u": "https://uri.amap.com/search?keyword=%E9%A1%BA%E5%9F%8E%E5%8D%97%E8%B7%AF%20%E8%A5%84%E5%AD%90%E7%B2%BE%E9%85%BF&city=610100&callnative=0"}],
+    L0:108.915,A0:34.285,K:10000,KY:12100,r:17,font:'Open Sans,Arial,sans-serif',stroke:'#231F20',txt:'#231F20',lead:'#8E0808',
+    col:{markt:'#FFCD15',food:'#D0342C',see:'#FFFFFF',bar:'#7FB6E6',base:'#231F20'},
+    cat:{markt:'Markt',food:'Essen',see:'Sehen',bar:'Bars',base:'Orientierung'},
+    bg:function(X,Y){ var w1=X(108.9275),w2=X(108.9745),n=Y(34.2735),s2=Y(34.2505);
+      var g='<rect width="800" height="1030" fill="#F1EEE2"/>';
+      g+='<g stroke="#E3DDCB" stroke-width="10" fill="none"><line x1="0" y1="'+Y(34.2610)+'" x2="800" y2="'+Y(34.2610)+'"/><line x1="'+X(108.9470)+'" y1="0" x2="'+X(108.9470)+'" y2="1030"/></g>';
+      g+='<rect x="'+w1+'" y="'+n+'" width="'+(w2-w1)+'" height="'+(s2-n)+'" fill="#FBF6EA" stroke="#8E0808" stroke-width="7"/>';
+      g+='<rect x="'+w1+'" y="'+n+'" width="'+(w2-w1)+'" height="'+(s2-n)+'" fill="none" stroke="#FFCD15" stroke-width="2" stroke-dasharray="6 6"/>';
+      g+='<text x="'+(w1+10)+'" y="'+(n-12)+'" font-family="Space Grotesk,Arial,sans-serif" font-weight="700" font-size="15" fill="#8E0808">MING-STADTMAUER · 城墙 (Stadtmauer) · 14 km</text>';
+      g+='<text x="'+(X(108.9470)+60)+'" y="'+(Y(34.2610)-8)+'" font-family="Open Sans,sans-serif" font-size="12" fill="#8E0808">东大街 (Oststraße)</text><text x="'+(X(108.9470)-60)+'" y="'+(Y(34.2610)-8)+'" text-anchor="end" font-family="Open Sans,sans-serif" font-size="12" fill="#8E0808">西大街 (Weststraße)</text>';
+      g+='<text x="16" y="1016" font-family="Open Sans,sans-serif" font-size="12" fill="#6b6060">Schematisch nach ungefähren Koordinaten · N ↑</text>';
+      return g; }});
+  // Chongqing (Blade Runner)
+  makeMap({svg:'cq-map',info:'cq-map-info',filter:'#cq-mapf',off:'#cq-off',pts:[{"c": "hang", "k": "02.1", "n": "龙门浩老街 (Longmenhao)", "w": "Südufer · unser Hotel", "t": "Oben anfangen", "lat": 29.5482, "lon": 106.5885, "u": "https://uri.amap.com/search?keyword=%E9%BE%99%E9%97%A8%E6%B5%A9%E8%80%81%E8%A1%97&city=500000&callnative=0"}, {"c": "hang", "k": "02.2", "n": "弹子石老街 (Danzishi)", "w": "Südufer, gegenüber Chaotianmen", "t": "ab 19:30 Licht", "lat": 29.5705, "lon": 106.6010, "u": "https://uri.amap.com/search?keyword=%E5%BC%B9%E5%AD%90%E7%9F%B3%E8%80%81%E8%A1%97&city=500000&callnative=0"}, {"c": "hang", "k": "02.3", "n": "山城巷 (Bergstadt-Gasse)", "w": "Südhang der Halbinsel", "t": "Stelzenhäuser", "lat": 29.5522, "lon": 106.58, "u": "https://uri.amap.com/search?keyword=%E5%B1%B1%E5%9F%8E%E5%B7%B7&city=500000&callnative=0"}, {"c": "hang", "k": "02.4", "n": "十八梯 (Achtzehn Stufen)", "w": "zwischen Oberstadt und Jangtse", "t": "saniert", "lat": 29.5512, "lon": 106.5738, "u": "https://uri.amap.com/search?keyword=%E5%8D%81%E5%85%AB%E6%A2%AF&city=500000&callnative=0"}, {"c": "hang", "k": "02.5", "n": "李子坝 (Pflaumendamm)", "w": "Jialing-Seite", "t": "Monorail im Wohnhaus", "lat": 29.5522, "lon": 106.5312, "u": "https://uri.amap.com/search?keyword=%E6%9D%8E%E5%AD%90%E5%9D%9D%E8%BD%BB%E8%BD%A8%E7%AB%99&city=500000&callnative=0"}, {"c": "food", "k": "03.1", "n": "珮姐老火锅 (Peijie)", "w": "较场口 (Jiaochangkou)", "t": "Erste Wahl · reservieren", "lat": 29.5532, "lon": 106.5722, "u": "https://uri.amap.com/search?keyword=%E7%8F%AE%E5%A7%90%E8%80%81%E7%81%AB%E9%94%85%20%E8%BE%83%E5%9C%BA%E5%8F%A3&city=500000&callnative=0"}, {"c": "food", "k": "03.3", "n": "枇杷园 (Mispelgarten)", "w": "南山 (Nanshan)", "t": "Nachtblick · Lage ungefähr", "lat": 29.542, "lon": 106.625, "u": "https://uri.amap.com/search?keyword=%E6%9E%87%E6%9D%B7%E5%9B%AD%E7%81%AB%E9%94%85%20%E5%8D%97%E5%B1%B1&city=500000&callnative=0"}, {"c": "food", "k": "03.4", "n": "仙隆井 (Xianlongjing)", "w": "南山 (Nanshan)", "t": "Laternen · Lage ungefähr", "lat": 29.536, "lon": 106.618, "u": "https://uri.amap.com/search?keyword=%E4%BB%99%E9%9A%86%E4%BA%95%E7%81%AB%E9%94%85&city=500000&callnative=0"}, {"c": "art", "k": "04.1", "n": "鹅岭二厂 (Testbed 2)", "w": "鹅岭 (Gänsegrat)", "t": "neben Liziba", "lat": 29.5532, "lon": 106.536, "u": "https://uri.amap.com/search?keyword=%E9%B9%85%E5%B2%AD%E4%BA%8C%E5%8E%82&city=500000&callnative=0"}, {"c": "mode", "k": "05.1", "n": "SND · WFC", "w": "民族路 188 (Minzu-Straße 188)", "t": "ältester Buyer Store", "lat": 29.5612, "lon": 106.5792, "u": "https://uri.amap.com/search?keyword=%E9%87%8D%E5%BA%86%E7%8E%AF%E7%90%83%E9%87%91%E8%9E%8D%E4%B8%AD%E5%BF%83&city=500000&callnative=0"}, {"c": "mode", "k": "05.2", "n": "超凡百货 (Super Normal)", "w": "长嘉汇 (Changjiahui)", "t": "GESCHLOSSEN seit 01/2024", "lat": 29.566, "lon": 106.5988, "u": "https://uri.amap.com/search?keyword=%E9%95%BF%E5%98%89%E6%B1%87&city=500000&callnative=0"}, {"c": "base", "k": "H", "n": "SUNYATA 既下山 (Hotel)", "w": "龙门浩 (Longmenhao)", "t": "16.–19.11.", "lat": 29.5476, "lon": 106.5896, "u": "https://uri.amap.com/search?keyword=%E9%87%8D%E5%BA%86%E6%97%A2%E4%B8%8B%E5%B1%B1&city=500000&callnative=0"}, {"c": "base", "k": "J", "n": "解放碑 (Befreiungsdenkmal)", "w": "Oberstadt", "t": "Seilbahn-Talstation in der Nähe", "lat": 29.5576, "lon": 106.577, "u": "https://uri.amap.com/search?keyword=%E8%A7%A3%E6%94%BE%E7%A2%91&city=500000&callnative=0"}, {"c": "base", "k": "C", "n": "朝天门 (Chaotianmen)", "w": "Spitze der Halbinsel", "t": "Zusammenfluss", "lat": 29.5652, "lon": 106.588, "u": "https://uri.amap.com/search?keyword=%E6%9C%9D%E5%A4%A9%E9%97%A8&city=500000&callnative=0"}, {"c": "base", "k": "HY", "n": "洪崖洞 (Hongyadong)", "w": "Jialing-Ufer", "t": "die volle Alternative zu Danzishi", "lat": 29.563, "lon": 106.579, "u": "https://uri.amap.com/search?keyword=%E6%B4%AA%E5%B4%96%E6%B4%9E&city=500000&callnative=0"}],
+    L0:106.520,A0:29.585,K:7000,KY:8050,r:18,font:'IBM Plex Mono,monospace',stroke:'#07060B',txt:'#07060B',lead:'#E7DCEB',glow:true,
+    col:{hang:'#37E1FF',food:'#FF3D8B',art:'#FFA640',mode:'#F6EEF8',base:'#8A7A9A'},
+    cat:{hang:'Hangstadt',food:'Essen',art:'Kunst',mode:'Mode',base:'Orientierung'},
+    bg:function(X,Y){ var g='<rect width="840" height="525" fill="#0B0912"/>';
+      g+='<g stroke="#1C1628" stroke-width="1">'; for(var i=0;i<840;i+=40) g+='<line x1="'+i+'" y1="0" x2="'+i+'" y2="525"/>'; for(var j=0;j<525;j+=40) g+='<line x1="0" y1="'+j+'" x2="840" y2="'+j+'"/>'; g+='</g>';
+      g+=riv(X,Y,[[29.585,106.505],[29.572,106.522],[29.566,106.535],[29.5635,106.552],[29.5665,106.568],[29.5668,106.582],[29.5652,106.592]],18,'#37E1FF',.28);
+      g+=riv(X,Y,[[29.515,106.525],[29.530,106.545],[29.540,106.562],[29.5475,106.575],[29.5515,106.585],[29.557,106.592],[29.5645,106.594],[29.578,106.603],[29.590,106.625]],22,'#FF3D8B',.22);
+      g+='<text x="'+X(106.538)+'" y="'+Y(29.5705)+'" font-family="IBM Plex Mono,monospace" font-size="12" fill="#37E1FF" opacity=".8">嘉陵江 (Jialing)</text>';
+      g+='<text x="'+X(106.552)+'" y="'+Y(29.5305)+'" font-family="IBM Plex Mono,monospace" font-size="12" fill="#FF3D8B" opacity=".8">长江 (Jangtse)</text>';
+      g+='<text x="'+X(106.548)+'" y="'+Y(29.5585)+'" font-family="Barlow Condensed,sans-serif" font-size="15" letter-spacing="3" fill="#E7DCEB" opacity=".55">渝中 (YUZHONG)</text>';
+      g+='<text x="'+X(106.600)+'" y="'+Y(29.5390)+'" font-family="Barlow Condensed,sans-serif" font-size="15" letter-spacing="3" fill="#E7DCEB" opacity=".55">南岸 (SÜDUFER)</text>';
+      g+='<path d="M'+X(106.5842)+' '+Y(29.5566)+' Q'+X(106.588)+' '+Y(29.551)+' '+X(106.5888)+' '+Y(29.5492)+'" fill="none" stroke="#FFA640" stroke-width="2.5" stroke-dasharray="6 4"/>';
+      g+='<text x="'+(X(106.5875)+8)+'" y="'+Y(29.5530)+'" font-family="IBM Plex Mono,monospace" font-size="11" fill="#FFA640">Seilbahn</text>';
+      g+='<path d="M'+X(106.522)+' '+Y(29.5505)+' L'+X(106.545)+' '+Y(29.5545)+' L'+X(106.565)+' '+Y(29.5555)+'" fill="none" stroke="#37E1FF" stroke-opacity=".5" stroke-width="2" stroke-dasharray="2 5"/>';
+      g+='<text x="'+X(106.522)+'" y="'+(Y(29.5505)+18)+'" font-family="IBM Plex Mono,monospace" font-size="11" fill="#37E1FF" opacity=".7">Monorail Linie 2</text>';
+      g+='<text x="10" y="515" font-family="IBM Plex Mono,monospace" font-size="11" fill="#8A7A9A">SCHEMATISCH · UNGEFÄHRE KOORDINATEN · N ↑</text>';
+      return g; }});
+
+
+  function sea(X,Y,pts,col,op){ return '<path d="'+pts.map(function(p,i){return (i?'L':'M')+X(p[1]).toFixed(1)+' '+Y(p[0]).toFixed(1);}).join(' ')+' Z" fill="'+col+'" fill-opacity="'+op+'"/>'; }
+  // Lijiang
+  makeMap({svg:'lj-map',info:'lj-map-info',filter:'#lj-mapf',off:'#lj-off',pts:[{"c": "trek", "k": "T1", "n": "Einstieg · Naxi Family Guesthouse", "w": "unterhalb, weiter drinnen als 桥头 (Qiaotou)", "t": "Bus hält hier", "lat": 27.168, "lon": 100.034, "u": "https://uri.amap.com/search?keyword=%E7%BA%B3%E8%A5%BF%E9%9B%85%E9%98%81%20%E8%99%8E%E8%B7%B3%E5%B3%A1&city=530700&callnative=0"}, {"c": "trek", "k": "T2", "n": "28 Kehren · 2.670 m", "w": "höchster Punkt", "t": "1,5 h Steigung", "lat": 27.186, "lon": 100.054, "u": "https://uri.amap.com/search?keyword=%E8%99%8E%E8%B7%B3%E5%B3%A128%E9%81%93%E6%8B%90&city=530700&callnative=0"}, {"c": "trek", "k": "T3", "n": "中途客栈 (Halfway Guesthouse)", "w": "Nacht 23.11.", "t": "kein Zimmer im obersten Stock", "lat": 27.205, "lon": 100.092, "u": "https://uri.amap.com/search?keyword=%E4%B8%AD%E9%80%94%E5%AE%A2%E6%A0%88%20%E8%99%8E%E8%B7%B3%E5%B3%A1&city=530700&callnative=0"}, {"c": "trek", "k": "T4", "n": "Tina's", "w": "Ende der Hochroute", "t": "Rückfahrt 16:30", "lat": 27.199, "lon": 100.116, "u": "https://uri.amap.com/search?keyword=%E8%99%8E%E8%B7%B3%E5%B3%A1%20Tina%27s&city=530700&callnative=0"}, {"c": "ort", "k": "O1", "n": "束河 (Shuhe)", "w": "Naxi-Höfe, Qinglong-Brücke", "t": "der Architekturpunkt", "lat": 26.925, "lon": 100.207, "u": "https://uri.amap.com/search?keyword=%E6%9D%9F%E6%B2%B3%E5%8F%A4%E9%95%87&city=530700&callnative=0"}, {"c": "ort", "k": "O2", "n": "白沙 (Baisha)", "w": "Wandmalereien im Dabaoji-Palast", "t": "für die Malereien hin", "lat": 26.955, "lon": 100.212, "u": "https://uri.amap.com/search?keyword=%E7%99%BD%E6%B2%99%E5%A3%81%E7%94%BB&city=530700&callnative=0"}, {"c": "ort", "k": "O3", "n": "玉湖村 (Dorf am Jadesee)", "w": "Steindorf, Joseph Rock", "t": "Amap statt Google", "lat": 26.99, "lon": 100.203, "u": "https://uri.amap.com/search?keyword=%E7%8E%89%E6%B9%96%E6%9D%91&city=530700&callnative=0"}, {"c": "food", "k": "E1", "n": "钰洁腊排骨 (Yujie Pökelrippen)", "w": "象山市场 (Markt am Elefantenberg), Neustadt", "t": "1 Topf ≈ 60 ¥", "lat": 26.89, "lon": 100.239, "u": "https://uri.amap.com/search?keyword=%E9%92%B0%E6%B4%81%E8%85%8A%E6%8E%92%E9%AA%A8%20%E8%B1%A1%E5%B1%B1%E5%B8%82%E5%9C%BA&city=530700&callnative=0"}, {"c": "food", "k": "E2", "n": "忠义市场 (Zhongyi-Markt)", "w": "Altstadt", "t": "Tag- und Nachtmarkt", "lat": 26.8685, "lon": 100.2365, "u": "https://uri.amap.com/search?keyword=%E5%BF%A0%E4%B9%89%E5%B8%82%E5%9C%BA&city=530700&callnative=0"}, {"c": "base", "k": "H1", "n": "InterContinental Ancient Town", "w": "Südwestecke der Altstadt", "t": "Nacht 22.11. (oder Amandayan)", "lat": 26.8672, "lon": 100.2285, "u": "https://uri.amap.com/search?keyword=%E4%B8%BD%E6%B1%9F%E5%8F%A4%E5%9F%8E%E6%B4%B2%E9%99%85%E9%85%92%E5%BA%97&city=530700&callnative=0"}, {"c": "base", "k": "H2", "n": "Amandayan", "w": "auf dem Löwenhügel", "t": "Nacht 24.11.", "lat": 26.8705, "lon": 100.232, "u": "https://uri.amap.com/search?keyword=%E4%B8%BD%E6%B1%9F%E5%AE%89%E7%BC%A6%E5%A4%A7%E7%A0%94&city=530700&callnative=0"}, {"c": "base", "k": "BUS", "n": "丽江客运站 (Busbahnhof)", "w": "Kangzhong Lu 25", "t": "Bus 08:30 / 09:00 / 09:30", "lat": 26.8598, "lon": 100.2305, "u": "https://uri.amap.com/search?keyword=%E4%B8%BD%E6%B1%9F%E5%AE%A2%E8%BF%90%E7%AB%99&city=530700&callnative=0"}, {"c": "base", "k": "▲", "n": "扇子陡 (Fächer-Steilwand)", "w": "玉龙雪山 (Jadedrachen-Schneeberg)", "t": "5.596 m", "lat": 27.1, "lon": 100.185, "u": "https://uri.amap.com/search?keyword=%E7%8E%89%E9%BE%99%E9%9B%AA%E5%B1%B1&city=530700&callnative=0"}],
+    L0:100.00,A0:27.235,K:2860,KY:3200,r:17,font:'Alegreya,Georgia,serif',stroke:'#1F2A3A',txt:'#1F2A3A',lead:'#1E4E8C',txtc:{trek:'#fff',food:'#fff',base:'#fff'},
+    col:{trek:'#E07A2E',ort:'#F2D7B0',food:'#B5412B',base:'#1E4E8C'},
+    cat:{trek:'Trek',ort:'Freier Tag',food:'Essen',base:'Orientierung'},
+    bg:function(X,Y){ var g='<rect width="800" height="1230" fill="#F6F9FC"/>';
+      g+='<path d="M'+X(100.13)+' '+Y(27.15)+' L'+X(100.19)+' '+Y(27.10)+' L'+X(100.24)+' '+Y(27.06)+' L'+X(100.22)+' '+Y(27.02)+' L'+X(100.16)+' '+Y(27.00)+' L'+X(100.12)+' '+Y(27.06)+' Z" fill="#DCE8F3" stroke="#9DB8D6"/>';
+      g+='<text x="'+X(100.215)+'" y="'+Y(27.075)+'" font-family="Almendra,Georgia,serif" font-size="16" fill="#51607A">玉龙雪山 (Jadedrachen)</text>';
+      g+=riv(X,Y,[[27.10,100.00],[27.140,100.012],[27.165,100.028],[27.182,100.068],[27.192,100.098],[27.196,100.125],[27.215,100.160],[27.235,100.190]],10,'#69B7E6',.8);
+      g+='<text x="'+X(100.14)+'" y="'+Y(27.222)+'" font-family="Alegreya,serif" font-style="italic" font-size="14" fill="#1E4E8C">金沙江 (Jinsha) · 虎跳峡 (Tigersprungschlucht)</text>';
+      g+='<path d="M'+X(100.034)+' '+Y(27.168)+' L'+X(100.054)+' '+Y(27.186)+' L'+X(100.092)+' '+Y(27.205)+' L'+X(100.116)+' '+Y(27.199)+'" fill="none" stroke="#E07A2E" stroke-width="4" stroke-dasharray="2 7" stroke-linecap="round"/>';
+      g+='<path d="M'+X(100.230)+' '+Y(26.860)+' C'+X(100.20)+' '+Y(26.95)+' '+X(100.10)+' '+Y(27.02)+' '+X(100.034)+' '+Y(27.168)+'" fill="none" stroke="#51607A" stroke-width="2" stroke-dasharray="7 6"/>';
+      g+='<text x="'+X(100.10)+'" y="'+Y(26.99)+'" font-family="Alegreya,serif" font-style="italic" font-size="14" fill="#51607A">Bus / Shuttle ca. 2–2,5 h</text>';
+      g+='<circle cx="'+X(100.234)+'" cy="'+Y(26.8705)+'" r="46" fill="#F2D7B0" fill-opacity=".35" stroke="#8A4B2A" stroke-dasharray="4 4"/>';
+      g+='<text x="'+(X(100.234)-52)+'" y="'+(Y(26.8705)+4)+'" text-anchor="end" font-family="Almendra,Georgia,serif" font-size="16" fill="#8A4B2A">大研 (Dayan, Altstadt)</text>';
+      g+='<text x="14" y="1216" font-family="Alegreya,serif" font-size="13" fill="#51607A">Schematisch nach ungefähren Koordinaten · N ↑</text>';
+      return g; }});
+  // Shenzhen
+  makeMap({svg:'sz-map',info:'sz-map-info',filter:'#sz-mapf',off:'#sz-off',pts:[{"c": "fair", "k": "M", "n": "深圳国际会展中心 (Shenzhen World)", "w": "福海 (Fuhai), 宝安 (Bao'an)", "t": "CHTF 26.–28.11.", "lat": 22.704, "lon": 113.772, "u": "https://uri.amap.com/search?keyword=%E6%B7%B1%E5%9C%B3%E5%9B%BD%E9%99%85%E4%BC%9A%E5%B1%95%E4%B8%AD%E5%BF%83&city=440300&callnative=0"}, {"c": "fair", "k": "HA", "n": "Hilton Shenzhen World", "w": "per Brücke zur Halle", "t": "Option A", "lat": 22.7075, "lon": 113.7745, "u": "https://uri.amap.com/search?keyword=%E6%B7%B1%E5%9C%B3%E5%9B%BD%E9%99%85%E4%BC%9A%E5%B1%95%E4%B8%AD%E5%BF%83%E5%B8%8C%E5%B0%94%E9%A1%BF%E9%85%92%E5%BA%97&city=440300&callnative=0"}, {"c": "fair", "k": "HB", "n": "Crowne Plaza WECC", "w": "530 m zum Gelände", "t": "Option B", "lat": 22.7005, "lon": 113.7765, "u": "https://uri.amap.com/search?keyword=%E6%B7%B1%E5%9C%B3%E5%9B%BD%E9%99%85%E4%BC%9A%E5%B1%95%E4%B8%AD%E5%BF%83%E7%9A%87%E5%86%A0%E5%81%87%E6%97%A5%E9%85%92%E5%BA%97&city=440300&callnative=0"}, {"c": "city", "k": "NT", "n": "南头古城 (Alte Stadt Nantou)", "w": "Nanshan · Hotel 27.11.", "t": "URBANUS", "lat": 22.543, "lon": 113.923, "u": "https://uri.amap.com/search?keyword=%E5%8D%97%E5%A4%B4%E5%8F%A4%E5%9F%8E&city=440300&callnative=0"}, {"c": "city", "k": "HQB", "n": "华强北 (Huaqiangbei)", "w": "Futian", "t": "Sa vormittags", "lat": 22.5445, "lon": 114.085, "u": "https://uri.amap.com/search?keyword=%E5%8D%8E%E5%BC%BA%E5%8C%97&city=440300&callnative=0"}, {"c": "city", "k": "SW", "n": "海上世界文化艺术中心 (Sea World)", "w": "蛇口 (Shekou)", "t": "Fumihiko Maki", "lat": 22.4835, "lon": 113.915, "u": "https://uri.amap.com/search?keyword=%E6%B5%B7%E4%B8%8A%E4%B8%96%E7%95%8C%E6%96%87%E5%8C%96%E8%89%BA%E6%9C%AF%E4%B8%AD%E5%BF%83&city=440300&callnative=0"}, {"c": "night", "k": "OCT", "n": "OCT-Loft · B10 Live", "w": "华侨城 (OCT)", "t": "Livemusik", "lat": 22.541, "lon": 113.99, "u": "https://uri.amap.com/search?keyword=%E5%8D%8E%E4%BE%A8%E5%9F%8E%E5%88%9B%E6%84%8F%E6%96%87%E5%8C%96%E5%9B%AD&city=440300&callnative=0"}, {"c": "night", "k": "LED", "n": "人才公园 (Talent Park)", "w": "后海 (Houhai)", "t": "LED-Show Fr/Sa ab 20:00", "lat": 22.513, "lon": 113.948, "u": "https://uri.amap.com/search?keyword=%E6%B7%B1%E5%9C%B3%E4%BA%BA%E6%89%8D%E5%85%AC%E5%9B%AD&city=440300&callnative=0"}, {"c": "night", "k": "FT", "n": "OIL Club · Coco Park", "w": "福田 (Futian)", "t": "Techno & House", "lat": 22.533, "lon": 114.059, "u": "https://uri.amap.com/search?keyword=COCO%20Park%20%E7%A6%8F%E7%94%B0&city=440300&callnative=0"}, {"c": "night", "k": "SK", "n": "Shekou · TAPS · Brown Sugar Jar", "w": "蛇口 (Shekou)", "t": "ruhiger", "lat": 22.488, "lon": 113.912, "u": "https://uri.amap.com/search?keyword=%E8%9B%87%E5%8F%A3%20%E6%B5%B7%E4%B8%8A%E4%B8%96%E7%95%8C&city=440300&callnative=0"}, {"c": "base", "k": "SZX", "n": "Flughafen Bao'an", "w": "7 km zur Messe", "t": "an Do 00:20", "lat": 22.639, "lon": 113.811, "u": "https://uri.amap.com/search?keyword=%E6%B7%B1%E5%9C%B3%E5%AE%9D%E5%AE%89%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA&city=440300&callnative=0"}, {"c": "base", "k": "FTS", "n": "福田站 (Futian, Bahnhof)", "w": "Zug nach Guangzhou", "t": "Sa mittags", "lat": 22.539, "lon": 114.055, "u": "https://uri.amap.com/search?keyword=%E7%A6%8F%E7%94%B0%E7%AB%99&city=440300&callnative=0"}, {"c": "base", "k": "NS", "n": "深圳北 (Shenzhen Nord)", "w": "Alternative", "t": "Zug nach Guangzhou", "lat": 22.609, "lon": 114.029, "u": "https://uri.amap.com/search?keyword=%E6%B7%B1%E5%9C%B3%E5%8C%97%E7%AB%99&city=440300&callnative=0"}],
+    L0:113.75,A0:22.735,K:2286,KY:2470,r:19,font:'Sora,Arial,sans-serif',stroke:'#FFFFFF',txt:'#FFFFFF',lead:'#2F6BFF',txtc:{base:'#0E1B33'},
+    col:{fair:'#2F6BFF',city:'#2ED8A8',night:'#7C6CFF',base:'#DCE5F0'},
+    cat:{fair:'Messe',city:'Stadt',night:'Nacht',base:'Orientierung'},
+    bg:function(X,Y){ var g='<rect width="800" height="660" fill="#F5F8FC"/>';
+      g+=sea(X,Y,[[22.74,113.75],[22.74,113.760],[22.72,113.768],[22.66,113.793],[22.60,113.832],[22.55,113.876],[22.49,113.898],[22.45,113.905],[22.45,113.75]],'#BFE3F5',.9);
+      g+=sea(X,Y,[[22.49,113.918],[22.503,113.950],[22.514,113.975],[22.512,114.005],[22.45,114.005],[22.45,113.918]],'#BFE3F5',.9);
+      g+='<text x="'+X(113.77)+'" y="'+Y(22.55)+'" font-family="Sora,sans-serif" font-size="13" fill="#56657F">珠江口 (Perlflussmündung)</text>';
+      g+='<text x="'+X(113.94)+'" y="'+Y(22.478)+'" font-family="Sora,sans-serif" font-size="12" fill="#56657F">深圳湾 (Shenzhen Bay)</text>';
+      g+='<path d="M'+X(113.923)+' '+Y(22.543)+' C'+X(113.90)+' '+Y(22.60)+' '+X(113.82)+' '+Y(22.66)+' '+X(113.772)+' '+Y(22.704)+'" fill="none" stroke="#2F6BFF" stroke-width="3" stroke-dasharray="8 6" opacity=".6"/>';
+      g+='<text x="'+X(113.855)+'" y="'+Y(22.64)+'" font-family="JetBrains Mono,monospace" font-size="12" fill="#2F6BFF">Metro 12 · Nanshan → Messe</text>';
+      g+='<text x="14" y="648" font-family="JetBrains Mono,monospace" font-size="11" fill="#56657F">SCHEMATISCH · UNGEFÄHRE KOORDINATEN · N ↑</text>';
+      return g; }});
+  // Guangzhou
+  makeMap({svg:'gz-map',info:'gz-map-info',filter:'#gz-mapf',off:'#gz-off',pts:[{"c": "food", "k": "陶", "n": "陶陶居 (Taotaoju)", "w": "上下九 (Shangxiajiu), Stammhaus", "t": "So ab 10 Uhr", "lat": 23.1192, "lon": 113.2536, "u": "https://uri.amap.com/search?keyword=%E9%99%B6%E9%99%B6%E5%B1%85%20%E7%AC%AC%E5%8D%81%E7%94%AB%E8%B7%AF&city=440100&callnative=0"}, {"c": "food", "k": "泮", "n": "泮溪酒家 (Panxi-Restaurant)", "w": "荔枝湾 (Lizhiwan)", "t": "vor 9 Uhr", "lat": 23.1262, "lon": 113.2432, "u": "https://uri.amap.com/search?keyword=%E6%B3%AE%E6%BA%AA%E9%85%92%E5%AE%B6&city=440100&callnative=0"}, {"c": "food", "k": "刘", "n": "恩宁刘福记 (Liu Fuji)", "w": "恩宁路 (Enning Lu)", "t": "Bib Gourmand", "lat": 23.1212, "lon": 113.2482, "u": "https://uri.amap.com/search?keyword=%E6%81%A9%E5%AE%81%E5%88%98%E7%A6%8F%E8%AE%B0&city=440100&callnative=0"}, {"c": "food", "k": "银", "n": "银记肠粉 (Yinji)", "w": "altes Stammhaus", "t": "Bib Gourmand", "lat": 23.1178, "lon": 113.2575, "u": "https://uri.amap.com/search?keyword=%E9%93%B6%E8%AE%B0%E8%82%A0%E7%B2%89%20%E4%B8%8A%E4%B9%9D%E8%B7%AF&city=440100&callnative=0"}, {"c": "food", "k": "集", "n": "永庆食集 (Yongqing-Esshalle)", "w": "永庆坊 (Yongqingfang)", "t": "So mittags", "lat": 23.1232, "lon": 113.2462, "u": "https://uri.amap.com/search?keyword=%E6%B0%B8%E5%BA%86%E5%9D%8A&city=440100&callnative=0"}, {"c": "food", "k": "東", "n": "东湖酒楼 (Donghu-Restaurant)", "w": "Yongqingfang", "t": "Trüffel-Knuspergans", "lat": 23.124, "lon": 113.2475, "u": "https://uri.amap.com/search?keyword=%E4%B8%9C%E6%B9%96%E9%85%92%E6%A5%BC%20%E6%B0%B8%E5%BA%86%E5%9D%8A&city=440100&callnative=0"}, {"c": "food", "k": "陈", "n": "陈添记 (Chen Tianji)", "w": "宝华路 (Baohua Lu)", "t": "Fischhaut, nachts", "lat": 23.1218, "lon": 113.2515, "u": "https://uri.amap.com/search?keyword=%E9%99%88%E6%B7%BB%E8%AE%B0%20%E5%AE%9D%E5%8D%8E%E8%B7%AF&city=440100&callnative=0"}, {"c": "arch", "k": "坊", "n": "永庆坊 (Yongqingfang)", "w": "恩宁路 (Enning Lu)", "t": "Qilou-Erneuerung", "lat": 23.1226, "lon": 113.2455, "u": "https://uri.amap.com/search?keyword=%E6%B0%B8%E5%BA%86%E5%9D%8A&city=440100&callnative=0"}, {"c": "arch", "k": "九", "n": "上下九 (Shangxiajiu)", "w": "Arkadenstraße", "t": "seit Ming/Qing", "lat": 23.117, "lon": 113.256, "u": "https://uri.amap.com/search?keyword=%E4%B8%8A%E4%B8%8B%E4%B9%9D%E6%AD%A5%E8%A1%8C%E8%A1%97&city=440100&callnative=0"}, {"c": "arch", "k": "沙", "n": "沙面 (Shamian)", "w": "Kolonialinsel", "t": "Kanton-System", "lat": 23.1075, "lon": 113.2445, "u": "https://uri.amap.com/search?keyword=%E6%B2%99%E9%9D%A2&city=440100&callnative=0"}, {"c": "mode", "k": "逵", "n": "逵园 (Kuiyuan)", "w": "东山口 (Dongshankou)", "t": "Kunsthaus 1922", "lat": 23.1268, "lon": 113.2958, "u": "https://uri.amap.com/search?keyword=%E9%80%B5%E5%9B%AD%E8%89%BA%E6%9C%AF%E9%A6%86&city=440100&callnative=0"}, {"c": "mode", "k": "山", "n": "庙前西街 (Miaoqian Xijie)", "w": "东山口 (Dongshankou)", "t": "Läden & Cafés", "lat": 23.1258, "lon": 113.294, "u": "https://uri.amap.com/search?keyword=%E5%BA%99%E5%89%8D%E8%A5%BF%E8%A1%97&city=440100&callnative=0"}, {"c": "base", "k": "鵝", "n": "白天鹅宾馆 (White Swan)", "w": "Shamian · unser Hotel", "t": "Jade River ★", "lat": 23.1062, "lon": 113.2462, "u": "https://uri.amap.com/search?keyword=%E7%99%BD%E5%A4%A9%E9%B9%85%E5%AE%BE%E9%A6%86&city=440100&callnative=0"}, {"c": "base", "k": "黄", "n": "黄沙 (Huangsha, Ausgang B)", "w": "Metro", "t": "Startpunkt zu Fuß", "lat": 23.1108, "lon": 113.2472, "u": "https://uri.amap.com/search?keyword=%E9%BB%84%E6%B2%99%E5%9C%B0%E9%93%81%E7%AB%99&city=440100&callnative=0"}],
+    L0:113.236,A0:23.132,K:12000,KY:13080,r:18,font:'Noto Serif TC,serif',stroke:'#1A0C0A',txt:'#F0D48A',lead:'#9B1B1E',txtc:{mode:'#1A0C0A',base:'#1A0C0A'},
+    col:{food:'#9B1B1E',arch:'#1A0C0A',mode:'#F0D48A',base:'#EADCC0'},
+    cat:{food:'Dim Sum & Essen',arch:'Arkaden & Shamian',mode:'Dongshankou',base:'Orientierung'},
+    bg:function(X,Y){ var g='<rect width="840" height="400" fill="#FBF5E6"/>';
+      g+=riv(X,Y,[[23.101,113.236],[23.1035,113.245],[23.1075,113.258],[23.110,113.270],[23.1125,113.283],[23.112,113.296],[23.110,113.306]],26,'#C9A04A',.35);
+      g+='<text x="'+X(113.262)+'" y="'+Y(23.1025)+'" font-family="Playfair Display,serif" font-style="italic" font-size="14" fill="#6A5140">珠江 (Perlfluss)</text>';
+      g+='<rect x="'+X(113.2405)+'" y="'+Y(23.1100)+'" width="'+(X(113.2505)-X(113.2405))+'" height="'+(Y(23.1045)-Y(23.1100))+'" rx="14" fill="#EADCC0" stroke="#9B1B1E" stroke-dasharray="4 3"/>';
+      g+='<text x="'+(X(113.2505)+8)+'" y="'+(Y(23.1045)-6)+'" font-family="Cormorant SC,serif" font-size="14" fill="#9B1B1E">沙面 (Shamian)</text>';
+      g+='<ellipse cx="'+X(113.250)+'" cy="'+Y(23.1205)+'" rx="120" ry="70" fill="#9B1B1E" fill-opacity=".05" stroke="#C9A04A" stroke-dasharray="5 4"/>';
+      g+='<text x="'+(X(113.250)-20)+'" y="'+(Y(23.1205)-76)+'" font-family="Cormorant SC,serif" font-size="15" fill="#9B1B1E">荔湾 (Liwan) · alles zu Fuß</text>';
+      g+='<text x="'+(X(113.2945)-40)+'" y="'+(Y(23.1263)-34)+'" font-family="Cormorant SC,serif" font-size="15" fill="#9B1B1E">东山口 (Dongshankou)</text>';
+      g+='<text x="14" y="390" font-family="Cormorant SC,serif" font-size="13" fill="#6A5140">Schematisch nach ungefähren Koordinaten · N ↑</text>';
+      return g; }});
+  // Hongkong
+  makeMap({svg:'hk-map',info:'hk-map-info',filter:'#hk-mapf',off:'#hk-off',pts:[{"c": "scene", "k": "1", "n": "M+", "w": "West Kowloon", "t": "Szene 1 · 30.11.", "lat": 22.3015, "lon": 114.1595, "u": "https://www.google.com/maps/search/M%2B%20Museum%20Hong%20Kong"}, {"c": "scene", "k": "2", "n": "Sham Shui Po · 大南街 (Tai Nan St) · 鴨寮街 (Apliu St)", "w": "Kowloon", "t": "Szene 2 · 01.12. vormittags", "lat": 22.33, "lon": 114.1605, "u": "https://www.google.com/maps/search/Apliu%20Street%20Sham%20Shui%20Po"}, {"c": "scene", "k": "3", "n": "大館 (Tai Kwun)", "w": "Central", "t": "Szene 3 · 01.12. nachmittags", "lat": 22.2812, "lon": 114.154, "u": "https://www.google.com/maps/search/Tai%20Kwun%20Hong%20Kong"}, {"c": "scene", "k": "4", "n": "元創方 (PMQ)", "w": "Central · Soho", "t": "Szene 4", "lat": 22.2835, "lon": 114.1508, "u": "https://www.google.com/maps/search/PMQ%20Hong%20Kong"}, {"c": "scene", "k": "5", "n": "藍屋 (Blue House)", "w": "灣仔 (Wan Chai)", "t": "Szene 5 · mittwochs zu", "lat": 22.274, "lon": 114.173, "u": "https://www.google.com/maps/search/Blue%20House%20Wan%20Chai"}, {"c": "scene", "k": "6", "n": "益昌大廈 (Monster Building)", "w": "鰂魚涌 (Quarry Bay)", "t": "Szene 6", "lat": 22.2845, "lon": 114.2125, "u": "https://www.google.com/maps/search/Yick%20Cheong%20Building%20Quarry%20Bay"}, {"c": "hotel", "k": "P", "n": "The Pottinger", "w": "Central", "t": "ab 253 $", "lat": 22.2832, "lon": 114.1553, "u": "https://www.google.com/maps/search/The%20Pottinger%20Hong%20Kong"}, {"c": "hotel", "k": "M", "n": "The Murray", "w": "Central", "t": "ab 390 $", "lat": 22.2778, "lon": 114.1605, "u": "https://www.google.com/maps/search/The%20Murray%20Hong%20Kong"}, {"c": "hotel", "k": "E", "n": "Eaton HK", "w": "佐敦 (Jordan)", "t": "Wong-Kar-wai-Welt", "lat": 22.3055, "lon": 114.1712, "u": "https://www.google.com/maps/search/Eaton%20HK%20Jordan"}, {"c": "hotel", "k": "F", "n": "The Fleming", "w": "灣仔 (Wan Chai)", "t": "neben dem Blue House", "lat": 22.2792, "lon": 114.1745, "u": "https://www.google.com/maps/search/The%20Fleming%20Hong%20Kong"}, {"c": "base", "k": "W", "n": "香港西九龍 (West Kowloon)", "w": "Ankunft 30.11.", "t": "Zug aus Guangzhou", "lat": 22.304, "lon": 114.1655, "u": "https://www.google.com/maps/search/Hong%20Kong%20West%20Kowloon%20Station"}, {"c": "base", "k": "CK", "n": "重慶大廈 (Chungking Mansions)", "w": "尖沙咀 (Tsim Sha Tsui)", "t": "Chungking Express", "lat": 22.2963, "lon": 114.1722, "u": "https://www.google.com/maps/search/Chungking%20Mansions"}, {"c": "base", "k": "SF", "n": "天星小輪 (Star Ferry)", "w": "TST ↔ Central", "t": "", "lat": 22.2937, "lon": 114.1685, "u": "https://www.google.com/maps/search/Star%20Ferry%20Tsim%20Sha%20Tsui"}],
+    L0:114.145,A0:22.335,K:11200,KY:12100,r:18,font:'Bodoni Moda,Didot,serif',stroke:'#0A0605',txt:'#0A0605',lead:'#E0A546',glow:false,txtc:{scene:'#E9DCC0',hotel:'#0A0605'},
+    col:{scene:'#8C1419',hotel:'#E0A546',base:'#6FA08E'},
+    cat:{scene:'Szene',hotel:'Zimmer (Hotel)',base:'Orientierung'},
+    bg:function(X,Y){ var g='<rect width="840" height="790" fill="#12241E"/>';
+      g+=sea(X,Y,[[22.300,114.145],[22.298,114.158],[22.2935,114.170],[22.2955,114.185],[22.302,114.195],[22.297,114.210],[22.293,114.220],[22.286,114.220],[22.2872,114.205],[22.2828,114.190],[22.2808,114.175],[22.2872,114.160],[22.2902,114.150],[22.2922,114.145]],'#0A0605',.85);
+      g+='<text x="'+X(114.178)+'" y="'+Y(22.2885)+'" font-family="Bodoni Moda,serif" font-style="italic" font-size="15" fill="#E0A546" opacity=".8">維多利亞港 (Victoria Harbour)</text>';
+      g+='<text x="'+X(114.190)+'" y="'+Y(22.325)+'" font-family="Cormorant Garamond,serif" font-size="16" letter-spacing="3" fill="#E9DCC0" opacity=".6">九龍 (KOWLOON)</text>';
+      g+='<text x="'+X(114.180)+'" y="'+Y(22.274)+'" font-family="Cormorant Garamond,serif" font-size="16" letter-spacing="3" fill="#E9DCC0" opacity=".6">香港島 (HONGKONG ISLAND)</text>';
+      g+='<line x1="'+X(114.1685)+'" y1="'+Y(22.2937)+'" x2="'+X(114.1610)+'" y2="'+Y(22.2870)+'" stroke="#E0A546" stroke-width="2" stroke-dasharray="4 4"/>';
+      g+='<text x="14" y="778" font-family="Cormorant Garamond,serif" font-size="14" fill="#E9DCC0" opacity=".7">Schematisch nach ungefähren Koordinaten · N ↑</text>';
+      return g; }});
+
   // ---------- Routing ----------
   var PAGES={'':['home','','China 2026 · CHTF'],'xian':['xian','xf','Xi\'an · China 2026'],'chengdu':['chengdu','cd','Chengdu · China 2026'],'shenzhen':['shenzhen','sc','Shenzhen · China 2026'],'shenzhen-a':['shenzhena','sz','Shenzhen (frühere Fassung) · China 2026'],'hongkong':['hongkong','hk','Hongkong · China 2026'],'chongqing-a':['chongqing','gs','Chongqing A · China 2026'],'lijiang':['lijiang','lm','Lijiang · China 2026'],'lijiang-a':['lijianga','lj','Lijiang (frühere Fassung) · China 2026'],'guangzhou':['guangzhou','hn','Guangzhou · China 2026'],'guangzhou-a':['guangzhoua','gz','Guangzhou (frühere Fassung) · China 2026'],'chongqing':['chongqingb','br','Chongqing · China 2026'],'chongqing-b':['chongqingb','br','Chongqing · China 2026']};
   function route(){
@@ -3771,6 +4213,10 @@ body.hn{background:#F4EBD8;color:#2A1A12}
     if(pg[0]==='shenzhena') requestAnimationFrame(drawAllGlitch);
     if(pg[0]==='chongqing') requestAnimationFrame(window.gsStart); else if(window.gsStop) window.gsStop();
     if(pg[0]==='chongqingb') requestAnimationFrame(window.brStart); else if(window.brStop) window.brStop();
+    if(pg[0]==='home'){ var mf=document.querySelector('.bw-map .frame.paper'); if(mf) requestAnimationFrame(function(){ mf.scrollLeft=Math.max(0,(mf.scrollWidth-mf.clientWidth)*.55); }); }
+    if(pg[0]==='chongqingb'){ var qw=document.querySelector('.gmap.cq .gm-wrap'); if(qw) requestAnimationFrame(function(){ qw.scrollLeft=Math.max(0,(qw.scrollWidth-qw.clientWidth)*.6); }); }
+    [['guangzhou','.gmap.gzc .gm-wrap',.2],['hongkong','.gmap.hkc .gm-wrap',.3],['shenzhen','.gmap.szc .gm-wrap',.5]].forEach(function(q){ if(pg[0]===q[0]){ var w=document.querySelector(q[1]); if(w) requestAnimationFrame(function(){ w.scrollLeft=Math.max(0,(w.scrollWidth-w.clientWidth)*q[2]); }); } });
+    if(pg[0]==='chengdu'){ var cw=document.querySelector('.cm-wrap'); if(cw) requestAnimationFrame(function(){ cw.scrollLeft=Math.max(0,(cw.scrollWidth-cw.clientWidth)*.5); }); }
     if(pg[0]==='shenzhen') requestAnimationFrame(window.scStart); else if(window.scStop) window.scStop();
   }
   window.addEventListener('hashchange',route); route();
