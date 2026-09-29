@@ -114,6 +114,10 @@ a{color:inherit}
 .stay-bar .sb-row b i{font-style:normal;font-weight:400;opacity:.78;font-size:.86em}
 .stay-bar .sb-row .w{font-size:13.5px;opacity:.78}
 .stay-bar .sb-a{margin-left:auto;display:flex;gap:14px;flex-wrap:wrap}
+.sb-st{display:inline-block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;border-radius:999px;padding:2px 9px;margin-left:10px;vertical-align:2px;white-space:nowrap;border:1px solid currentColor}
+.sb-st.ok{background:currentColor}
+.sb-st.ok b{color:#fff;font-weight:600}
+.stay-bar .sb-row .pr{font-size:12.5px;opacity:.65;letter-spacing:.02em}
 .stay-bar .sb-a a,.stay-bar .sb-a button{all:unset;cursor:pointer;font-size:13px;letter-spacing:.04em;border-bottom:1px solid currentColor;padding-bottom:1px}
 .stay-bar .sb-a a:focus-visible,.stay-bar .sb-a button:focus-visible{outline:2px solid currentColor;outline-offset:3px}
 @media (max-width:640px){.stay-bar{padding:12px 14px}.stay-bar .sb-a{margin-left:0;width:100%;gap:12px}.stay-bar .sb-row em{min-width:0;width:100%}.stay-bar .sb-row b{font-size:16px}.lmp .stay-bar .sb-row b,.hnp .stay-bar .sb-row b,.hkp .stay-bar .sb-row b{font-size:17px}.brp .stay-bar .sb-row b{font-size:19px}.stay-bar .sb-row .w{font-size:13px}}
@@ -977,7 +981,8 @@ body.lm{background:#F6F9FC;color:#1F2A3A}
 .lm-bar button:hover{background:var(--cobalt);color:#fff}
 .lm-bar button:focus-visible{outline:2px solid var(--saff);outline-offset:2px}
 /* Hero */
-.lm-hero{position:relative;height:clamp(500px,78vh,760px);overflow:hidden;background:linear-gradient(180deg,var(--sky-top) 0%,var(--sky-bot) 75%)}
+.lm-hero{position:relative;height:clamp(440px,78vh,760px);overflow:hidden;background:linear-gradient(180deg,var(--sky-top) 0%,var(--sky-bot) 75%)}
+@media (max-width:760px){.lm-hero{height:clamp(380px,62vh,520px)}}
 .lm-hero svg.mtn{position:absolute;inset:0;width:100%;height:100%;display:block}
 .lm-hero .cloud{animation:lmdrift 70s linear infinite}
 .lm-hero .cloud.b{animation-duration:100s;animation-direction:reverse}
@@ -1392,6 +1397,18 @@ body.hn{background:#F4EBD8;color:#2A1A12}
 .cm-note{margin:10px 4px 0;font-size:13.5px;color:#EBD6B3}
 .zh-b{display:block;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif;font-weight:700;font-size:22px;line-height:1.2;color:#fff}
 
+
+.hk-eat{max-width:1180px;margin:0 auto;padding:6px 0 10px}
+.hk-eat-lede{font-family:"Cormorant Garamond",serif;font-size:19px;line-height:1.7;color:var(--cream);max-width:70ch;margin:0 0 26px}
+.hk-eat-h{font-family:"Bodoni Moda",Didot,serif;font-style:italic;font-weight:400;font-size:24px;color:var(--amber);margin:30px 0 6px}
+.hk-eat-h span{font-family:"Noto Serif TC",serif;font-style:normal;font-size:18px;opacity:.8}
+.hk-eat-sub{font-family:"Cormorant Garamond",serif;font-size:18px;line-height:1.7;color:var(--cream);margin:0 0 6px;max-width:80ch}
+.hk-eat-l{display:grid;grid-template-columns:minmax(220px,auto) 1fr;gap:6px 26px;margin:10px 0 0;font-family:"Cormorant Garamond",serif;font-size:18px}
+.hk-eat-l dt{color:var(--amber);border-top:1px solid rgba(224,165,70,.22);padding-top:9px}
+.hk-eat-l dt span{color:var(--cream);opacity:.75;font-size:.9em}
+.hk-eat-l dd{margin:0;color:var(--cream);border-top:1px solid rgba(224,165,70,.22);padding-top:9px;opacity:.9}
+@media (max-width:700px){.hk-eat-l{grid-template-columns:1fr;gap:2px}.hk-eat-l dd{border-top:0;padding-top:2px;margin-bottom:8px}}
+
 /* Generische Karten */
 .gm-filter{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
 .gm-filter button{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;font-size:14px;opacity:.45}
@@ -1548,18 +1565,18 @@ body.hn{background:#F4EBD8;color:#2A1A12}
             <circle cx="852" cy="126" r="13"/><circle cx="707" cy="420" r="14"/><circle cx="557" cy="398" r="20" fill="#8E1F18"/><circle cx="316" cy="612" r="14"/><circle cx="1235" cy="828" r="12"/><circle cx="1184" cy="812" r="10"/><circle cx="1256" cy="852" r="10"/>
           </g>
           <g font-family="Marcellus SC, Optima, serif" fill="#3B342D" letter-spacing="3">
-            <text x="880" y="118" font-size="30">XI'AN</text><text x="880" y="146" font-size="15" fill="#B3342B" letter-spacing="2">14.–16.11.</text>
-            <text x="735" y="430" font-size="30">CHONGQING</text><text x="735" y="458" font-size="15" fill="#B3342B" letter-spacing="2">16.–19.11.</text>
-            <text x="530" y="352" font-size="34" text-anchor="end">CHENGDU</text><text x="530" y="380" font-size="15" fill="#B3342B" letter-spacing="2" text-anchor="end">19.–22.11.</text>
-            <text x="290" y="668" font-size="30">LIJIANG</text><text x="290" y="694" font-size="15" fill="#4A4239" letter-spacing="2">&amp; TIGERSPRUNGSCHLUCHT</text><text x="290" y="718" font-size="15" fill="#B3342B" letter-spacing="2">22.–25.11.</text>
-            <text x="1170" y="770" font-size="26" text-anchor="end">GUANGZHOU</text><text x="1170" y="792" font-size="14" fill="#B3342B" letter-spacing="2" text-anchor="end">28.–30.11.</text>
-            <text x="1262" y="812" font-size="26">SHENZHEN</text><text x="1262" y="834" font-size="14" fill="#B3342B" letter-spacing="2">25.–28.11. · CHTF</text>
+            <text x="880" y="118" font-size="30">XI'AN</text><text x="880" y="146" font-size="15" fill="#B3342B" letter-spacing="2">14.–17.11.</text>
+            <text x="735" y="430" font-size="30">CHONGQING</text><text x="735" y="458" font-size="15" fill="#B3342B" letter-spacing="2">17.–20.11.</text>
+            <text x="530" y="352" font-size="34" text-anchor="end">CHENGDU</text><text x="530" y="380" font-size="15" fill="#B3342B" letter-spacing="2" text-anchor="end">20.–24.11.</text>
+            <text x="290" y="668" font-size="30">LIJIANG</text><text x="290" y="694" font-size="15" fill="#4A4239" letter-spacing="2">&amp; TIGERSPRUNGSCHLUCHT</text><text x="290" y="718" font-size="15" fill="#B3342B" letter-spacing="2">24.–27.11.</text>
+            <text x="1170" y="770" font-size="26" text-anchor="end">GUANGZHOU</text><text x="1170" y="792" font-size="14" fill="#B3342B" letter-spacing="2" text-anchor="end">29.–30.11.</text>
+            <text x="1262" y="812" font-size="26">SHENZHEN</text><text x="1262" y="834" font-size="14" fill="#B3342B" letter-spacing="2">27.–29.11. · CHTF 28.11.</text>
             <text x="1276" y="872" font-size="22">HONGKONG</text><text x="1276" y="892" font-size="14" fill="#B3342B" letter-spacing="2">30.11.–02.12.</text>
           </g>
           <g font-family="Libre Caslon Text, Georgia, serif" font-style="italic" font-size="17" fill="#5A5047">
             <text x="770" y="250" transform="rotate(-60 770 250)">Zug, 5 h 32</text>
             <text x="590" y="440">Zug, 1 h</text>
-            <text x="330" y="470">Flug, 1 h 20</text>
+            <text x="330" y="470">Flug, 1 h 25</text>
             <text x="720" y="640" transform="rotate(14 720 640)">Nachtflug, 2 h 25</text>
           </g>
           <g font-family="Ma Shan Zheng, serif" fill="#231C16" opacity=".85" font-size="84">
@@ -1575,8 +1592,9 @@ body.hn{background:#F4EBD8;color:#2A1A12}
     <aside class="bw-side">
       <h1>Die Reise nach Shenzhen<br>(China 2026)</h1>
       <p>14. November bis 2. Dezember 2026</p>
-      <p>18 Nächte, sieben Stationen, drei Flüge und vier Zugstrecken.</p>
-      <p>Ziel: CHTF, <a href="https://www.chtf.com" target="_blank" rel="noopener">China Hi-Tech Fair</a>, Shenzhen, 26.–28. November.</p>
+      <p>18 Nächte, sieben Stationen, zwei Flüge im Land und vier Zugstrecken.</p>
+      <p>Anreise: Fr 13.11. mit Hainan Airlines ab Berlin, über Peking nach Xi'an.</p>
+      <p>Ziel: CHTF, <a href="https://www.chtf.com" target="_blank" rel="noopener">China Hi-Tech Fair</a>, Shenzhen. Wir gehen am Samstag, 28. November, dem Schlusstag — der einzige Messetag.</p>
       <p>Rückflug: Hongkong → Bangkok, 2. Dezember.</p>
       <p><a href="#tage" data-jump="tage">Tag für Tag ansehen</a></p>
       <ol class="idx">
@@ -1598,29 +1616,30 @@ body.hn{background:#F4EBD8;color:#2A1A12}
       <!-- Tag fuer Tag -->
       <section class="paper itin" id="tage" style="scroll-margin-top:30px">
         <h2>Tag für Tag</h2>
-        <p class="isub">19 Tage, 18 Nächte, sieben Stationen. Volle Tage sind hervorgehoben, Reisetage stehen in Rot. Rechts steht, wo wir in dieser Nacht schlafen.</p>
+        <p class="isub">20 Tage, 18 Nächte, sieben Stationen. Stand: Plan vom 28.09.2026, inklusive Buchungsstand. Volle Tage sind hervorgehoben, Reisetage stehen in Rot. Rechts steht, wo wir in dieser Nacht schlafen.</p>
         <ol>
-        <li class="a"><span class="dt"><b>Sa</b>14.11.</span><span class="ct">Xi'an<span class="ty">Ankunft</span></span><span class="ho"><a href="#/xian">垣里民宿</a><i>1. Nacht</i></span><p class="no">Landung 14:15 am Flughafen 咸阳 (Xianyang). Reiner Anreisetag.</p></li>
-        <li class="v"><span class="dt"><b>So</b>15.11.</span><span class="ct">Xi'an<span class="ty">Voller Tag</span></span><span class="ho"><a href="#/xian">垣里民宿</a><i>2. Nacht</i></span><p class="no">Vormittags 西仓集市 (Xicang-Markt), er hat nur do. und so. Danach zeigt uns die Freundin die Stadt.</p></li>
-        <li class="w"><span class="dt"><b>Mo</b>16.11.</span><span class="ct">Xi'an → Chongqing<span class="ty">Weiterreise</span></span><span class="ho"><a href="#/chongqing">SUNYATA 既下山</a><i>1. Nacht</i></span><p class="no">Zug G3763 ab 西安北 08:02, an 重庆北 13:34. Nachmittags ankommen, abends Hotpot.</p></li>
-        <li class="v"><span class="dt"><b>Di</b>17.11.</span><span class="ct">Chongqing<span class="ty">Voller Tag</span></span><span class="ho"><a href="#/chongqing">SUNYATA 既下山</a><i>2. Nacht</i></span><p class="no">Hangstadt: 龙门浩 (Longmenhao), 十八梯 (Achtzehn Stufen), Seilbahn über den Jangtse.</p></li>
-        <li class="v"><span class="dt"><b>Mi</b>18.11.</span><span class="ct">Chongqing<span class="ty">Voller Tag</span></span><span class="ho"><a href="#/chongqing">SUNYATA 既下山</a><i>3. Nacht</i></span><p class="no">Zweiter voller Tag, optional der Ausflug nach 大足石刻 (Felsskulpturen von Dazu).</p></li>
-        <li class="w"><span class="dt"><b>Do</b>19.11.</span><span class="ct">Chongqing → Chengdu<span class="ty">Weiterreise</span></span><span class="ho"><a href="#/chengdu">博舍 (The Upper House)</a><i>1. Nacht</i></span><p class="no">Zug nach 成都东 (Chengdu Ost), 1–1,5 h, fährt laufend. Nachmittags in Chengdu.</p></li>
-        <li class="v"><span class="dt"><b>Fr</b>20.11.</span><span class="ct">Chengdu<span class="ty">Voller Tag</span></span><span class="ho"><a href="#/chengdu">博舍 (The Upper House)</a><i>2. Nacht</i></span><p class="no">Block A: Chunxi Road, Taikoo Li, 香香巷 (Duftgasse). Abends 玉林 (Yulin).</p></li>
-        <li class="v"><span class="dt"><b>Sa</b>21.11.</span><span class="ct">Chengdu<span class="ty">Voller Tag</span></span><span class="ho"><a href="#/chengdu">博舍 (The Upper House)</a><i>3. Nacht</i></span><p class="no">Block B im Osten, 苍蝇馆子 (Fliegen-Lokale) und der Michelin-Abend.</p></li>
-        <li class="w"><span class="dt"><b>So</b>22.11.</span><span class="ct">Chengdu → Lijiang<span class="ty">Weiterreise</span></span><span class="ho"><a href="#/lijiang">InterContinental oder Amandayan</a><i>noch offen</i></span><p class="no">Flug CTU 09:05 → LJG 10:25. Nachmittags an 2.400 m gewöhnen, früh ins Bett.</p></li>
-        <li class="t"><span class="dt"><b>Mo</b>23.11.</span><span class="ct">Tigersprungschlucht<span class="ty">Trek, Tag 1</span></span><span class="ho"><a href="#/lijiang">中途客栈 (Halfway Guesthouse)</a><i>auf der Hochroute</i></span><p class="no">Früh mit dem Bus zum Einstieg. Die 28 Kehren hinauf auf 2.670 m, 5–6 h.</p></li>
-        <li class="t"><span class="dt"><b>Di</b>24.11.</span><span class="ct">Schlucht → Lijiang<span class="ty">Trek, Tag 2</span></span><span class="ho"><a href="#/lijiang">Amandayan</a><i>auf dem Löwenhügel</i></span><p class="no">Abstieg zu Tina's, 3–4 h. Rückfahrt meist 16:30, gegen 19 Uhr zurück in Lijiang.</p></li>
-        <li class="v"><span class="dt"><b>Mi</b>25.11.</span><span class="ct">Lijiang → Shenzhen<span class="ty">Voller Tag</span></span><span class="ho"><a href="#/shenzhen">Nachtflug, gegen 01:15 im Messehotel</a><i>Nacht im Flug</i></span><p class="no">束河 (Shuhe), 白沙 (Baisha), 玉湖村 (Dorf am Jadesee). Abends Nachtflug LJG 21:55 → SZX 00:20.</p></li>
-        <li class="m"><span class="dt"><b>Do</b>26.11.</span><span class="ct">Shenzhen<span class="ty">Messetag 1</span></span><span class="ho"><a href="#/shenzhen">Hilton Shenzhen World oder Crowne Plaza</a><i>am Gelände</i></span><p class="no">CHTF, erster Tag. Nach der kurzen Nacht nicht um neun starten, sondern gegen Mittag.</p></li>
-        <li class="m"><span class="dt"><b>Fr</b>27.11.</span><span class="ct">Shenzhen<span class="ty">Messetag 2</span></span><span class="ho"><a href="#/shenzhen">Jiangnan House Nantou</a><i>in der Altstadt</i></span><p class="no">Ruhiger als der Eröffnungstag. Morgens auschecken, abends Umzug nach 南头 (Nantou).</p></li>
-        <li class="w"><span class="dt"><b>Sa</b>28.11.</span><span class="ct">Shenzhen → Guangzhou<span class="ty">Weiterreise</span></span><span class="ho"><a href="#/guangzhou">白天鹅宾馆 (White Swan)</a><i>1. Nacht</i></span><p class="no">Vormittags 华强北 (Huaqiangbei), mittags Zug. Ankunft 广州南 (Guangzhou Süd), Gepäck ins Hotel.</p></li>
-        <li class="v"><span class="dt"><b>So</b>29.11.</span><span class="ct">Guangzhou<span class="ty">Voller Tag</span></span><span class="ho"><a href="#/guangzhou">白天鹅宾馆 (White Swan)</a><i>2. Nacht</i></span><p class="no">Ab 10 Uhr Yum Cha im 陶陶居 (Taotaoju), danach die Arkaden bis 永庆坊 (Yongqingfang).</p></li>
-        <li class="w"><span class="dt"><b>Mo</b>30.11.</span><span class="ct">Guangzhou → Hongkong<span class="ty">Weiterreise</span></span><span class="ho"><a href="#/hongkong">Pottinger, Murray, Eaton oder Fleming</a><i>noch offen</i></span><p class="no">Vormittags noch einmal Yum Cha, dann Zug 广州南 → 香港西九龍, 47 min. Nachmittags M+.</p></li>
-        <li class="v"><span class="dt"><b>Di</b>01.12.</span><span class="ct">Hongkong<span class="ty">Voller Tag</span></span><span class="ho"><a href="#/hongkong">Pottinger, Murray, Eaton oder Fleming</a><i>noch offen</i></span><p class="no">Vormittags 深水埗 (Sham Shui Po), nachmittags über den Hafen zu 大館 (Tai Kwun).</p></li>
-        <li class="x"><span class="dt"><b>Mi</b>02.12.</span><span class="ct">Hongkong<span class="ty">Abreise</span></span><span class="ho">Rückflug<i>18 Nächte insgesamt</i></span><p class="no">Vormittags bleibt noch Zeit, nachmittags Rückflug HKG → Bangkok.</p></li>
+        <li class="w"><span class="dt"><b>Fr</b>13.11.</span><span class="ct">Berlin → Peking<span class="ty">Abflug</span></span><span class="ho">Nacht im Flug<i>—</i></span><p class="no">Hainan Airlines HU490, BER 12:55 → PEK 05:05+1. Ein Ticket bis Xi'an, durchgecheckt, zwei Gepäckstücke pro Person.</p></li>
+        <li class="a"><span class="dt"><b>Sa</b>14.11.</span><span class="ct">Peking → Xi'an<span class="ty">Ankunft</span></span><span class="ho"><a href="#/xian">垣里民宿</a><i>1. Nacht</i></span><p class="no">6 h 55 Umsteigezeit in Peking, Lounge nutzen. HU7237 12:00 → XIY 14:15. Ankunftstag ohne Programm.</p></li>
+        <li class="v"><span class="dt"><b>So</b>15.11.</span><span class="ct">Xi'an<span class="ty">Voller Tag</span></span><span class="ho"><a href="#/xian">垣里民宿</a><i>2. Nacht</i></span><p class="no">Vormittags 西仓集市 (Xicang-Markt) — er läuft nur donnerstags und sonntags, deshalb liegt die Anreise auf Samstag.</p></li>
+        <li class="v"><span class="dt"><b>Mo</b>16.11.</span><span class="ct">Xi'an<span class="ty">Voller Tag</span></span><span class="ho"><a href="#/xian">垣里民宿</a><i>3. Nacht</i></span><p class="no">Zweiter voller Tag mit Eight, die uns in Xi'an herumführt. Frei einteilbar.</p></li>
+        <li class="w"><span class="dt"><b>Di</b>17.11.</span><span class="ct">Xi'an → Chongqing<span class="ty">Weiterreise</span></span><span class="ho"><a href="#/chongqing">SUNYATA 既下山</a><i>1. Nacht</i></span><p class="no">Zug G3763 ab 西安北 08:02, an 重庆北 13:34, 5 h 32. Nord, nicht West. Abends Hotpot.</p></li>
+        <li class="v"><span class="dt"><b>Mi</b>18.11.</span><span class="ct">Chongqing<span class="ty">Voller Tag</span></span><span class="ho"><a href="#/chongqing">SUNYATA 既下山</a><i>2. Nacht</i></span><p class="no">Hangstadt: 龙门浩 (Longmenhao), 十八梯 (Achtzehn Stufen), Seilbahn über den Jangtse.</p></li>
+        <li class="v"><span class="dt"><b>Do</b>19.11.</span><span class="ct">Chongqing<span class="ty">Voller Tag</span></span><span class="ho"><a href="#/chongqing">SUNYATA 既下山</a><i>3. Nacht</i></span><p class="no">Zweiter voller Tag in der Stadt: Kunst in 黄桷坪 (Huangjueping), Testbed 2, abends Hotpot.</p></li>
+        <li class="w"><span class="dt"><b>Fr</b>20.11.</span><span class="ct">Chongqing → Chengdu<span class="ty">Weiterreise</span></span><span class="ho"><a href="#/chengdu">博舍 (The Upper House)</a><i>1. Nacht</i></span><p class="no">Morgens los, Zug nach 成都东 (Chengdu Ost), 1–1,5 h. Dann bleibt fast der ganze Tag in Chengdu.</p></li>
+        <li class="v"><span class="dt"><b>Sa</b>21.11.</span><span class="ct">Chengdu<span class="ty">Voller Tag</span></span><span class="ho"><a href="#/chengdu">博舍 (The Upper House)</a><i>2. Nacht</i></span><p class="no">Jinjiang: Buyer Stores um die Chunxi Road, Taikoo Li, 香香巷 (Duftgasse). Abends 玉林 (Yulin).</p></li>
+        <li class="v"><span class="dt"><b>So</b>22.11.</span><span class="ct">Chengdu<span class="ty">Voller Tag</span></span><span class="ho"><a href="#/chengdu">博舍 (The Upper House)</a><i>3. Nacht</i></span><p class="no">Der Osten: MixC und 东郊记忆 (Erinnerung an die Ostvorstadt), 苍蝇馆子 (Fliegen-Lokale), der Michelin-Abend.</p></li>
+        <li class="v"><span class="dt"><b>Mo</b>23.11.</span><span class="ct">Chengdu<span class="ty">Voller Tag</span></span><span class="ho"><a href="#/chengdu">博舍 (The Upper House)</a><i>4. Nacht</i></span><p class="no">Dritter Tag für einen Ausflug: 三星堆 (Sanxingdui) oder die Pandabasis, früh am Morgen.</p></li>
+        <li class="w"><span class="dt"><b>Di</b>24.11.</span><span class="ct">Chengdu → Lijiang<span class="ty">Weiterreise</span></span><span class="ho"><a href="#/lijiang">安隅 (Anyu Hotel)</a><i>gebucht</i></span><p class="no">Gegen 07:45 aus dem Hotel, der Flug geht ab 天府 (Tianfu), rund 50 km raus. TFU 11:05 → LJG 12:30. Gegen 13:30 im Hotel, nachmittags an 2.400 m gewöhnen, abends 忠义市场 (Zhongyi-Markt).</p></li>
+        <li class="t"><span class="dt"><b>Mi</b>25.11.</span><span class="ct">Tigersprungschlucht<span class="ty">Trek, Tag 1</span></span><span class="ho"><a href="#/lijiang">中途客栈 (Halfway Guesthouse)</a><i>auf der Hochroute</i></span><p class="no">Bus ab Busbahnhof Lijiang, am besten der um 09:30 mit Gepäcktransfer. Einstieg gegen 11 Uhr, über die 28 Kehren auf 2.670 m, 5–6 h.</p></li>
+        <li class="t"><span class="dt"><b>Do</b>26.11.</span><span class="ct">Schlucht → Lijiang<span class="ty">Trek, Tag 2</span></span><span class="ho"><a href="#/lijiang">Amandayan oder Anyu</a><i>noch offen</i></span><p class="no">Abstieg zu Tina's, 3–4 h. Rückfahrt ab Mittlerer Schlucht meist 16:30, gegen 19 Uhr zurück in Lijiang.</p></li>
+        <li class="v"><span class="dt"><b>Fr</b>27.11.</span><span class="ct">Lijiang → Shenzhen<span class="ty">Voller Tag</span></span><span class="ho"><a href="#/shenzhen">Nachtflug, dann Nantou</a><i>Nacht im Flug</i></span><p class="no">Freier Tag: 束河 (Shuhe), die Wandmalereien in 白沙 (Baisha), 玉湖村 (Dorf am Jadesee). Abends Nachtflug LJG 21:55 → SZX 00:20, danach mit dem Didi nach 南头 (Nantou).</p></li>
+        <li class="m"><span class="dt"><b>Sa</b>28.11.</span><span class="ct">Shenzhen<span class="ty">Messetag</span></span><span class="ho"><a href="#/shenzhen">Jiangnan House Nantou</a><i>gebucht</i></span><p class="no">CHTF, Schlusstag und unser einziger Messetag. Früh hin, am letzten Tag bauen Aussteller teils früher ab.</p></li>
+        <li class="w"><span class="dt"><b>So</b>29.11.</span><span class="ct">Shenzhen → Guangzhou<span class="ty">Weiterreise</span></span><span class="ho"><a href="#/guangzhou">白天鹅宾馆 (White Swan)</a><i>einzige Nacht</i></span><p class="no">Vormittags 华强北 (Huaqiangbei), mittags Zug ab 福田 (Futian) oder 深圳北 (Shenzhen Nord). Nachmittags in Guangzhou.</p></li>
+        <li class="w"><span class="dt"><b>Mo</b>30.11.</span><span class="ct">Guangzhou → Hongkong<span class="ty">Weiterreise</span></span><span class="ho"><a href="#/hongkong">Pottinger, Murray, Eaton, Fleming oder Langham</a><i>noch offen</i></span><p class="no">Vormittags Yum Cha, dann ein späterer Vormittagszug 广州南 → 香港西九龍, 47 min. Grenzabfertigung für beide Seiten in West Kowloon. Nachmittags M+.</p></li>
+        <li class="v"><span class="dt"><b>Di</b>01.12.</span><span class="ct">Hongkong<span class="ty">Voller Tag</span></span><span class="ho"><a href="#/hongkong">Pottinger, Murray, Eaton, Fleming oder Langham</a><i>noch offen</i></span><p class="no">Vormittags 深水埗 (Sham Shui Po), nachmittags über den Hafen zu 大館 (Tai Kwun).</p></li>
+        <li class="x"><span class="dt"><b>Mi</b>02.12.</span><span class="ct">Hongkong<span class="ty">Abreise</span></span><span class="ho">Rückflug<i>18 Nächte insgesamt</i></span><p class="no">Vormittags bleibt noch Zeit, dann Rückflug ab HKG nach Bangkok.</p></li>
         </ol>
-        <p class="ifoot">Fünf Nächte gehen für An- und Abreise drauf, zwei für den Trek, drei für die Messe. Bleiben acht volle Tage.</p>
+        <p class="ifoot">Neun volle Tage, dazu zwei auf dem Trek und einer auf der Messe. Die übrigen acht Tage sind An-, Weiter- und Abreise.</p>
       </section>
 
       <!-- Stationen -->
@@ -1628,13 +1647,13 @@ body.hn{background:#F4EBD8;color:#2A1A12}
         <a class="cover" href="#/xian" aria-label="Zur Xi'an-Seite"></a>
         <span class="inkchar" style="right:8%;top:6%;font-size:min(16vw,200px)">西安</span>
         <div class="credit" style="left:7%;top:30%">
-          <span class="lab">Station I · Sa 14.11. – Mo 16.11. · 2 Nächte</span>
+          <span class="lab">Station I · Sa 14.11. – Di 17.11. · 3 Nächte</span>
           <span class="nm">Xi'an</span>
-          <span class="ln">西安 (Westlicher Friede). Landung am Samstag um 14:15 in Xianyang. Der Sonntag ist der einzige volle Tag: vormittags der Markt 西仓集市 (Xicang-Markt), danach zeigt uns die Freundin die Stadt.</span>
+          <span class="ln">西安 (Westlicher Friede). Abflug schon am Freitag: HU490 Berlin 12:55 → Peking 05:05, umsteigen, HU7237 12:00 → Xianyang 14:15. Zwei volle Tage: Sonntagvormittag der Markt 西仓集市 (Xicang-Markt), der nur donnerstags und sonntags läuft, am Montag zeigt uns Eight die Stadt.</span>
           <span class="lab">Unterkunft</span>
           <span class="ln">垣里民宿 (Pension unter der Stadtmauer)</span>
           <span class="lab">Weiter</span>
-          <span class="ln">Mo 16.11., Zug G3763, 西安北 (Xi'an Nord) 08:02 → 重庆北 (Chongqing Nord) 13:34</span>
+          <span class="ln">Di 17.11., Zug G3763, 西安北 (Xi'an Nord) 08:02 → 重庆北 (Chongqing Nord) 13:34</span>
         </div>
         <span class="go">Zur Stadt →</span>
       </section>
@@ -1643,13 +1662,13 @@ body.hn{background:#F4EBD8;color:#2A1A12}
         <a class="cover" href="#/chongqing" aria-label="Zur Chongqing-Seite"></a>
         <span class="inkchar" style="left:8%;top:6%;font-size:min(16vw,200px)">重庆</span>
         <div class="credit" style="right:7%;left:52%;top:30%">
-          <span class="lab">Station II · Mo 16.11. – Do 19.11. · 3 Nächte</span>
+          <span class="lab">Station II · Di 17.11. – Fr 20.11. · 3 Nächte</span>
           <span class="nm">Chongqing</span>
           <span class="ln">重庆 (Doppeltes Glück). Eine Stadt am Hang, abends Hotpot: 九宫格 (Topf mit neun Kammern), 麻辣 (betäubend-scharf) und 七上八下 (siebenmal rein, achtmal raus).</span>
           <span class="lab">Unterkunft</span>
           <span class="ln">SUNYATA 既下山 (Vom Berg herab), Longmenhao</span>
           <span class="lab">Weiter</span>
-          <span class="ln">Do 19.11., Zug nach 成都东 (Chengdu Ost), 1–1,5 h, fährt laufend</span>
+          <span class="ln">Fr 20.11., Zug nach 成都东 (Chengdu Ost), 1–1,5 h, fährt laufend</span>
         </div>
         <span class="go">Zur Stadt →</span>
       </section>
@@ -1658,13 +1677,13 @@ body.hn{background:#F4EBD8;color:#2A1A12}
         <a class="cover" href="#/chengdu" aria-label="Zur Chengdu-Seite"></a>
         <span class="inkchar" style="right:8%;top:6%;font-size:min(16vw,200px);color:#2A1510">成都</span>
         <div class="credit" style="left:7%;top:26%">
-          <span class="lab">Station III · Do 19.11. – So 22.11. · 3 Nächte</span>
+          <span class="lab">Station III · Fr 20.11. – Di 24.11. · 4 Nächte</span>
           <span class="nm">Chengdu</span>
-          <span class="ln">成都 (Chengdu). Hier ist die Modeszene der Reise am dichtesten. Dazu 苍蝇馆子 (Fliegen-Lokale) und ein eigener Michelin-Guide. Tagsüber in zwei Blöcken unterwegs, Jinjiang und der Osten, abends 玉林 (Yulin).</span>
+          <span class="ln">成都 (Chengdu). Hier ist die Modeszene der Reise am dichtesten. Dazu 苍蝇馆子 (Fliegen-Lokale) und ein eigener Michelin-Guide. Drei volle Tage: Jinjiang mit den Buyer Stores und Taikoo Li, der Osten mit MixC und 东郊记忆 (Erinnerung an die Ostvorstadt), dazu 三星堆 (Sanxingdui) oder die Pandabasis. Abende in 玉林 (Yulin).</span>
           <span class="lab">Unterkunft</span>
           <span class="ln">博舍 (The Upper House), Taikoo Li</span>
           <span class="lab">Weiter</span>
-          <span class="ln">So 22.11., CTU 09:05 → LJG 10:25, ab 双流 (Shuangliu)</span>
+          <span class="ln">Di 24.11., TFU 11:05 → LJG 12:30, ab 天府 (Tianfu) — rund 50 km raus, gegen 07:45 los</span>
         </div>
         <span class="go">Zur Stadt →</span>
       </section>
@@ -1673,13 +1692,13 @@ body.hn{background:#F4EBD8;color:#2A1A12}
         <a class="cover" href="#/lijiang" aria-label="Zur Lijiang-Seite"></a>
         <span class="inkchar" style="left:6%;top:5%;font-size:min(11vw,140px)">虎跳峡</span>
         <div class="credit" style="right:6%;left:48%;top:16%">
-          <span class="lab">Station IV · So 22.11. – Mi 25.11. · 3 Nächte</span>
+          <span class="lab">Station IV · Di 24.11. – Fr 27.11. · 3 Nächte</span>
           <span class="nm">Lijiang &amp; Tigersprung&shy;schlucht</span>
-          <span class="ln">丽江 (Lijiang) · 虎跳峡 (Tigersprungschlucht). Ein Nachmittag, um sich an 2.400 m zu gewöhnen. Tag 1: über die 28 Kehren hinauf auf 2.670 m, 5–6 h. Tag 2: runter zu Tina's, 3–4 h. Am letzten Tag 束河 (Shuhe) und die Wandmalereien in 白沙 (Baisha).</span>
+          <span class="ln">丽江 (Lijiang) · 虎跳峡 (Tigersprungschlucht). Dienstag gegen 13:30 im Hotel, der Nachmittag gehört der Höhe. Mittwoch über die 28 Kehren hinauf auf 2.670 m, 5–6 h. Donnerstag runter zu Tina's, 3–4 h. Freitag frei für 束河 (Shuhe), 白沙 (Baisha) und 玉湖村 (Dorf am Jadesee), abends geht der Nachtflug.</span>
           <span class="lab">Unterkunft</span>
-          <span class="ln">InterContinental oder Amandayan · 中途客栈 (Halfway Guesthouse) · Amandayan</span>
+          <span class="ln">安隅 (Anyu) am Südtor der Altstadt, gebucht · 中途客栈 (Halfway Guesthouse) · dritte Nacht noch offen</span>
           <span class="lab">Weiter</span>
-          <span class="ln">Mi 25.11., Nachtflug LJG 21:55 → SZX 00:20, Juneyao</span>
+          <span class="ln">Fr 27.11., Nachtflug LJG 21:55 → SZX 00:20, Juneyao</span>
         </div>
         <span class="go">Zur Stadt →</span>
       </section>
@@ -1688,13 +1707,13 @@ body.hn{background:#F4EBD8;color:#2A1A12}
         <a class="cover" href="#/shenzhen" aria-label="Zur Shenzhen-Seite"></a>
         <span class="inkchar" style="right:8%;top:6%;font-size:min(16vw,200px)">深圳</span>
         <div class="credit" style="left:7%;top:28%">
-          <span class="lab">Station V · Mi 25.11. – Sa 28.11. · 3 Nächte</span>
+          <span class="lab">Station V · Fr 27.11. – So 29.11. · 2 Nächte</span>
           <span class="nm">Shenzhen · CHTF</span>
-          <span class="ln">深圳 (Tiefer Graben). Zwei Messetage, am ersten starten wir erst gegen Mittag. Am Freitag Umzug nach 南头 (Nantou). Samstagvormittag 华强北 (Huaqiangbei), der größte Elektronikmarkt der Welt.</span>
+          <span class="ln">深圳 (Tiefer Graben). Ankunft mitten in der Nacht, danach nach 南头 (Nantou). Der Samstag ist der einzige Messetag und zugleich der Schlusstag der CHTF, deshalb früh hin. Sonntagvormittag 华强北 (Huaqiangbei), der größte Elektronikmarkt der Welt.</span>
           <span class="lab">Unterkunft</span>
-          <span class="ln">Hilton Shenzhen World oder Crowne Plaza WECC · Jiangnan House Nantou</span>
+          <span class="ln">Jiangnan House Nantou, zwei Zimmer, gebucht — wir wohnen in der Altstadt, nicht am Gelände</span>
           <span class="lab">Weiter</span>
-          <span class="ln">Sa 28.11., Zug ab 福田 (Futian) oder 深圳北 (Shenzhen Nord)</span>
+          <span class="ln">So 29.11., mittags Zug ab 福田 (Futian) oder 深圳北 (Shenzhen Nord)</span>
         </div>
         <span class="go">Zur Stadt →</span>
       </section>
@@ -1703,13 +1722,13 @@ body.hn{background:#F4EBD8;color:#2A1A12}
         <a class="cover" href="#/guangzhou" aria-label="Zur Guangzhou-Seite"></a>
         <span class="inkchar" style="left:8%;top:6%;font-size:min(16vw,200px)">广州</span>
         <div class="credit" style="right:7%;left:52%;top:30%">
-          <span class="lab">Station VI · Sa 28.11. – Mo 30.11. · 2 Nächte</span>
+          <span class="lab">Station VI · So 29.11. – Mo 30.11. · 1 Nacht</span>
           <span class="nm">Guangzhou</span>
-          <span class="ln">广州 (Weite Präfektur). Kantonesisch essen, wo die Küche herkommt. Ob wir die zwei Nächte behalten, kürzen oder streichen, steht noch nicht fest.</span>
+          <span class="ln">广州 (Weite Präfektur). Nach der Umstellung auf einen Messetag bleibt nur noch eine Nacht: Sonntagnachmittag an, Montagvormittag Yum Cha, dann weiter. Ob die Nacht hier bleibt, nach Hongkong wandert oder für Shenzhen-Stadt genutzt wird, ist offen.</span>
           <span class="lab">Unterkunft</span>
           <span class="ln">白天鹅宾馆 (White Swan Hotel), Shamian</span>
           <span class="lab">Weiter</span>
-          <span class="ln">Mo 30.11., 广州南 (Guangzhou Süd) → 香港西九龍 (Hongkong West Kowloon), 47 min</span>
+          <span class="ln">Mo 30.11., später Vormittagszug 广州南 (Guangzhou Süd) → 香港西九龍 (Hongkong West Kowloon), 47 min</span>
         </div>
         <span class="go">Zur Stadt →</span>
       </section>
@@ -1731,31 +1750,32 @@ body.hn{background:#F4EBD8;color:#2A1A12}
         <h2>Vor dem Abflug</h2>
         <div class="it"><span class="lab">Einreise</span><span class="nm">30 Tage visumfrei</span><p>Gilt mit deutschem Pass bis 31.12.2026. Vor jeder Einreise die digitale Einreisekarte ausfüllen, für Hongkong ein zweites Mal.</p></div>
         <div class="it"><span class="lab">Bezahlen</span><span class="nm">Alipay · WeChat Pay</span><p>Vorher mit der Kreditkarte verknüpfen. Für die Schlucht zusätzlich 500–800 ¥ bar pro Person.</p></div>
+        <div class="it"><span class="lab">App</span><span class="nm">大众点评 (Dianping)</span><p>Eights Tipp für Chongqing, funktioniert aber überall auf dem Festland: Damit findet man die Bunker-Hotpots, und viele Restaurants nehmen darüber Reservierungen und Wartenummern entgegen — bei 珮姐 (Peijie) mit bis zu zwei Stunden Schlange der entscheidende Punkt. Vor dem Abflug einrichten. Für die Reservierung kann eine chinesische Nummer nötig sein, also vorher testen.</p></div>
         <div class="it"><span class="lab">Netz</span><span class="nm">eSIM über Hongkong</span><p>Vor dem Abflug installieren, aber erst vor Ort aktivieren. VPN ebenfalls vorher einrichten. Die deutsche SIM aktiv lassen, sonst kommen keine SMS-Codes.</p></div>
-        <div class="it"><span class="lab">Messe</span><span class="nm">Ausweis auf chtf.com</span><p>Vorher online registrieren. Am Eingang wird der Reisepass gescannt, also mitnehmen.</p></div>
+        <div class="it"><span class="lab">Messe</span><span class="nm">Ausweis auf chtf.com</span><p>Vorher online registrieren. Am Eingang wird der Reisepass gescannt, also mitnehmen. Wir haben nur den Samstag, den Schlusstag.</p></div>
         <div class="it"><span class="lab">Klima</span><span class="nm">−1 bis 25 °C</span><p>Xi'an nachts frostig. In Sichuan feucht und ohne Heizung. Im Süden Sommer. Dünne Daunenjacke plus Sommersachen einpacken.</p></div>
-        <div class="it"><span class="lab">Kritischer Punkt</span><span class="nm">Nachtflug 25.11.</span><p>Wenn er ausfällt, verlieren wir einen Messetag. Die Messe selbst ist nicht in Gefahr.</p></div>
+        <div class="it"><span class="lab">Kritischer Punkt</span><span class="nm">Nachtflug 27.11.</span><p>Weil nur noch der 28.11. als Messetag bleibt, gibt es keinen Ausweichtag: Fällt der Flug um 21:55 aus, ist die Messe weg. Wer das Risiko nicht will, nimmt am 27.11. den Tagesflug um 11:35 — das kostet den zweiten freien Tag in Lijiang.</p></div>
       </section>
 
       <section class="roll" id="offen" style="scroll-margin-top:30px">
         <h2>Noch offen</h2>
-        <div class="it"><span class="lab">Route</span><span class="nm">Guangzhou</span><p>Zwei Nächte behalten, auf eine kürzen und dafür drei Nächte Hongkong, oder streichen und vier Nächte Hongkong.</p></div>
-        <div class="it"><span class="lab">Hotel</span><span class="nm">Hongkong</span><p>Pottinger, Murray, Eaton HK oder The Fleming.</p></div>
-        <div class="it"><span class="lab">Hotel</span><span class="nm">Lijiang, erste Nacht</span><p>InterContinental oder Amandayan.</p></div>
-        <div class="it"><span class="lab">Schlucht</span><span class="nm">Eintritt &amp; Bus</span><p>Beides über Trip.com buchen, der Name muss genau wie im Pass stehen. Außerdem klären, ob die Mutter die 28 Kehren mitläuft.</p></div>
-        <div class="it"><span class="lab">Programm</span><span class="nm">Xi'an</span><p>Mit der Freundin abstimmen.</p></div>
-        <div class="it"><span class="lab">Sofort buchen</span><span class="nm">Messehotels &amp; Zug nach Hongkong</span><p>Zugtickets sind meist ab 15 Tage vor Abfahrt buchbar.</p></div>
+        <div class="it"><span class="lab">Route</span><span class="nm">Guangzhou</span><p>Nach der Umstellung auf einen Messetag ist Guangzhou auf eine Nacht geschrumpft. Varianten: so lassen · streichen und Hongkong drei Nächte geben · oder die Nacht für Shenzhen-Stadt mit 南头 (Nantou) und OCT-Loft nutzen. Neu in der Diskussion: ein Tag in 顺德 (Shunde) mit Xiaoyus Essensliste und den Möbelmärkten von 乐从 (Lecong).</p></div>
+        <div class="it"><span class="lab">Hotel</span><span class="nm">Hongkong</span><p>Pottinger, Murray, Eaton HK oder The Fleming — nichts davon ist gebucht. The Langham war für 25.–27.11. gebucht und wurde storniert, das waren noch alte Daten; falls es bleibt, wären es der 30.11. bis 2.12.</p></div>
+        <div class="it"><span class="lab">Hotel</span><span class="nm">Lijiang, Nacht 26.11.</span><p>Die Nacht nach dem Trek ist offen: Amandayan auf dem Löwenhügel oder das 安隅 (Anyu) um eine Nacht verlängern. Die Ankunftsnacht am 24.11. ist im Anyu gebucht, das Halfway Guesthouse noch nicht.</p></div>
+        <div class="it"><span class="lab">Schlucht</span><span class="nm">Eintritt &amp; Bus</span><p>Beides über Trip.com buchen, der Name muss genau wie im Pass stehen; am Eingang wird Gesicht und Ausweis geprüft. Der Bus um 09:30 gilt als der zuverlässigste und nimmt das Gepäck mit. Außerdem klären, ob die Mutter die 28 Kehren mitläuft.</p></div>
+        <div class="it"><span class="lab">Programm</span><span class="nm">Xi'an</span><p>Mit Eight abstimmen, die uns vor Ort herumführt: Jetzt sind es drei volle Tage. Fest liegt nur der Markt am Sonntagvormittag.</p></div>
+        <div class="it"><span class="lab">Noch zu buchen</span><span class="nm">Schlucht, Guangzhou, Hongkong</span><p>Offen sind das 中途客栈 (Halfway Guesthouse), die Nacht vom 26. auf den 27.11. in Lijiang sowie Guangzhou und Hongkong. Die Booking-Reise reicht bisher nur bis zum 29.11. Zugtickets sind meist ab 15 Tage vor Abfahrt buchbar.</p></div>
       </section>
     </div>
   </div>
-  <footer class="bw-foot caps"><span>Stand 21.09.2026</span><span>Alle sieben Stationen haben eine eigene Seite</span></footer>
+  <footer class="bw-foot caps"><span>Stand 28.09.2026</span><span>Alle sieben Stationen haben eine eigene Seite</span></footer>
 </main>
 
 <!-- ======================= CHENGDU ======================= -->
 <div id="chengdu" class="fbj" hidden>
   <div class="ticker anton" aria-hidden="true"><div class="track">
-    <span>🌶 19.–22.11. · 3 Nächte 🌶</span><span>麻辣 <i>(betäubend-scharf)</i> ⚡</span><span>UNESCO City of Gastronomy seit 2010 🥢</span><span>6. Michelin-Guide · 84 Häuser ⭐</span><span>苍蝇馆子 <i>(Fliegen-Lokale)</i> 🍜</span>
-    <span>🌶 19.–22.11. · 3 Nächte 🌶</span><span>麻辣 <i>(betäubend-scharf)</i> ⚡</span><span>UNESCO City of Gastronomy seit 2010 🥢</span><span>6. Michelin-Guide · 84 Häuser ⭐</span><span>苍蝇馆子 <i>(Fliegen-Lokale)</i> 🍜</span>
+    <span>🌶 20.–24.11. · 4 Nächte 🌶</span><span>麻辣 <i>(betäubend-scharf)</i> ⚡</span><span>UNESCO City of Gastronomy seit 2010 🥢</span><span>6. Michelin-Guide · 84 Häuser ⭐</span><span>苍蝇馆子 <i>(Fliegen-Lokale)</i> 🍜</span>
+    <span>🌶 20.–24.11. · 4 Nächte 🌶</span><span>麻辣 <i>(betäubend-scharf)</i> ⚡</span><span>UNESCO City of Gastronomy seit 2010 🥢</span><span>6. Michelin-Guide · 84 Häuser ⭐</span><span>苍蝇馆子 <i>(Fliegen-Lokale)</i> 🍜</span>
   </div></div>
   <div class="fbj-head">
     <div class="fbj-bar"><div class="in">
@@ -1764,7 +1784,7 @@ body.hn{background:#F4EBD8;color:#2A1A12}
       <span class="pill anton">Station 3 / 7</span>
     </div></div>
     <nav class="fbj-sub" aria-label="Abschnitte"><div class="in">
-      <button data-jump="cd-plan">Plan 📅</button><button data-jump="cd-karte">Karte 🗺</button><button data-jump="cd-fashion">Fashion 👕</button><button data-jump="cd-food">Essen 🌶</button><button data-jump="cd-michelin">Michelin ⭐</button><button data-jump="cd-design">Design 🏛</button><button data-jump="cd-more">Viertel &amp; Ausflüge 🐼</button><button data-jump="cd-city">Die Stadt 📜</button>
+      <button data-jump="cd-plan">Plan 📅</button><button data-jump="cd-karte">Karte 🗺</button><button data-jump="cd-fashion">Fashion 👕</button><button data-jump="cd-food">Essen 🌶</button><button data-jump="cd-eight">Eights Liste 💬</button><button data-jump="cd-michelin">Michelin ⭐</button><button data-jump="cd-design">Design 🏛</button><button data-jump="cd-more">Viertel &amp; Ausflüge 🐼</button><button data-jump="cd-city">Die Stadt 📜</button>
     </div></nav>
   </div>
 
@@ -1776,20 +1796,20 @@ body.hn{background:#F4EBD8;color:#2A1A12}
       </div>
       <div class="facts">
         <dl>
-          <dt>Wann</dt><dd>Do 19.11. – So 22.11. · 3 Nächte</dd>
-          <dt>Hotel</dt><dd>博舍 (The Upper House), Taikoo Li · 3 Nächte · <a href="https://www.booking.com/hotel/cn/bo-she.html" target="_blank" rel="noopener">Booking</a> · <a href="https://uri.amap.com/search?keyword=%E5%8D%9A%E8%88%8D%E9%85%92%E5%BA%97&amp;city=510100&amp;callnative=0" target="_blank" rel="noopener">Karte</a> · <a href="#cd-karte" data-jump="cd-karte">auf der Karte: H</a></dd>
-          <dt>Hin</dt><dd>Zug ab Chongqing nach 成都东 (Chengdu Ost), 1–1,5 h, etwa 150 Züge am Tag</dd>
-          <dt>Weiter</dt><dd>So 22.11., CTU 09:05 → LJG 10:25, Tibet Airlines</dd>
+          <dt>Wann</dt><dd>Fr 20.11. – Di 24.11. · 4 Nächte</dd>
+          <dt>Hotel</dt><dd>博舍 (The Upper House), Taikoo Li · 4 Nächte · <b>gebucht, 2.669,25 €</b> · <a href="https://www.booking.com/hotel/cn/bo-she.html" target="_blank" rel="noopener">Booking</a> · <a href="https://uri.amap.com/search?keyword=%E5%8D%9A%E8%88%8D%E9%85%92%E5%BA%97&amp;city=510100&amp;callnative=0" target="_blank" rel="noopener">Karte</a> · <a href="#cd-karte" data-jump="cd-karte">auf der Karte: H</a></dd>
+          <dt>Hin</dt><dd>Fr 20.11. morgens, Zug ab Chongqing nach 成都东 (Chengdu Ost), 1–1,5 h. Dann bleibt fast der ganze Tag</dd>
+          <dt>Weiter</dt><dd>Di 24.11., TFU 11:05 → LJG 12:30, Beijing Capital Airlines</dd>
           <dt>Wetter</dt><dd>12–14 °C, feucht, drinnen keine Heizung</dd>
         </dl>
-        <div class="strip">Abflug ab <span class="tag">双流 (Shuangliu) · 16 km</span> nicht ab <span class="tag">天府 (Tianfu) · 50 km</span></div>
+        <div class="strip">Abflug ab <span class="tag">天府 (Tianfu) · 50 km</span> etwa <span class="tag">1 h Anfahrt · 07:45 los</span></div>
       <a class="vidbar" href="https://www.youtube.com/watch?v=mxivlewFfXk" target="_blank" rel="noopener"><span class="vb-p" aria-hidden="true"><svg viewBox="0 0 16 16"><polygon points="3,1.5 14,8 3,14.5"/></svg></span><span class="vb-t"><b>Food in Chengdu</b><span class="vb-m">YouTube · von Maxim · in China nur mit VPN</span></span><span class="vb-go">Ansehen ↗</span></a>
       </div>
     </header>
 
     <section class="sec" id="cd-plan">
-      <h2 class="sec-h anton">Zwei Blöcke <span class="amp">&amp;</span> ein Abend</h2>
-      <p class="sec-sub">Fast alles liegt in zwei Gegenden. Abends geht es in den Süden.</p>
+      <h2 class="sec-h anton">Drei Tage <span class="amp">&amp;</span> zwei Blöcke</h2>
+      <p class="sec-sub">Fast alles liegt in zwei Gegenden, dazu bleibt am dritten Tag Zeit für einen Ausflug. Abends geht es in den Süden.</p>
       <div class="twocol">
         <div class="box"><span class="k">Block A · Zentrum · zu Fuß vom Hotel</span><h3 class="anton">Jinjiang</h3><p>Um die Chunxi Road, alles innerhalb eines Kilometers: 晶融汇 (Jingronghui), Taikoo Li, 香香巷 (Duftgasse) und 干槐树街 (Straße der trockenen Akazie).</p></div>
         <div class="box"><span class="k">Block B · Osten · am Freitag</span><h3 class="anton">Der Osten</h3><p>MixC, 东郊记忆 (Erinnerung an die Ostvorstadt) und 建设巷 (Aufbaugasse). 东郊记忆 am besten an einem Werktag.</p></div>
@@ -1925,10 +1945,58 @@ body.hn{background:#F4EBD8;color:#2A1A12}
       <div class="warn"><span class="ic">!</span><span><b>马路边边 (Straßenrand)</b> ist das Gegenmodell: ein Konzept, das ein 苍蝇馆子 (Fliegen-Lokal) mit Retro-Kulisse nachbaut. Handwerklich stark, aber eben Kulisse.</span></div>
     </section>
 
+    <section class="sec" id="cd-eight">
+      <h2 class="sec-h anton">Eight <span class="amp">&amp;</span> ihre Liste <span class="zh">八的建议</span></h2>
+      <p class="sec-sub">Von Eight, der Freundin aus Xi'an, die uns dort herumführt. Ihre beiden Hotpot-Tipps waren Chongqinger Hotpot in Chengdu — den essen wir dort, wo er herkommt.</p>
+      <div class="stores"><ol class="st-list">
+          <li class="st-row">
+            <span class="st-no">E1</span>
+            <div class="st-main"><b class="zh-b">蛙蛙鸡冷锅鱼 (Kalttopf-Fisch)</b><span class="st-where">Filiale 金沙 (Jinsha) · Westen</span><p>冷锅鱼 heißt Kalttopf-Fisch: Der Fisch wird vorgegart und dann im Topf mit heißem Gewürzöl serviert. Man isst ihn heraus und kocht danach die Beilagen darin weiter. Dazu Frosch und Huhn.</p><span class="st-brands">Fisch · Frosch · Huhn</span></div>
+            <div class="st-side"><span class="st-tag st-ok">Eight</span><a class="st-map" href="https://uri.amap.com/search?keyword=%E8%9B%99%E8%9B%99%E9%B8%A1%E5%86%B7%E9%94%85%E9%B1%BC&amp;city=510100&amp;callnative=0" target="_blank" rel="noopener">Karte</a></div>
+          </li>
+          <li class="st-row">
+            <span class="st-no">E2</span>
+            <div class="st-main"><b class="zh-b">玉林小吃街 (Yulin-Imbissstraße)</b><span class="st-where">玉林 (Yulin) · Wuhou · abends</span><p>Ihre Picks dort: 玉林串串 (Yulin-Spieße) und 王妈手撕烤兔 (von Hand zerrissenes Grillkaninchen). Kaninchen ist in Chengdu eine eigene Disziplin, das ist der beste Zusatz zu unserem Abendprogramm.</p><span class="st-brands">串串 (Spieße) · 烤兔 (Grillkaninchen)</span></div>
+            <div class="st-side"><span class="st-tag st-ok">Eight</span><a class="st-map" href="https://uri.amap.com/search?keyword=%E7%8E%89%E6%9E%97%E5%B0%8F%E5%90%83%E8%A1%97&amp;city=510100&amp;callnative=0" target="_blank" rel="noopener">Karte</a></div>
+          </li>
+          <li class="st-row">
+            <span class="st-no">E3</span>
+            <div class="st-main"><b class="zh-b">老妈蹄花 (Mamas Schweinsfuß)</b><span class="st-where">mehrere Filialen</span><p>Stand schon auf unserer Liste (F5) und ist von Eight bestätigt.</p><span class="st-brands">bestätigt</span></div>
+            <div class="st-side"><span class="st-tag st-chk">Eight</span><a class="st-map" href="https://uri.amap.com/search?keyword=%E8%80%81%E5%A6%88%E8%B9%84%E8%8A%B1&amp;city=510100&amp;callnative=0" target="_blank" rel="noopener">Karte</a></div>
+          </li>
+        </ol></div>
+    </section>
+
     <section class="sec" id="cd-michelin">
       <h2 class="sec-h anton">Sterne <span class="amp">&amp;</span> Teehaus <span class="zh">米其林</span></h2>
-      <p class="sec-sub">Die 6. Ausgabe für Chengdu kam am 7. September 2026 heraus und listet 84 Häuser.</p>
-      <div class="cards" data-set="michelin"></div>
+      <p class="sec-sub">Die 6. Ausgabe für Chengdu kam am 7. September 2026 heraus und listet 84 Häuser. Vier davon stehen hier — ein Teehaus und drei Restaurants.</p>
+      <div class="stores">
+        <div class="st-filter" role="group" aria-label="Nach Art filtern">
+          <button aria-pressed="true" data-m="all">Alle 4</button><button aria-pressed="false" data-m="tee">Teehaus</button><button aria-pressed="false" data-m="rest">Restaurants</button>
+        </div>
+        <ol class="st-list">
+          <li class="st-row" data-m="tee">
+            <span class="st-no">★1</span>
+            <div class="st-main"><b class="zh-b">谧寻茶室 (Mi Xun Teehaus)</b><span class="st-where">Im 博舍 (The Upper House) · unser Hotel · 2 min zum Taikoo Li</span><p>Teehaus und Restaurant in einem Hofhaus neben dem 大慈寺 (Daci-Tempel). Vegetarische Sichuan-Küche, das Gemüse kommt aus dem eigenen Hof.</p><span class="st-brands">Teehaus · Mittag &amp; Abend · im Haus</span></div>
+            <div class="st-side"><span class="st-tag st-ok">★ + Grüner Stern</span><span class="st-area">Teehaus</span><a class="st-map" href="https://uri.amap.com/search?keyword=%E8%B0%A7%E5%AF%BB%E8%8C%B6%E5%AE%A4&amp;city=510100&amp;callnative=0" target="_blank" rel="noopener">Karte</a></div>
+          </li>
+          <li class="st-row" data-m="rest">
+            <span class="st-no">★2</span>
+            <div class="st-main"><b class="zh-b">玉芝兰 (Yu Zhi Lan)</b><span class="st-where">青羊 (Qingyang) · westlich der Altstadt</span><p>Jedes Menü wird für den Tisch eigens gekocht, das Geschirr eigens gebrannt. Unbedingt vorher reservieren. Die jüngsten Bewertungen gehen weit auseinander.</p><span class="st-brands">Restaurant · Menü · Reservierung nötig</span></div>
+            <div class="st-side"><span class="st-tag st-ok">★★</span><span class="st-area">Restaurant</span><a class="st-map" href="https://uri.amap.com/search?keyword=%E7%8E%89%E8%8A%9D%E5%85%B0&amp;city=510100&amp;callnative=0" target="_blank" rel="noopener">Karte</a></div>
+          </li>
+          <li class="st-row" data-m="rest">
+            <span class="st-no">★3</span>
+            <div class="st-main"><b class="zh-b">马旺子 (Ma's Kitchen)</b><span class="st-where">Taikoo Li · gegenüber vom Hotel</span><p>Sichuanesisch, ein Stern, und der kürzeste Weg vom Zimmer an den Tisch.</p><span class="st-brands">Restaurant · Sichuan · zu Fuß</span></div>
+            <div class="st-side"><span class="st-tag st-chk">★</span><span class="st-area">Restaurant</span><a class="st-map" href="https://uri.amap.com/search?keyword=%E9%A9%AC%E6%97%BA%E5%AD%90&amp;city=510100&amp;callnative=0" target="_blank" rel="noopener">Karte</a></div>
+          </li>
+          <li class="st-row" data-m="rest">
+            <span class="st-no">★★★</span>
+            <div class="st-main"><b class="zh-b">新荣记 (Xin Rong Ji)</b><span class="st-where">Das erste Drei-Sterne-Haus der Stadt</span><p>Eine Kette, die Meeresfrüchte aus 台州 (Taizhou) einfliegen lässt. Mit Sichuan hat das nichts zu tun, deshalb kann man es auslassen.</p><span class="st-brands">Restaurant · kein Sichuan</span></div>
+            <div class="st-side"><span class="st-tag st-na">Auslassen</span><span class="st-area">Restaurant</span></div>
+          </li>
+        </ol>
+      </div>
     </section>
 
     <section class="sec" id="cd-design">
@@ -1972,7 +2040,7 @@ body.hn{background:#F4EBD8;color:#2A1A12}
 
     <footer class="fbj-foot">
       <span class="big anton">Weiter nach Lijiang →</span>
-      <span>So 22.11. · CTU 09:05 ab 双流 (Shuangliu)</span>
+      <span>Di 24.11. · TFU 11:05 ab 天府 (Tianfu)</span>
       <a class="btn" href="#/">Zur Übersicht</a>
     </footer>
   </div></div>
@@ -1994,12 +2062,12 @@ body.hn{background:#F4EBD8;color:#2A1A12}
     <div>
       <p class="kick zh">吃在西安 (In Xi'an wird gegessen)</p>
       <h1>Die Xi'an<br>Klassiker</h1>
-      <p class="lede">Station I, 14.–16.11., zwei Nächte. Hier geht es ums Essen, nicht um Design. Voller Tag ist nur der Sonntag, und sein Vormittag gehört dem Markt.</p>
+      <p class="lede">Station I, 14.–17.11., drei Nächte. Hier geht es ums Essen, nicht um Design. Zwei volle Tage: Der Sonntagvormittag gehört dem Markt, am Montag zeigt uns Eight die Stadt.</p>
       <div class="stay-bar">
-        <span class="sb-k">Hotel · 2 Nächte · Sa 14.11. – Mo 16.11.</span>
+        <span class="sb-k">Hotel · 3 Nächte · Sa 14.11. – Di 17.11. · gebucht</span>
         <div class="sb-row">
           <b>垣里民宿 <i>(Pension unter der Stadtmauer)</i></b>
-          <span class="w">顺城南路 (Shuncheng Nanlu), innen an der Südmauer. Zu 襄子craft beer und Niwowo sind es ein paar Schritte.</span>
+          <span class="w">顺城南路 (Shuncheng Nanlu), innen an der Südmauer. Zu 襄子craft beer und Niwowo sind es ein paar Schritte.</span><span class="pr">gebucht über Booking · 561,05 €</span>
           <span class="sb-a"><a href="https://www.booking.com/hotel/cn/yuanli.html" target="_blank" rel="noopener">Booking</a><a href="https://uri.amap.com/search?keyword=%E5%9E%A3%E9%87%8C%E6%B0%91%E5%AE%BF&amp;city=610100&amp;callnative=0" target="_blank" rel="noopener">Karte</a><button data-jump="xf-karte">Auf der Karte: H</button></span>
         </div>
       </div>
@@ -2020,7 +2088,7 @@ body.hn{background:#F4EBD8;color:#2A1A12}
       </figure>
     </div>
     <div class="tray" id="xf-menu">
-      <p class="tray-cap">Street Food &amp; Klassiker <span>S1–S8 · die Liste für Sonntag und Montagmorgen</span></p>
+      <p class="tray-cap">Street Food &amp; Klassiker <span>S1–S8 · die Liste für die beiden vollen Tage</span></p>
       <div class="menu" data-xmenu="food"></div>
     </div>
   </section>
@@ -2029,7 +2097,6 @@ body.hn{background:#F4EBD8;color:#2A1A12}
   <section class="band" id="xf-markt"><div class="in">
     <div class="q"><b>Sonntag</b><p>西仓集市 (Markt am Westspeicher). Nur donnerstags und sonntags vormittags, für uns also genau ein Termin: So 15.11.</p></div>
     <div class="q"><b>7–9 Uhr</b><p>小南门早市 (Morgenmarkt am Kleinen Südtor). Die Nachbarschaft kauft an der Stadtmauer ein, danach ist er vorbei.</p></div>
-    <div class="q"><b>Prüfen</b><p>长恨歌 (Lied vom ewigen Leid). Die Show pausiert im Winter vermutlich, vorher nachfragen lassen.</p></div>
     <div class="q"><b>Qinling</b><p>开车去秦岭 (Mit dem Auto ins Qinling) geht: klar und kalt, oben vielleicht Schnee. Lässt sich gut mit 楼观台 (Louguantai) verbinden.</p></div>
   </div></section>
   <div class="wave" style="transform:scaleY(-1)"></div>
@@ -2039,18 +2106,20 @@ body.hn{background:#F4EBD8;color:#2A1A12}
     <div class="order">
       <div class="receipt">
         <h3>XI'AN · STATION I</h3>
-        <div class="row"><span>Sa 14.11. Ankunft XIY</span><span>14:15</span></div>
+        <div class="row"><span>Fr 13.11. BER → PEK</span><span>12:55</span></div>
+        <div class="row"><span>Sa 14.11. PEK → XIY</span><span>14:15</span></div>
         <div class="row"><span>So 15.11. Markt + Stadt</span><span>1 Tag</span></div>
-        <div class="row"><span>Mo 16.11. G3763 → 重庆北</span><span>08:02</span></div>
-        <div class="row"><span>垣里民宿 (Pension unter der Stadtmauer)</span><span>2 N.</span></div>
+        <div class="row"><span>Mo 16.11. Stadt mit Eight</span><span>1 Tag</span></div>
+        <div class="row"><span>Di 17.11. G3763 → 重庆北</span><span>08:02</span></div>
+        <div class="row"><span>垣里民宿 (Pension unter der Stadtmauer)</span><span>3 N.</span></div>
         <div class="row"><span>Wetter</span><span>8–11 °C / −1 °C</span></div>
         <div class="row tot"><span>Nördlich des Qinling</span><span>GEHEIZT</span></div>
       </div>
       <ul class="lst">
-        <li><span class="c">I</span><div><b>Ankunft Samstag</b>14:15 am Flughafen Xianyang, reiner Anreisetag. Deshalb sind wir am Sonntag pünktlich am Markt.</div></li>
+        <li><span class="c">I</span><div><b>Anreise Freitag/Samstag</b>HU490 ab Berlin Fr 12:55, Peking an 05:05. Nach 6 h 55 Umsteigezeit HU7237 12:00 → Xianyang 14:15, ein Ticket, durchgecheckt. Reiner Anreisetag, deshalb sind wir am Sonntag pünktlich am Markt.</div></li>
         <li><span class="c">II</span><div><b>Unterkunft</b><span class="cn zh">垣里民宿</span> (Pension unter der Stadtmauer) · <a href="https://www.booking.com/hotel/cn/yuanli.html" target="_blank" rel="noopener">Booking</a>. Zu 襄子craft beer und Niwowo sind es von hier nur ein paar Schritte.</div></li>
-        <li><span class="c">III</span><div><b>Weiter am Montag</b>Zug G3763 ab 西安北 (Xi'an Nord) 08:02, an 重庆北 (Chongqing Nord) 13:34. Fährt über Guangyuan durch die Qinling-Tunnel.</div></li>
-        <li><span class="c">IV</span><div><b>Mit der Freundin abstimmen</b>Sie zeigt uns die Stadt. Nur der Sonntag ist ein voller Tag.</div></li>
+        <li><span class="c">III</span><div><b>Weiter am Dienstag</b>Zug G3763 ab 西安北 (Xi'an Nord) 08:02, an 重庆北 (Chongqing Nord) 13:34. Fährt über Guangyuan durch die Qinling-Tunnel.</div></li>
+        <li><span class="c">IV</span><div><b>Mit Eight abstimmen</b>Sie führt uns in Xi'an herum. Fest liegt nur der Markt am Sonntagvormittag, der Montag ist frei einteilbar.</div></li>
       </ul>
     </div>
   </section>
@@ -2063,7 +2132,7 @@ body.hn{background:#F4EBD8;color:#2A1A12}
       <div class="gm-filter" id="xa-mapf" role="group" aria-label="Kategorien"><button aria-pressed="true" data-c="markt"><i style="background:#FFCD15"></i>Markt</button><button aria-pressed="true" data-c="food"><i style="background:#D0342C;box-shadow:0 0 0 2px #fff"></i>Essen</button><button aria-pressed="true" data-c="see"><i style="background:#fff"></i>Sehen</button><button aria-pressed="true" data-c="bar"><i style="background:#7FB6E6"></i>Bars</button><button aria-pressed="true" data-c="hotel"><i style="background:#8E0808"></i>Hotel</button></div>
       <div class="gm-wrap"><svg id="xa-map" viewBox="0 0 800 1030" role="img" aria-label="Schematische Karte von Xi'an mit Stadtmauer, Märkten, Essen, Sehenswürdigkeiten und Bars"></svg></div>
       <div class="gm-info" id="xa-map-info" aria-live="polite"><b>Auf einen Punkt tippen.</b> Die Codes sind dieselben wie in den Menükarten.</div>
-      <ul class="gm-off" id="xa-off"><li data-c="see"><b>A7</b> 兵马俑 (Terrakotta-Armee) <span>↗ ca. 35 km östlich</span> <a class="gm-a" href="https://uri.amap.com/search?keyword=%E5%85%B5%E9%A9%AC%E4%BF%91&city=610100&callnative=0" target="_blank" rel="noopener">Karte</a></li><li data-c="see"><b>A3</b> 考古博物馆 (Archäologisches Museum) <span>↓ südlich, Chang'an</span> <a class="gm-a" href="https://uri.amap.com/search?keyword=%E9%99%95%E8%A5%BF%E8%80%83%E5%8F%A4%E5%8D%9A%E7%89%A9%E9%A6%86&city=610100&callnative=0" target="_blank" rel="noopener">Karte</a></li><li data-c="base"><b>Zug</b> 西安北 (Xi'an Nord) <span>↑ nördlich, Abfahrt Mo 08:02</span> <a class="gm-a" href="https://uri.amap.com/search?keyword=%E8%A5%BF%E5%AE%89%E5%8C%97%E7%AB%99&city=610100&callnative=0" target="_blank" rel="noopener">Karte</a></li><li data-c="base"><b>XIY</b> Flughafen Xianyang <span>↖ nordwestlich, Ankunft Sa 14:15</span> <a class="gm-a" href="https://uri.amap.com/search?keyword=%E8%A5%BF%E5%AE%89%E5%92%B8%E9%98%B3%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA&city=610100&callnative=0" target="_blank" rel="noopener">Karte</a></li></ul>
+      <ul class="gm-off" id="xa-off"><li data-c="see"><b>A7</b> 兵马俑 (Terrakotta-Armee) <span>↗ ca. 35 km östlich</span> <a class="gm-a" href="https://uri.amap.com/search?keyword=%E5%85%B5%E9%A9%AC%E4%BF%91&city=610100&callnative=0" target="_blank" rel="noopener">Karte</a></li><li data-c="see"><b>A3</b> 考古博物馆 (Archäologisches Museum) <span>↓ südlich, Chang'an</span> <a class="gm-a" href="https://uri.amap.com/search?keyword=%E9%99%95%E8%A5%BF%E8%80%83%E5%8F%A4%E5%8D%9A%E7%89%A9%E9%A6%86&city=610100&callnative=0" target="_blank" rel="noopener">Karte</a></li><li data-c="base"><b>Zug</b> 西安北 (Xi'an Nord) <span>↑ nördlich, Abfahrt Di 08:02</span> <a class="gm-a" href="https://uri.amap.com/search?keyword=%E8%A5%BF%E5%AE%89%E5%8C%97%E7%AB%99&city=610100&callnative=0" target="_blank" rel="noopener">Karte</a></li><li data-c="base"><b>XIY</b> Flughafen Xianyang <span>↖ nordwestlich, an Sa 14:15 über Peking</span> <a class="gm-a" href="https://uri.amap.com/search?keyword=%E8%A5%BF%E5%AE%89%E5%92%B8%E9%98%B3%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA&city=610100&callnative=0" target="_blank" rel="noopener">Karte</a></li></ul>
     </div>
   </section>
 
@@ -2117,7 +2186,7 @@ body.hn{background:#F4EBD8;color:#2A1A12}
 
   <section class="ac-meta">
     <div><span class="k">Station</span><span class="d">-</span><b>Shenzhen</b><span class="z">深圳 (Tiefer Graben)</span></div>
-    <div><span class="k">Zeitraum</span><span class="d">-</span><b>25.–28.11.</b><span class="z">3 Nächte · Station V</span></div>
+    <div><span class="k">Zeitraum</span><span class="d">-</span><b>27.–29.11.</b><span class="z">2 Nächte · Station V</span></div>
     <div><span class="k">Kategorie</span><span class="d">-</span><span class="z">Messe<br>Hardware<br>Nantou</span></div>
     <div><span class="k">Synopsis</span><span class="d">-</span><span class="z">Die Stadt ist vierzig Jahre alt, und das sieht man ihr an. Wir fahren wegen der Messe hin. Die Stadt selbst hat man in einem halben Tag gesehen.</span></div>
   </section>
@@ -2127,17 +2196,17 @@ body.hn{background:#F4EBD8;color:#2A1A12}
   <section class="ac-row">
     <div class="h"><span class="k">Ablauf</span><span class="d">-</span><b>Vier Tage</b></div>
     <ol class="ac-days">
-      <li><span class="t">Mi 25.11.</span><span>Nachtflug LJG 21:55 → SZX 00:20. Ankunft nach Mitternacht, gegen 01:15 im Hotel, der Flughafen liegt 7 km vom Messegelände. Dem Hotel vorher Bescheid geben, dass wir spät kommen.</span></li>
-      <li><span class="t">Do 26.11.</span><span>CHTF, Tag 1. Nach der kurzen Nacht nicht um neun los, sondern gegen Mittag.</span></li>
-      <li><span class="t">Fr 27.11.</span><span>CHTF, Tag 2, ruhiger als der Eröffnungstag. Morgens auschecken, abends nach 南头 (Nantou).</span></li>
-      <li><span class="t">Sa 28.11.</span><span>Vormittags 华强北 (Huaqiangbei), mittags Zug nach Guangzhou ab 福田 (Futian) oder 深圳北 (Shenzhen Nord).</span></li>
+      <li><span class="t">So 29.11.</span><span>Nachtflug LJG 21:55 → SZX 00:20. Ankunft nach Mitternacht, gegen 01:15 im Hotel, der Flughafen liegt 7 km vom Messegelände. Dem Hotel vorher Bescheid geben, dass wir spät kommen.</span></li>
+      <li><span class="t">So 29.11.</span><span>CHTF, Tag 1. Nach der kurzen Nacht nicht um neun los, sondern gegen Mittag.</span></li>
+      <li><span class="t">So 29.11.</span><span>CHTF, Tag 2, ruhiger als der Eröffnungstag. Morgens auschecken, abends nach 南头 (Nantou).</span></li>
+      <li><span class="t">So 29.11.</span><span>Vormittags 华强北 (Huaqiangbei), mittags Zug nach Guangzhou ab 福田 (Futian) oder 深圳北 (Shenzhen Nord).</span></li>
     </ol>
   </section>
 
   <p class="ac-q">Was verkaufen<br>die Firmen hier?</p>
 
   <section class="ac-row" id="sza-messe">
-    <div class="h"><span class="k">Messe</span><span class="d">-</span><b>CHTF 26.–28.11.</b></div>
+    <div class="h"><span class="k">Messe</span><span class="d">-</span><b>CHTF 28.11. (Schlusstag)</b></div>
     <div class="b">
       <p>China Hi-Tech Fair, im 深圳国际会展中心 (Shenzhen World Exhibition &amp; Convention Center) in 福海 (Fuhai), 宝安 (Bao'an).</p>
       <p class="ac-warn"><b>Nicht verwechseln</b> mit dem 深圳会展中心 (Shenzhen Convention &amp; Exhibition Centre) in Futian. Das ist ein anderes Haus, 25 km entfernt. Sogar Messeportale nennen für die CHTF teils die falsche Adresse.</p>
@@ -2145,7 +2214,7 @@ body.hn{background:#F4EBD8;color:#2A1A12}
         <dt>Gelände</dt><dd>Mehr als ein Kilometer lang. Metro-Linien 12 und 20, Stationen Shenzhen World und Shenzhen World North. Beim Hotel nachfragen, an welchem Ende es liegt.</dd>
         <dt>Flughafen</dt><dd>7 km, Taxi 15–30 min. Kostenlose Shuttlebusse von den Metrostationen 福永 (Fuyong) und 塘尾 (Tangwei) an Linie 11. Ab Flughafen 10 RMB.</dd>
         <dt>Badge</dt><dd>Elektronisch über chtf.com. <b>Am Eingang wird der Reisepass gescannt.</b> Wer sich nicht vorher registriert, wartet vor Ort bis zu zwei Stunden. Eintritt ab 16 Jahren.</dd>
-        <dt>Hotel</dt><dd>Hilton Shenzhen World, über eine Brücke direkt mit dem Gelände verbunden, <i>oder</i> Crowne Plaza WECC, 530 m entfernt. Beide sind bei 450.000 Besuchern früh ausgebucht, deshalb zuerst buchen.<br><a href="https://www.hilton.com/en/hotels/szxechi-hilton-shenzhen-world-exhibition-and-convention-center/" target="_blank" rel="noopener">Hilton</a> · <a href="https://www.ihg.com/crowneplaza/hotels/us/en/shenzhen/szxic/hoteldetail" target="_blank" rel="noopener">Crowne Plaza</a></dd>
+        <dt>Hotel</dt><dd>Jiangnan House Nantou, 乐平街 22 (Leping-Straße 22), zwei Zimmer, gebucht. Die Messehotels am Gelände sind vom Tisch.<br><a href="https://www.booking.com/hotel/cn/shen-zhen-nan-tou-you-xiong-jiu-dian.html" target="_blank" rel="noopener">Booking</a></dd>
       </dl>
     </div>
   </section>
@@ -2176,16 +2245,8 @@ body.hn{background:#F4EBD8;color:#2A1A12}
     <div class="b">
       <p>Eine 1.700 Jahre alte Stadt mitten in Nanshan, umgebaut von <b>URBANUS</b>. Der einzige historische Ort der Stadt, und selbst der ist umgebaut. Frei zugänglich, die Museen kosten nichts. 2 h einplanen.</p>
       <dl class="ac-dl">
-        <dt>Hotel 27.11.</dt><dd>Jiangnan House Nantou, 乐平街 22 (Leping-Straße 22) · <a href="https://www.booking.com/hotel/cn/shen-zhen-nan-tou-you-xiong-jiu-dian.html" target="_blank" rel="noopener">Booking</a></dd>
         <dt>Metro</dt><dd>Linie 12 fährt ohne Umsteigen von Nanshan direkt zum Messegelände.</dd>
       </dl>
-    </div>
-  </section>
-
-  <section class="ac-row">
-    <div class="h"><span class="k">Architektur</span><span class="d">-</span><b>Sea World Culture and Arts Center</b><span class="z">海上世界文化艺术中心 (Kulturzentrum Meereswelt)</span></div>
-    <div class="b">
-      <p><b>Fumihiko Maki</b>, in 蛇口 (Shekou). Mit einer Dependance des V&amp;A, Designshop und Dachgarten mit Blick auf die Bucht. Geöffnet Di–So bis 20:30.</p>
     </div>
   </section>
 
@@ -2205,7 +2266,7 @@ body.hn{background:#F4EBD8;color:#2A1A12}
   </section>
 
   <section class="ac-grid3">
-    <div><span class="k">蛇口 (Shekou) · Sea World</span><b>International, ruhig</b><p>Seit Jahrzehnten das internationale Viertel, rund um das festgemachte Kreuzfahrtschiff 明华轮 (Minghua). TAPS Brewpub, Brown Sugar Jar mit Livejazz. Älteres Publikum, schließt früher als Futian.</p></div>
+    <div><span class="k">蛇口 (Shekou)</span><b>International, ruhig</b><p>Seit Jahrzehnten das internationale Viertel, rund um das festgemachte Kreuzfahrtschiff 明华轮 (Minghua). TAPS Brewpub, Brown Sugar Jar mit Livejazz. Älteres Publikum, schließt früher als Futian.</p></div>
     <div><span class="k">后海 (Houhai)</span><b>Rooftops &amp; Skyline</b><p>Dresscode, Instagram-Publikum. Freitags und samstags ab 20 Uhr eine synchronisierte LED-Lichtshow über die Türme, am besten vom 人才公园 (Talent Park) aus. Sehenswert, aber kein ganzer Abend.</p></div>
     <div><span class="k">福田 (Futian)</span><b>OIL Club · Coco Park</b><p>Die Adresse für Techno und House, und zwar in Futian, nicht in Nanshan.</p></div>
   </section>
@@ -2242,14 +2303,14 @@ body.hn{background:#F4EBD8;color:#2A1A12}
     <div><span class="k">Logistik · Genomik</span><b>SF Express · BGI</b></div>
   </section>
 
-  <footer class="ac-foot"><a href="#/">← Übersicht</a><span>Weiter: Guangzhou · Sa 28.11.</span></footer>
+  <footer class="ac-foot"><a href="#/">← Übersicht</a><span>Weiter: Guangzhou · So 29.11.</span></footer>
 </div>
 
 <!-- ======================= HONGKONG ======================= -->
 <div id="hongkong" class="hkp" hidden>
   <header class="hk-bar"><div class="in">
     <a class="home" href="#/">← Übersicht</a>
-    <nav aria-label="Abschnitte"><button data-jump="hk-plan">Plan</button><button data-jump="hk-karte">Karte</button><button data-jump="hk-szenen">Szenen</button><button data-jump="hk-zimmer">Zimmer</button><button data-jump="hk-stadt">Stadt</button><button data-jump="hk-reise">Reise</button></nav>
+    <nav aria-label="Abschnitte"><button data-jump="hk-plan">Plan</button><button data-jump="hk-karte">Karte</button><button data-jump="hk-szenen">Szenen</button><button data-jump="hk-zimmer">Zimmer</button><button data-jump="hk-essen">Essen</button><button data-jump="hk-stadt">Stadt</button><button data-jump="hk-reise">Reise</button></nav>
   </div></header>
 
   <div class="hk-wrap">
@@ -2410,13 +2471,45 @@ body.hn{background:#F4EBD8;color:#2A1A12}
       </div>
     </article>
 
-    <div class="inter" id="hk-zimmer"><p>Welches Zimmer, das ist noch offen.</p><span class="tc">四扇門</span></div>
+    <div class="inter" id="hk-zimmer"><p>Welches Zimmer, das ist noch offen — nichts davon ist gebucht.</p><span class="tc">五扇門</span></div>
 
     <div class="rooms">
       <div class="door"><span class="plate">Central</span><h4>The Pottinger</h4><span class="loc">ab 253 $ · 68 Zimmer</span><p>An der Pottinger Street, fünf Gehminuten zu Tai Kwun.</p><a href="https://www.tripadvisor.com/Hotel_Review-g294217-d6485790-Reviews-The_Pottinger_Hong_Kong-Hong_Kong.html" target="_blank" rel="noopener">Ansehen</a></div>
       <div class="door"><span class="plate">Central</span><h4>The Murray</h4><span class="loc">ab 390 $ · ab 38 m²</span><p>Ein Regierungsbau von 1969, umgebaut von Foster.</p><a href="https://guide.michelin.com/mt/en/hotels-stays/hong-kong-island/the-murray-hong-kong-a-niccolo-hotel-9100" target="_blank" rel="noopener">Ansehen</a></div>
       <div class="door wkw"><span class="plate">佐敦 (Jordan)</span><h4>Eaton HK</h4><span class="loc">Preis prüfen</span><p>Ausdrücklich nach den Filmen der 90er gestaltet. Die 重慶大廈 (Chungking Mansions) liegen die Nathan Road hinunter. Die beste Lage für M+ und Sham Shui Po.</p><a href="https://www.eatonworkshop.com/en-us/hong-kong/" target="_blank" rel="noopener">Ansehen</a></div>
+      <div class="door"><span class="plate">尖沙咀 (Tsim Sha Tsui)</span><h4>The Langham</h4><span class="loc">war schon einmal gebucht</span><p>War für 25.–27.11. gebucht und wurde storniert — das waren noch die Daten einer früheren Planversion. Falls es weiter in Frage kommt, wären es jetzt der 30.11. bis 2.12.</p><a href="https://www.langhamhotels.com/en/the-langham/hong-kong/" target="_blank" rel="noopener">Ansehen</a></div>
       <div class="door wkw"><span class="plate">灣仔 (Wan Chai)</span><h4>The Fleming</h4><span class="loc">Preis prüfen · 66 Zimmer</span><p>Zitiert die 天星小輪 (Star Ferry) und das Hongkong der 60er. Der Michelin Guide ordnet es diesem Film zu. Das Blaue Haus ist gleich nebenan.</p><a href="https://www.mrandmrssmith.com/luxury-hotels/the-fleming" target="_blank" rel="noopener">Ansehen</a></div>
+    </div>
+
+
+    <div class="inter" id="hk-essen"><p>Und wo gegessen wird — die Liste kommt von Gordon.</p><span class="tc">食在香港</span></div>
+
+    <div class="hk-eat">
+      <p class="hk-eat-lede">Von einem Hongkonger, sortiert nach seinen eigenen Kategorien. <b>★</b> heißt: von ihm hervorgehoben. Bei zwei Nächten sind das realistisch fünf, sechs Mahlzeiten — die drei Sterne zuerst reservieren, die anderen gehen auch ohne. Frühstück im Cha Chaan Teng, mittags Dim Sum, abends eines der Restaurants.</p>
+
+      <h4 class="hk-eat-h">Local Eats</h4>
+      <dl class="hk-eat-l">
+        <dt>坤記煲仔小菜 <span>(Kwan Kee Claypot Rice)</span></dt><dd>Claypot-Reis in 西營盤 (Sai Ying Pun). Klassisches Essen für die kühle Jahreszeit — Ende November passt.</dd>
+        <dt>Yat Lok Restaurant, Central</dt><dd>Gebratene Gans.</dd>
+        <dt>華姐清湯腩 <span>(Sister Wah)</span></dt><dd>Rinderbrust in klarer Brühe.</dd>
+        <dt>流浮山窯燒雞 <span>(Kiln Chicken)</span></dt><dd>Im Ofen gebackenes Huhn aus 流浮山 (Lau Fau Shan).</dd>
+        <dt>新景園咖喱小廚 <span>(Sun King Yuen Curry)</span></dt><dd>Curry-Laden.</dd>
+      </dl>
+
+      <h4 class="hk-eat-h">茶餐廳 <span>(Cha Chaan Teng)</span></h4>
+      <p class="hk-eat-sub">Die Hongkonger Institution: Milchtee, Toast, schnelle Küche.</p>
+      <dl class="hk-eat-l">
+        <dt>德如茶餐廳 <span>(Tak Yu)</span></dt><dd>Ohne Kommentar auf seiner Liste.</dd>
+        <dt>澳洲牛奶公司 <span>(Australia Dairy Company)</span></dt><dd>佐敦 (Jordan), ein paar Minuten vom Eaton HK. Rührei-Toast, schneller Service im Wortsinn.</dd>
+        <dt>Lan Fong Yuen, Central oder TST</dt><dd>Milchtee und Schweinekotelett-Brötchen.</dd>
+        <dt>敏華冰廳 <span>(Men Wah Bing Teng)</span></dt><dd>銅鑼灣 (Causeway Bay).</dd>
+      </dl>
+
+      <h4 class="hk-eat-h">Restaurants</h4>
+      <p class="hk-eat-sub">Café Landmark · 北京樓 (Peking Garden), Landmark · 利苑 (Lee Gardens), IFC · 太平館餐廳 (Tai Ping Koon) · 竹園海鮮飯店 (Chuk Yuen Seafood) · Ho Lee Fook · <b>The Chairman ★</b> · <b>Whey ★</b> (singapurische Fusion) · <b>Liu Yuan Pavilion ★</b></p>
+
+      <h4 class="hk-eat-h">Dim Sum</h4>
+      <p class="hk-eat-sub">六安居 (Luk On Kui) · 點點心 (Dim Dim Sum)</p>
     </div>
 
     <div class="twocol" id="hk-stadt">
@@ -2462,8 +2555,8 @@ body.hn{background:#F4EBD8;color:#2A1A12}
     <div class="gs-title"><div class="in">
       <h1>CHONGQING<span class="zh">重庆</span></h1>
       <ul class="gs-log">
-        <li class="ok">ZIEL 重庆 (Doppeltes Glück) · Station II · 16.–19.11. · 3 Nächte</li>
-        <li class="ok">ANKUNFT Mo 16.11. 13:34 · 重庆北 (Chongqing Nord), nicht Chongqing West</li>
+        <li class="ok">ZIEL 重庆 (Doppeltes Glück) · Station II · 17.–20.11. · 3 Nächte</li>
+        <li class="ok">ANKUNFT Di 17.11. 13:34 · 重庆北 (Chongqing Nord), nicht Chongqing West</li>
         <li class="ok">QUARTIER SUNYATA 既下山 (Vom Berg herab) · 龙门浩 (Longmenhao)</li>
         <li class="caution">SICHT 雾都 (Nebelstadt) · 12–14 °C · feucht · innen ungeheizt</li>
       </ul>
@@ -2474,10 +2567,10 @@ body.hn{background:#F4EBD8;color:#2A1A12}
     <section class="gs-sec" id="cq-ablauf">
       <div class="gs-h"><span class="n">00</span><h2>Ablauf</h2><span class="zh">日程 (Zeitplan)</span></div>
       <div class="days">
-        <div><span class="t">MO 16.11.</span><p>Zug G3763 ab 西安北 (Xi'an Nord) 08:02, an 13:34. Nachmittags ankommen, abends Hotpot.</p></div>
-        <div><span class="t">DI 17.11.</span><p>Voller Tag.</p></div>
-        <div><span class="t">MI 18.11.</span><p>Voller Tag. Optional der Ausflug nach 大足石刻 (Felsskulpturen von Dazu).</p></div>
-        <div><span class="t">DO 19.11.</span><p>Zug nach 成都东 (Chengdu Ost), 1–1,5 h, fährt laufend.</p></div>
+        <div><span class="t">DI 17.11.</span><p>Zug G3763 ab 西安北 (Xi'an Nord) 08:02, an 13:34. Nachmittags ankommen, abends Hotpot.</p></div>
+        <div><span class="t">MI 18.11.</span><p>Voller Tag.</p></div>
+        <div><span class="t">DO 19.11.</span><p>Zweiter voller Tag in der Stadt, kein Ausflug.</p></div>
+        <div><span class="t">FR 20.11.</span><p>Zug nach 成都东 (Chengdu Ost), 1–1,5 h, fährt laufend.</p></div>
       </div>
     </section>
 
@@ -2576,7 +2669,6 @@ body.hn{background:#F4EBD8;color:#2A1A12}
         <article class="tgt"><div class="id"><span>04.1 · EHEM. BANKNOTENDRUCK</span><b>DRITTE FRONT</b></div><h3>Testbed 2<span class="zh">鹅岭二厂 (Zweites Werk am Gänsegrat)</span></h3><p>Früher eine Banknotendruckerei, davor wurden hier während der japanischen Invasion Waffen gefertigt. Heute Galerien, Cafés, Bars, Boutiquen und Aussichtsterrassen. Schilder zeigen einem, wo und wie man fotografieren soll.</p><div class="rd">Direkt neben Liziba</div></article>
         <article class="tgt"><div class="id"><span>04.2 · SÜDEN</span><b>VOR SONNENUNTERGANG</b></div><h3>Huangjueping<span class="zh">黄桷坪 (Ebene der Gelben Feige)</span></h3><p>Der alte Campus der 四川美术学院 (Sichuan-Kunstakademie). Die Graffitistraße gilt als längste Kunststraße der Welt, der Campus ist voller Installationen, dazu billige Läden für Künstlerbedarf.</p><div class="rd">1–2 h</div></article>
         <article class="tgt amber"><div class="id"><span>04.3 · IN HUANGJUEPING</span><b>NUR TEE</b></div><h3>Jiaotong Teahouse<span class="zh">交通茶馆 (Verkehrs-Teehaus)</span></h3><p>Ein altes Teehaus, nur Tee und Nüsse, Gaiwan-Stil. In der Gasse nebenan darf man selbst an die Wand malen.</p><div class="rd">Mittendrin im Kunstviertel</div></article>
-        <article class="tgt"><div class="id"><span>04.4 · OPTIONAL · 3. TAG</span><b>UNESCO</b></div><h3>Dazu Rock Carvings<span class="zh">大足石刻 (Felsskulpturen von Dazu)</span></h3><p>Buddhistische Felsgrotten, UNESCO-Welterbe.</p><div class="rd">1,5 h raus</div></article>
       </div>
     </section>
 
@@ -2584,7 +2676,6 @@ body.hn{background:#F4EBD8;color:#2A1A12}
       <div class="gs-h"><span class="n">05</span><h2>Mode</h2><span class="zh">买手店 (Buyer Stores)</span></div>
       <div class="gs-grid">
         <article class="tgt amber"><div class="id"><span>05.1 · WFC · 民族路 188 (Minzu-Straße 188)</span><b>1.–2. OG</b></div><h3>SND<span class="zh">环球金融中心 (World Financial Center)</span></h3><p>Der älteste unabhängige Buyer Store Chongqings und der, der am längsten durchgehalten hat: zehn Jahre, inzwischen zwölf Filialen. DRIES VAN NOTEN, Y/Project, nohant, Short Sentence, IMMI, SHUSHU/TONG.</p><div class="rd">Innenraum von 万社 (Various Associates), wie (SO)WHAT in Chengdu. Ein über 20 m freigeräumter, schmaler Raum, man geht wie unter einer Brücke entlang. Zweite Filiale im 新光广场 (Xinguang-Plaza), 288 m².</div></article>
-        <article class="tgt red"><div class="id"><span>05.2 · 长嘉汇 (Changjiahui)</span><b>OFFLINE</b></div><h3>Super Normal Department<span class="zh">超凡百货 (Kaufhaus Übernormal)</span></h3><p>In der französischen Marinekaserne. <b>Am 7. Januar 2024 geschlossen</b>, steht aber immer noch in jedem Blogpost.</p><div class="rd"><span class="tag r">NICHT HINGEHEN</span></div></article>
       </div>
     </section>
 
@@ -2657,10 +2748,10 @@ body.hn{background:#F4EBD8;color:#2A1A12}
         <svg class="swirl" viewBox="0 0 140 22" aria-hidden="true"><path d="M4 11 H52 M88 11 H136" stroke="#E07A2E" stroke-width="1.6"/><path d="M62 11 a8 8 0 1 1 8 8 a5 5 0 1 1 -5 -5 a2.4 2.4 0 1 1 2.4 2.4" fill="none" stroke="#E07A2E" stroke-width="1.8" stroke-linecap="round"/></svg>
       </div>
       <div class="days-lj">
-        <div class="dy"><span class="w">So 22.11.</span><span class="d">Ankunft</span><p>Flug CTU 09:05 → LJG 10:25, Tibet Airlines, ab 双流 (Shuangliu). Mittags an, nachmittags an die 2.400 m gewöhnen. Früh schlafen.</p><span class="stay">InterContinental Ancient Town oder Amandayan</span></div>
-        <div class="dy trek"><span class="w">Mo 23.11.</span><span class="d">Trek, Tag 1</span><p>Um 7 Uhr geht es los. Die 28 Kehren hinauf auf 2.670 m, dann fast eben an der Hangkante entlang. 5–6 h.</p><span class="stay">中途客栈 (Halfway Guesthouse)</span></div>
-        <div class="dy trek"><span class="w">Di 24.11.</span><span class="d">Trek, Tag 2</span><p>Abstieg zu Tina's, 3–4 h, am Wasserfall vorbei. Rückfahrt meist um 16:30, gegen 19 Uhr in Lijiang.</p><span class="stay">Amandayan</span></div>
-        <div class="dy"><span class="w">Mi 25.11.</span><span class="d">Freier Tag</span><p>束河 (Shuhe), 白沙 (Baisha), 玉湖村 (Dorf am Jadesee). Abends Flug LJG 21:55 → SZX 00:20, Juneyao.</p><span class="stay">Nachtflug nach Shenzhen</span></div>
+        <div class="dy"><span class="w">Di 24.11.</span><span class="d">Ankunft</span><p>Flug TFU 11:05 → LJG 12:30, Beijing Capital, ab 天府 (Tianfu). Gegen 13:30 im Hotel, nachmittags an die 2.400 m gewöhnen. Früh schlafen.</p><span class="stay">安隅 (Anyu), Südtor Dayan · gebucht</span></div>
+        <div class="dy trek"><span class="w">Mi 25.11.</span><span class="d">Trek, Tag 1</span><p>Um 7 Uhr geht es los. Die 28 Kehren hinauf auf 2.670 m, dann fast eben an der Hangkante entlang. 5–6 h.</p><span class="stay">中途客栈 (Halfway Guesthouse)</span></div>
+        <div class="dy trek"><span class="w">Do 26.11.</span><span class="d">Trek, Tag 2</span><p>Abstieg zu Tina's, 3–4 h, am Wasserfall vorbei. Rückfahrt meist um 16:30, gegen 19 Uhr in Lijiang.</p><span class="stay">Amandayan</span></div>
+        <div class="dy"><span class="w">Fr 27.11.</span><span class="d">Freier Tag</span><p>束河 (Shuhe), 白沙 (Baisha), 玉湖村 (Dorf am Jadesee). Abends Flug LJG 21:55 → SZX 00:20, Juneyao.</p><span class="stay">Nachtflug nach Shenzhen</span></div>
       </div>
     </section>
 
@@ -2785,7 +2876,7 @@ body.hn{background:#F4EBD8;color:#2A1A12}
       </div>
     </section>
 
-    <footer class="lj-foot"><a href="#/">← Übersicht</a><span>Weiter: Shenzhen · Nachtflug 25.11.</span></footer>
+    <footer class="lj-foot"><a href="#/">← Übersicht</a><span>Weiter: Shenzhen · Nachtflug 27.11.</span></footer>
   </div>
 </div>
 
@@ -2805,7 +2896,7 @@ body.hn{background:#F4EBD8;color:#2A1A12}
         <span class="hp zh">食在广州</span>
         <h1 class="zh">羊城</h1>
         <span class="de">Guangzhou · Stadt der Ziegen</span>
-        <p class="meta">Station VI · Sa 28.11. – Mo 30.11. · zwei Nächte · Hauptstadt der kantonesischen Küche</p>
+        <p class="meta">Station VI · So 29.11. – Mo 30.11. · eine Nacht · Hauptstadt der kantonesischen Küche</p>
       </div>
       <div class="couplet zh" aria-label="Linke Spruchzeile">骑楼深处觅老味</div>
     </div>
@@ -2831,11 +2922,11 @@ body.hn{background:#F4EBD8;color:#2A1A12}
     <section class="gz-sec" id="gza-zettel">
       <div class="gz-h"><span class="cn">點心紙</span><span class="de">Bestellzettel · anderthalb Tage</span><p>Wie in einem Teehaus: Was wir wollen, wird abgestempelt. Zum Stempeln oder Entfernen auf ein Kästchen tippen.</p></div>
       <div class="sheet">
-        <div class="sheet-head"><span>枱號 (Tisch) · 2</span><b class="zh">點心紙</b><span>28.–30.11.2026</span></div>
+        <div class="sheet-head"><span>枱號 (Tisch) · 2</span><b class="zh">點心紙</b><span>29.–30.11.2026</span></div>
         <table>
           <thead><tr><th>類 (Größe)</th><th>時間 (Zeit)</th><th>品名 (Posten)</th><th>蓋章</th></tr></thead>
           <tbody>
-            <tr><td class="sz">特點 (Spezial)</td><td>Sa 28.11. mittags</td><td>Zug ab 福田 (Futian) oder 深圳北 (Shenzhen Nord). Ankunft in 广州南 (Guangzhou Süd) in Panyu, weit draußen. Mit Linie 2 eine halbe Stunde in die Stadt, Gepäck ins Hotel.</td><td class="stampcell"><button class="chk" aria-pressed="true" aria-label="Stempel Anreise"></button></td></tr>
+            <tr><td class="sz">特點 (Spezial)</td><td>So 29.11. mittags</td><td>Zug ab 福田 (Futian) oder 深圳北 (Shenzhen Nord). Ankunft in 广州南 (Guangzhou Süd) in Panyu, weit draußen. Mit Linie 2 eine halbe Stunde in die Stadt, Gepäck ins Hotel.</td><td class="stampcell"><button class="chk" aria-pressed="true" aria-label="Stempel Anreise"></button></td></tr>
             <tr><td class="sz">中點 (Mittel)</td><td>Sa nachmittags</td><td>东山口 (Dongshankou): Läden, 逵园 (Kuiyuan) und das Café auf der Terrasse.</td><td class="stampcell"><button class="chk" aria-pressed="true" aria-label="Stempel Dongshankou"></button></td></tr>
             <tr><td class="sz">大點 (Groß)</td><td>Sa abends</td><td>Essen in 荔湾 (Liwan).</td><td class="stampcell"><button class="chk" aria-pressed="false" aria-label="Stempel Abendessen Liwan"></button></td></tr>
             <tr><td class="sz">頂點 (Spitze)</td><td>So 29.11. ab 10 Uhr</td><td>Yum Cha im 陶陶居 (Taotaoju), Stammhaus an der Shangxiajiu. Die Einheimischen empfehlen den Umgang im 2. Stock wegen der Aussicht. Vom 5. Stock sieht man über die Arkadendächer.</td><td class="stampcell"><button class="chk" aria-pressed="true" aria-label="Stempel Yum Cha"></button></td></tr>
@@ -2907,7 +2998,6 @@ body.hn{background:#F4EBD8;color:#2A1A12}
         <div class="room"><span class="no">包房 2 · Achse</span><h4>Miaoqian Xijie<span class="zh">庙前西街 (Westliche Tempelvorderstraße)</span></h4><p>GROUP STUDIOST, 3MODE, Vital und Captain东山 (Captain Dongshan). Cafés: seed down und 急急脚 (Eilige Füße).</p></div>
         <div class="room"><span class="no">包房 3 · Buyer Store</span><h4>FOAMING AROUND</h4><p>Buyer Store und Ausstellungsraum in einem. Arbeitet mit Kunstinstitutionen, Gastronomie und Nachwuchsdesignern zusammen.</p></div>
         <div class="room"><span class="no">包房 4 · Label</span><h4>Moromoro</h4><p>Ein eigenes Damenlabel im Retro-Stil.</p></div>
-        <div class="room"><span class="no">包房 5 · Erster Laden</span><h4>Aesop</h4><p>Der erste Laden in Guangzhou, an der 恤孤院路 (Xugu Yuan Lu).</p></div>
         <div class="room gold"><span class="no">包房 6 · Architektur</span><h4>Yongqingfang<span class="zh">永庆坊 (Yongqingfang)</span></h4><p>An der 恩宁路 (Enning Lu), die als schönste Qilou-Straße gilt. Die Stadt wurde erneuert statt abgerissen: durchlaufende Arkaden über dem Gehweg, oben wird gewohnt, unten sind Läden.</p></div>
       </div>
       <div class="twocol-gz" style="margin-top:30px">
@@ -2954,7 +3044,7 @@ body.hn{background:#F4EBD8;color:#2A1A12}
   <header class="br-bar"><div class="in">
     <a href="#/">← Übersicht</a>
     <span class="br-var"><a href="#/chongqing-a">A · Ghost in the Shell</a><b>B · Blade Runner</b></span>
-    <nav aria-label="Abschnitte"><button data-jump="cqb-karte">Karte</button><button data-jump="cqb-ebenen">Ebenen</button><button data-jump="cqb-hang">Hang</button><button data-jump="cqb-essen">Essen</button><button data-jump="cqb-kunst">Kunst</button><button data-jump="cqb-mode">Mode</button><button data-jump="cqb-archiv">Archiv</button></nav>
+    <nav aria-label="Abschnitte"><button data-jump="cqb-karte">Karte</button><button data-jump="cqb-ebenen">Ebenen</button><button data-jump="cqb-hang">Hang</button><button data-jump="cqb-essen">Essen</button><button data-jump="cqb-kunst">Kunst</button><button data-jump="cqb-mode">Mode</button><button data-jump="cqb-eight">Eight</button><button data-jump="cqb-archiv">Archiv</button></nav>
   </div></header>
 
   <section class="br-hero">
@@ -2962,18 +3052,18 @@ body.hn{background:#F4EBD8;color:#2A1A12}
     <div class="br-title"><div class="in">
       <p class="br-kick">Chongqing · November 2026</p>
       <h1>CHONGQING</h1>
-      <p class="br-sub">雾都 (Nebelstadt) · 山城 (Bergstadt) · 16.–19.11. · drei Nächte</p>
+      <p class="br-sub">雾都 (Nebelstadt) · 山城 (Bergstadt) · 17.–20.11. · drei Nächte</p>
     </div></div>
   </section>
 
   <section class="br-crawl"><div class="in">
     <p>Im November liegt der Nebel so tief, dass die oberen Stockwerke verschwinden. Zwei Flüsse, ein Felsrücken, und darauf dreißig Millionen Menschen im Verwaltungsgebiet. Seilbahnen über den Jangtse, eine Bahn durch ein Wohnhaus, Hotpot in Luftschutztunneln.</p>
-    <p class="meta">Ankunft Mo 16.11. 13:34 · 重庆北 (Chongqing Nord)</p>
+    <p class="meta">Ankunft Di 17.11. 13:34 · 重庆北 (Chongqing Nord)</p>
     <div class="stay-bar">
-      <span class="sb-k">Hotel · 3 Nächte · Mo 16.11. – Do 19.11.</span>
+      <span class="sb-k">Hotel · 3 Nächte · Di 17.11. – Fr 20.11. · gebucht</span>
       <div class="sb-row">
-        <b>SUNYATA 既下山 <i>(Vom Berg herab)</i></b>
-        <span class="w">龙门浩 (Longmenhao), Südufer. Von dort mit der Seilbahn über den Jangtse nach 解放碑 (Jiefangbei).</span>
+        <b>SUNYATA CHONGQING River View Hotel 既下山 <i>(Vom Berg herab)</i></b>
+        <span class="w">龙门浩 (Longmenhao), Südufer. Von dort mit der Seilbahn über den Jangtse nach 解放碑 (Jiefangbei).</span><span class="pr">gebucht über Booking · 1.023,24 €</span>
         <span class="sb-a"><a href="https://www.booking.com/hotel/cn/ji-xia-shan-zhong-qing-sunyatadu-jia-jiu-dian.html" target="_blank" rel="noopener">Booking</a><a href="https://uri.amap.com/search?keyword=%E9%87%8D%E5%BA%86%E6%97%A2%E4%B8%8B%E5%B1%B1&amp;city=500000&amp;callnative=0" target="_blank" rel="noopener">Karte</a><button data-jump="cqb-karte">Auf der Karte: H</button></span>
       </div>
     </div>
@@ -2985,10 +3075,10 @@ body.hn{background:#F4EBD8;color:#2A1A12}
     <section class="gs-sec" id="cqb-ablauf">
       <div class="gs-h"><span class="n">00</span><h2>Ablauf</h2><span class="zh">日程 (Zeitplan)</span></div>
       <div class="days">
-        <div><span class="t">MO 16.11.</span><p>Zug G3763 ab 西安北 (Xi'an Nord) 08:02, an 13:34. Nachmittags ankommen, abends Hotpot.</p></div>
-        <div><span class="t">DI 17.11.</span><p>Voller Tag.</p></div>
-        <div><span class="t">MI 18.11.</span><p>Voller Tag. Optional der Ausflug nach 大足石刻 (Felsskulpturen von Dazu).</p></div>
-        <div><span class="t">DO 19.11.</span><p>Zug nach 成都东 (Chengdu Ost), 1–1,5 h, fährt laufend.</p></div>
+        <div><span class="t">DI 17.11.</span><p>Zug G3763 ab 西安北 (Xi'an Nord) 08:02, an 13:34. Nachmittags ankommen, abends Hotpot.</p></div>
+        <div><span class="t">MI 18.11.</span><p>Voller Tag.</p></div>
+        <div><span class="t">DO 19.11.</span><p>Zweiter voller Tag in der Stadt, kein Ausflug.</p></div>
+        <div><span class="t">FR 20.11.</span><p>Zug nach 成都东 (Chengdu Ost), 1–1,5 h, fährt laufend.</p></div>
       </div>
     </section>
 
@@ -3098,7 +3188,6 @@ body.hn{background:#F4EBD8;color:#2A1A12}
         <article class="tgt"><div class="id"><span>04.1 · EHEM. BANKNOTENDRUCK</span><b>DRITTE FRONT</b></div><h3>Testbed 2<span class="zh">鹅岭二厂 (Zweites Werk am Gänsegrat)</span></h3><p>Früher eine Banknotendruckerei, davor wurden hier während der japanischen Invasion Waffen gefertigt. Heute Galerien, Cafés, Bars, Boutiquen und Aussichtsterrassen. Schilder zeigen einem, wo und wie man fotografieren soll.</p><div class="rd">Direkt neben Liziba</div></article>
         <article class="tgt"><div class="id"><span>04.2 · SÜDEN</span><b>VOR SONNENUNTERGANG</b></div><h3>Huangjueping<span class="zh">黄桷坪 (Ebene der Gelben Feige)</span></h3><p>Der alte Campus der 四川美术学院 (Sichuan-Kunstakademie). Die Graffitistraße gilt als längste Kunststraße der Welt, der Campus ist voller Installationen, dazu billige Läden für Künstlerbedarf.</p><div class="rd">1–2 h</div></article>
         <article class="tgt amber"><div class="id"><span>04.3 · IN HUANGJUEPING</span><b>NUR TEE</b></div><h3>Jiaotong Teahouse<span class="zh">交通茶馆 (Verkehrs-Teehaus)</span></h3><p>Ein altes Teehaus, nur Tee und Nüsse, Gaiwan-Stil. In der Gasse nebenan darf man selbst an die Wand malen.</p><div class="rd">Mittendrin im Kunstviertel</div></article>
-        <article class="tgt"><div class="id"><span>04.4 · OPTIONAL · 3. TAG</span><b>UNESCO</b></div><h3>Dazu Rock Carvings<span class="zh">大足石刻 (Felsskulpturen von Dazu)</span></h3><p>Buddhistische Felsgrotten, UNESCO-Welterbe.</p><div class="rd">1,5 h raus</div></article>
       </div>
     </section>
 
@@ -3106,8 +3195,24 @@ body.hn{background:#F4EBD8;color:#2A1A12}
       <div class="gs-h"><span class="n">05</span><h2>Mode</h2><span class="zh">买手店 (Buyer Stores)</span></div>
       <div class="gs-grid">
         <article class="tgt amber"><div class="id"><span>05.1 · WFC · 民族路 188 (Minzu-Straße 188)</span><b>1.–2. OG</b></div><h3>SND<span class="zh">环球金融中心 (World Financial Center)</span></h3><p>Der älteste unabhängige Buyer Store Chongqings und der, der am längsten durchgehalten hat: zehn Jahre, inzwischen zwölf Filialen. DRIES VAN NOTEN, Y/Project, nohant, Short Sentence, IMMI, SHUSHU/TONG.</p><div class="rd">Innenraum von 万社 (Various Associates), wie (SO)WHAT in Chengdu. Ein über 20 m freigeräumter, schmaler Raum, man geht wie unter einer Brücke entlang. Zweite Filiale im 新光广场 (Xinguang-Plaza), 288 m².</div></article>
-        <article class="tgt red"><div class="id"><span>05.2 · 长嘉汇 (Changjiahui)</span><b>OFFLINE</b></div><h3>Super Normal Department<span class="zh">超凡百货 (Kaufhaus Übernormal)</span></h3><p>In der französischen Marinekaserne. <b>Am 7. Januar 2024 geschlossen</b>, steht aber immer noch in jedem Blogpost.</p><div class="rd"><span class="tag r">NICHT HINGEHEN</span></div></article>
       </div>
+    </section>
+
+    <section class="gs-sec" id="cqb-eight">
+      <div class="gs-h"><span class="n">05.5</span><h2>Eight empfiehlt</h2><span class="zh">八的建议 (Eights Rat)</span></div>
+      <p class="gs-lede">Eight kommt aus Chongqing und führt uns in Xi'an herum. Ihr Grundsatz für hier: Man kann sich auf die Gattung verlassen statt auf den einzelnen Laden. Jedes gut bewertete, volle Lokal ist richtig.</p>
+      <div class="gs-grid">
+        <article class="tgt amber"><div class="id"><span>EIGHT · APP</span><b>VOR ABFLUG</b></div><h3>Dianping<span class="zh">大众点评 (Öffentliche Bewertung)</span></h3><p>Ihr wichtigster Rat: Damit findet man die Bunker-Hotpots in 渝中 (Yuzhong), und viele Restaurants nehmen darüber <b>Reservierungen und Wartenummern</b> entgegen — bei 珮姐 (Peijie) mit bis zu zwei Stunden Schlange der entscheidende Punkt. Vor dem Abflug einrichten, zusammen mit Alipay. Für die Reservierung kann eine chinesische Nummer nötig sein, also vorher testen.</p></article>
+        <article class="tgt"><div class="id"><span>EIGHT · GATTUNG</span><b>BESTELLEN</b></div><h3>Worauf man setzt<span class="zh">重庆小面 · 烧烤 · 美蛙鱼头</span></h3><p>重庆小面 (Chongqing-Nudeln) · 烧烤 (Grill) zusammen mit 冒脑花 (pochiertes Schweinehirn) · 美蛙鱼头 (Ochsenfrosch mit Fischkopf) · 鸡杂锅 (Topf mit Hühnerinnereien).</p></article>
+        <article class="tgt amber"><div class="id"><span>EIGHT · RUNDGANG</span><b>YUZHONG</b></div><h3>Ihr Weg über die Halbinsel<span class="zh">解放碑 → 朝天门 → 十八梯</span></h3><p>解放碑 (Befreiungsdenkmal) → 朝天门广场 (Platz am Himmelstor) → 十八梯 (Achtzehn Stufen), abends 洪崖洞 (Hongyadong). Wer Lust hat, nimmt die 长江索道 (Jangtse-Seilbahn) nach 南岸 (Nan'an) — dort gibt es außer dem Nanshan-Park wenig, aber der Blick auf die ganze Stadt ist hervorragend.</p></article>
+        <article class="tgt"><div class="id"><span>EIGHT · ABENDS</span><b>VOLL</b></div><h3>Hongyadong<span class="zh">洪崖洞 (Hongyadong)</span></h3><p>Von Eight ausdrücklich empfohlen, abends. Die leerere Alternative bleibt 弹子石老街 (Danzishi): weniger Betrieb, Rolltreppen in beide Richtungen, täglich ab 19:30 Lichtshow.</p></article>
+        <article class="tgt"><div class="id"><span>EIGHT · SNACKS</span><b>CIQIKOU</b></div><h3>Magnetgefäß-Hafen<span class="zh">磁器口 (Ciqikou)</span></h3><p>Vergleichbar mit Jinli und den Kuanzhai-Gassen in Chengdu, viele Snacks. Ein alter Laden namens 张老汉 (Der alte Zhang) hat laut ihr sehr gute 紫薯酸辣粉 (scharf-saure Nudeln aus Lila-Süßkartoffel).</p></article>
+        <article class="tgt"><div class="id"><span>EIGHT · ABSEITS</span><b>YUBEI</b></div><h3>Guanyinqiao<span class="zh">观音桥 (Guanyin-Brücke)</span></h3><p>Zum Essen abseits der Halbinsel, im Bezirk 渝北 (Yubei). Dazu 李子坝 (Pflaumendamm) für die Monorail durchs Wohnhaus: an der Station aussteigen, man sieht es von der Straße oder von der Aussichtsplattform.</p></article>
+      </div>
+      <div class="gs-grid" style="margin-top:22px">
+        <article class="tgt amber warn-lvl"><div class="id"><span>EIGHT · WARNUNG</span><b>EBENEN</b></div><h3>Nicht blind der App folgen<span class="zh">上下 (oben und unten)</span></h3><p>Chongqing ist zu groß und zu dreidimensional für blinde App-Navigation. Neben vorne, hinten, links und rechts gibt es oben und unten, vieles geht über Rampen und Treppen. Beim Laufen genau prüfen, auf welcher Ebene die angezeigte Straße liegt.</p></article>
+      </div>
+      <p class="gs-lede" style="margin-top:22px">Und eine Einordnung von Bryar: 重庆好吃点，成都好玩点 — Chongqing ist die bessere Essensstadt, Chengdu die bessere Erlebnisstadt.</p>
     </section>
 
     <section class="gs-sec" id="cqb-archiv">
@@ -3164,14 +3269,14 @@ body.hn{background:#F4EBD8;color:#2A1A12}
     </nav>
 
     <div class="stay-bar">
-      <span class="sb-k">Wo wir schlafen · So 22.11. – Mi 25.11.</span>
-      <div class="sb-row"><em>Nacht 22.11.</em><b>InterContinental Ancient Town <i>oder</i> Amandayan</b><span class="w">Altstadt 大研 (Dayan) · noch offen</span>
-        <span class="sb-a"><a href="https://uri.amap.com/search?keyword=%E4%B8%BD%E6%B1%9F%E5%8F%A4%E5%9F%8E%E6%B4%B2%E9%99%85%E9%85%92%E5%BA%97&amp;city=530700&amp;callnative=0" target="_blank" rel="noopener">InterCont</a><a href="https://uri.amap.com/search?keyword=%E4%B8%BD%E6%B1%9F%E5%AE%89%E7%BC%A6%E5%A4%A7%E7%A0%94&amp;city=530700&amp;callnative=0" target="_blank" rel="noopener">Amandayan</a><button data-jump="lm-tu">Karte: H1 · H2</button></span></div>
-      <div class="sb-row"><em>Nacht 23.11.</em><b>中途客栈 <i>(Halfway Guesthouse)</i></b><span class="w">auf der Hochroute, 2.400 m · kein Zimmer im obersten Stock</span>
+      <span class="sb-k">Wo wir schlafen · Di 24.11. – Fr 27.11. · 3 Nächte · teilweise gebucht</span>
+      <div class="sb-row"><em>Nacht 24.11.</em><b>安隅 <i>(Lijiang Old Town Anyu Hotel)</i></b><span class="w">am Südtor der Altstadt 大研 (Dayan)</span><span class="pr">gebucht über Booking · 330,83 €</span>
+        <span class="sb-a"><a href="https://uri.amap.com/search?keyword=%E4%B8%BD%E6%B1%9F%E5%AE%89%E9%9A%85%E9%85%92%E5%BA%97&amp;city=530700&amp;callnative=0" target="_blank" rel="noopener">Karte</a><button data-jump="lm-tu">Karte: H1</button></span></div>
+      <div class="sb-row"><em>Nacht 25.11.</em><b>中途客栈 <i>(Halfway Guesthouse)</i></b><span class="w">auf der Hochroute, 2.400 m · kein Zimmer im obersten Stock</span><span class="pr">noch nicht gebucht</span>
         <span class="sb-a"><a href="https://uri.amap.com/search?keyword=%E4%B8%AD%E9%80%94%E5%AE%A2%E6%A0%88%20%E8%99%8E%E8%B7%B3%E5%B3%A1&amp;city=530700&amp;callnative=0" target="_blank" rel="noopener">Karte</a><button data-jump="lm-tu">Karte: T3</button></span></div>
-      <div class="sb-row"><em>Nacht 24.11.</em><b>Amandayan</b><span class="w">auf dem 狮子山 (Löwenhügel) · wer beide Nächte bucht, bekommt den Flughafentransfer</span>
-        <span class="sb-a"><a href="https://uri.amap.com/search?keyword=%E4%B8%BD%E6%B1%9F%E5%AE%89%E7%BC%A6%E5%A4%A7%E7%A0%94&amp;city=530700&amp;callnative=0" target="_blank" rel="noopener">Karte</a><button data-jump="lm-tu">Karte: H2</button></span></div>
-      <div class="sb-row"><em>Nacht 25.11.</em><b>Nachtflug nach Shenzhen</b><span class="w">LJG 21:55 → SZX 00:20, gegen 01:15 im Messehotel</span>
+      <div class="sb-row"><em>Nacht 26.11.</em><b>Noch offen: Amandayan <i>oder</i> 安隅 (Anyu) verlängern</b><span class="w">nach dem Trek zurück in Lijiang</span><span class="pr">zu entscheiden</span>
+        <span class="sb-a"><a href="https://uri.amap.com/search?keyword=%E4%B8%BD%E6%B1%9F%E5%AE%89%E7%BC%A6%E5%A4%A7%E7%A0%94&amp;city=530700&amp;callnative=0" target="_blank" rel="noopener">Amandayan</a><button data-jump="lm-tu">Karte: H2</button></span></div>
+      <div class="sb-row"><em>Nacht 27.11.</em><b>Nachtflug nach Shenzhen</b><span class="w">LJG 21:55 → SZX 00:20, dann mit dem Didi nach 南头 (Nantou)</span>
         <span class="sb-a"><a href="#/shenzhen">Shenzhen</a></span></div>
     </div>
       <a class="vidbar" href="https://www.youtube.com/watch?v=BO22aSKDA2s" target="_blank" rel="noopener"><span class="vb-p" aria-hidden="true"><svg viewBox="0 0 16 16"><polygon points="3,1.5 14,8 3,14.5"/></svg></span><span class="vb-t"><b>How to eat like a local in China's most popular tourist spot</b><span class="vb-m">YouTube · Blondie in China · in China nur mit VPN</span></span><span class="vb-go">Ansehen ↗</span></a>
@@ -3181,10 +3286,10 @@ body.hn{background:#F4EBD8;color:#2A1A12}
       <div class="lm-h"><span class="ring r-feng">风</span><span class="k">Luft · Höhenlicht</span><h2>Vier Tage auf 2.400 Metern</h2></div>
       <p class="lm-lede">Nach dem Dunst des Sichuan-Beckens das genaue Gegenteil: Im November ist Trockenzeit, der Himmel ist klar, die Sonne hart und nachts gibt es Frost. Der erste Nachmittag gehört der Höhe.</p>
       <div class="days-lm">
-        <div class="dl"><span class="w">So 22.11.</span><span class="d">Ankunft</span><p>Flug CTU 09:05 → LJG 10:25, Tibet Airlines, ab 双流 (Shuangliu). Nachmittags akklimatisieren, früh ins Bett.</p><span class="stay">InterContinental Ancient Town oder Amandayan</span></div>
-        <div class="dl trek"><span class="w">Mo 23.11.</span><span class="d">Trek, Tag 1</span><p>Früh los. Die 28 Kehren hinauf auf 2.670 m, danach an der Hangkante entlang, 5–6 h.</p><span class="stay">中途客栈 (Halfway Guesthouse)</span></div>
-        <div class="dl trek"><span class="w">Di 24.11.</span><span class="d">Trek, Tag 2</span><p>Abstieg zu Tina's, 3–4 h. Rückfahrt meist 16:30, gegen 19 Uhr in Lijiang.</p><span class="stay">Amandayan</span></div>
-        <div class="dl"><span class="w">Mi 25.11.</span><span class="d">Freier Tag</span><p>Naxi-Höfe in 束河 (Shuhe), 白沙 (Baisha), 玉湖村 (Dorf am Jadesee). Abends LJG 21:55 → SZX 00:20, Juneyao.</p><span class="stay">Nachtflug nach Shenzhen</span></div>
+        <div class="dl"><span class="w">Di 24.11.</span><span class="d">Ankunft</span><p>Gegen 07:45 aus dem Hotel in Chengdu, Flug TFU 11:05 → LJG 12:30, Beijing Capital, ab 天府 (Tianfu). Gegen 13:30 im Hotel, nachmittags akklimatisieren, abends 忠义市场 (Zhongyi-Markt).</p><span class="stay">安隅 (Anyu), Südtor Dayan · gebucht</span></div>
+        <div class="dl trek"><span class="w">Mi 25.11.</span><span class="d">Trek, Tag 1</span><p>Bus ab Lijiang, am besten der um 09:30 mit Gepäcktransfer. Einstieg gegen 11 Uhr, die 28 Kehren hinauf auf 2.670 m, danach an der Hangkante entlang, 5–6 h.</p><span class="stay">中途客栈 (Halfway Guesthouse)</span></div>
+        <div class="dl trek"><span class="w">Do 26.11.</span><span class="d">Trek, Tag 2</span><p>Abstieg zu Tina's, 3–4 h. Rückfahrt meist 16:30, gegen 19 Uhr in Lijiang.</p><span class="stay">Amandayan</span></div>
+        <div class="dl"><span class="w">Fr 27.11.</span><span class="d">Freier Tag</span><p>Kein Ausflugstag, sondern ein Tag in Lijiang selbst: ausschlafen, die Altstadt in Ruhe, Teehaus, essen. Schwerpunkt 束河 (Shuhe). Der Flug geht erst um 21:55.</p><span class="stay">Nachtflug nach Shenzhen</span></div>
       </div>
       <div class="air">
         <div><b>15–17 °C</b><span>in der Sonne, nachts Frost. Die Guesthouses sind ungeheizt, nach der Heizdecke fragen.</span></div>
@@ -3209,7 +3314,7 @@ body.hn{background:#F4EBD8;color:#2A1A12}
         <div class="gm-filter" id="lj-mapf" role="group" aria-label="Kategorien"><button aria-pressed="true" data-c="trek"><i style="background:#E07A2E"></i>Trek</button><button aria-pressed="true" data-c="hotel"><i style="background:#1E4E8C"></i>Hotel</button><button aria-pressed="true" data-c="ort"><i style="background:#F2D7B0"></i>Freier Tag</button><button aria-pressed="true" data-c="food"><i style="background:#B5412B"></i>Essen</button><button aria-pressed="true" data-c="base"><i style="background:#51607A"></i>Orientierung</button></div>
         <div class="gm-wrap"><svg id="lj-map" viewBox="0 0 800 1230" role="img" aria-label="Schematische Karte: Lijiang, Shuhe, Baisha, Yuhu, Yulong Xueshan und Tigersprungschlucht"></svg></div>
         <div class="gm-info" id="lj-map-info" aria-live="polite"><b>Auf einen Punkt tippen.</b> Unten die Altstadt 大研 (Dayan), im Nordwesten die Schlucht, dazwischen der Jadedrachen.</div>
-        <ul class="gm-off" id="lj-off"><li data-c="base"><b>LJG</b> Flughafen Lijiang <span>↓ ca. 25 km südlich · an So 10:25 · ab Mi 21:55</span> <a class="gm-a" href="https://uri.amap.com/search?keyword=%E4%B8%BD%E6%B1%9F%E4%B8%89%E4%B9%89%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA&city=530700&callnative=0" target="_blank" rel="noopener">Karte</a></li></ul>
+        <ul class="gm-off" id="lj-off"><li data-c="base"><b>LJG</b> Flughafen Lijiang <span>↓ ca. 25 km südlich · an Di 12:30 · ab Fr 21:55</span> <a class="gm-a" href="https://uri.amap.com/search?keyword=%E4%B8%BD%E6%B1%9F%E4%B8%89%E4%B9%89%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA&city=530700&callnative=0" target="_blank" rel="noopener">Karte</a></li></ul>
       </div>
 
       <div class="profile">
@@ -3253,7 +3358,7 @@ body.hn{background:#F4EBD8;color:#2A1A12}
         <li><b>500–800 ¥ bar</b> pro Person, auf der Hochroute gibt es nur lückenhaft Empfang.</li>
         <li><b>Halfway früh reservieren</b>, WeChat/Telefon: +86 139 8870 0522.</li>
         <li><b>Die Mutter:</b> Sie fährt im selben Wagen bis Halfway und läuft am zweiten Tag den leichteren Abstieg mit.</li>
-        <li><b>Amandayan:</b> Wer beide Nächte bucht, bekommt den Flughafentransfer in beide Richtungen.</li>
+        <li><b>Nach dem Trek:</b> Die Nacht vom 26. auf den 27.11. ist noch offen — entweder Amandayan auf dem Löwenhügel oder das 安隅 (Anyu) um eine Nacht verlängern. Die Ankunftsnacht am 24.11. ist im Anyu gebucht.</li>
       </ul>
     </section>
 
@@ -3301,6 +3406,11 @@ body.hn{background:#F4EBD8;color:#2A1A12}
             <dt>天井 (Himmelsbrunnen)</dt><dd>Der gepflasterte Hof, nach oben offen.</dd>
             <dt>照壁 (Schattenwand)</dt><dd>Die geschlossene vierte Seite. Die helle Wand wirft das Höhenlicht zurück in den Hof und auf das Haupthaus.</dd>
           </dl>
+        <div class="tip-lm" style="margin-top:26px">
+          <p class="lm-lede"><b>Tipp von Xiaoyu:</b> In 束河 (Shuhe) wohnen, 白沙 (Baisha) auslassen. Shuhe sei weniger kommerziell, eine schöne Altstadt mit vielen guten Teezeremonie-Läden und sehr gutem Essen. Baisha mag sie nicht.</p>
+          <p class="lm-lede">Das deckt sich mit der Bewertungslage: Shuhe gilt als bewohnt statt inszeniert, Baisha ist in den letzten Jahren stark überformt worden. Für den freien Tag am 27.11. heißt das: Schwerpunkt Shuhe, Baisha höchstens für die Wandmalereien. Wohnen in Shuhe ginge für die Ankunftsnacht am 24.11. — der Busbahnhof für den Trek ist von dort mit dem Taxi in etwa einer Viertelstunde erreichbar. Die Nacht nach dem Trek bleibt beim Amandayan.</p>
+        </div>
+
           <p class="note">Die zweite klassische Form heißt <span class="zh">四合五天井</span> (vier Flügel, fünf Höfe): ein großer Hof in der Mitte und vier kleine in den Ecken.</p>
         </div>
       </div>
@@ -3331,7 +3441,7 @@ body.hn{background:#F4EBD8;color:#2A1A12}
       </div>
     </section>
 
-    <footer class="lm-foot"><a href="#/">← Übersicht</a><span>Weiter: Shenzhen · Nachtflug 25.11. 21:55</span></footer>
+    <footer class="lm-foot"><a href="#/">← Übersicht</a><span>Weiter: Shenzhen · Nachtflug 27.11. 21:55</span></footer>
   </div>
 </div>
 
@@ -3346,7 +3456,7 @@ body.hn{background:#F4EBD8;color:#2A1A12}
   <section class="sc-hero">
     <canvas id="sc-city" aria-label="Skyline von Shenzhen zur blauen Stunde mit LED-Fassaden und einem Drohnenschwarm"></canvas>
     <div class="sc-title">
-      <span class="k">Station V · 25.–28.11.2026 · CHTF</span>
+      <span class="k">Station V · 27.–29.11.2026 · CHTF</span>
       <h1>SHEN<b>ZHEN</b></h1>
       <p>深圳 (Tiefer Graben) · eine Stadt, die 1980 angefangen hat</p>
     </div>
@@ -3358,29 +3468,26 @@ body.hn{background:#F4EBD8;color:#2A1A12}
 
   <div class="sc-wrap">
     <div class="glass sc-meta">
-      <div><span class="l">Zeitraum</span><b>Mi 25. – Sa 28.11.</b><span class="v">3 Nächte</span></div>
-      <div><span class="l">Messe</span><b>CHTF 26.–28.11.</b><span class="v">Shenzhen World, Bao'an</span></div>
+      <div><span class="l">Zeitraum</span><b>Fr 27. – So 29.11.</b><span class="v">2 Nächte</span></div>
+      <div><span class="l">Messe</span><b>Sa 28.11.</b><span class="v">Schlusstag der CHTF · unser einziger Messetag</span></div>
       <div><span class="l">Klima</span><b>23–25 °C</b><span class="v">subtropisch, nach dem Frost in der Schlucht</span></div>
-      <div><span class="l">Kurz gesagt</span><b>Messe · Huaqiangbei · Nantou</b><span class="v">Die Stadt selbst ist in einem halben Tag gesehen</span></div>
+      <div><span class="l">Kurz gesagt</span><b>Messe · Nantou · Huaqiangbei</b><span class="v">Wir wohnen in der Altstadt, nicht am Gelände</span></div>
     </div>
 
     <div class="stay-bar">
-      <span class="sb-k">Hotels · 3 Nächte · Mi 25.11. – Sa 28.11.</span>
-      <div class="sb-row"><em>25. + 26.11.</em><b>Hilton Shenzhen World <i>oder</i> Crowne Plaza WECC</b><span class="w">direkt am Messegelände · bei 450.000 Besuchern früh ausgebucht, zuerst buchen</span>
-        <span class="sb-a"><a href="https://www.hilton.com/en/hotels/szxechi-hilton-shenzhen-world-exhibition-and-convention-center/" target="_blank" rel="noopener">Hilton</a><a href="https://www.ihg.com/crowneplaza/hotels/us/en/shenzhen/szxic/hoteldetail" target="_blank" rel="noopener">Crowne Plaza</a><button data-jump="sc-karte">Karte: HA · HB</button></span></div>
-      <div class="sb-row"><em>27.11.</em><b>Jiangnan House Nantou</b><span class="w">乐平街 22 (Leping-Straße 22), mitten in 南头古城 (Alte Stadt Nantou)</span>
+      <span class="sb-k">Hotel · 2 Nächte · Fr 27.11. – So 29.11. · gebucht</span>
+      <div class="sb-row"><em>27. + 28.11.</em><b>Jiangnan House Nantou</b><span class="w">乐平街 22 (Leping-Straße 22), mitten in 南头古城 (Alte Stadt Nantou). Linie 12 fährt von Nanshan ohne Umstieg zum Messegelände, nach 华强北 (Huaqiangbei) sind es knapp 45 min.</span><span class="pr">gebucht über Booking · zwei Zimmer, 226,22 € und 395,89 €</span>
         <span class="sb-a"><a href="https://www.booking.com/hotel/cn/shen-zhen-nan-tou-you-xiong-jiu-dian.html" target="_blank" rel="noopener">Booking</a><button data-jump="sc-karte">Karte: HN</button></span></div>
     </div>
-      <div class="vidbar empty"><span class="vb-p" aria-hidden="true"><svg viewBox="0 0 16 16"><polygon points="3,1.5 14,8 3,14.5"/></svg></span><span class="vb-t"><b>Noch kein Video</b><span class="vb-m">Für Shenzhen ist noch keins eingebracht. Link schicken, dann steht es hier.</span></span></div>
+      <a class="vidbar" href="https://www.youtube.com/watch?v=TWw4LY4nbsY" target="_blank" rel="noopener"><span class="vb-p" aria-hidden="true"><svg viewBox="0 0 16 16"><polygon points="3,1.5 14,8 3,14.5"/></svg></span><span class="vb-t"><b>Inside world's biggest tech markets in Shenzhen</b><span class="vb-m">YouTube · Fel Thommy · in China nur mit VPN</span></span><span class="vb-go">Ansehen ↗</span></a>
 
 
     <section class="sc-sec" id="sc-ablauf">
-      <div class="sc-h"><span class="n">01</span><h2>Vier Tage, <b>ein Ziel</b></h2></div>
+      <div class="sc-h"><span class="n">01</span><h2>Drei Tage, <b>ein Messetag</b></h2></div>
       <div class="tl">
-        <div><span class="d">MI 25.11. · 21:55</span><b>Nachtflug</b><p>LJG → SZX, an 00:20. Der Flughafen liegt 7 km vom Messegelände, gegen 01:15 im Hotel. Dem Hotel vorher sagen, dass wir spät kommen.</p></div>
-        <div><span class="d">DO 26.11.</span><b>CHTF, Tag 1</b><p>Nach der kurzen Nacht nicht um neun starten, sondern gegen Mittag.</p></div>
-        <div><span class="d">FR 27.11.</span><b>CHTF, Tag 2 → Nantou</b><p>Ruhiger als der Eröffnungstag. Morgens auschecken, abends nach 南头 (Nantou).</p></div>
-        <div><span class="d">SA 28.11.</span><b>Huaqiangbei → Zug</b><p>Vormittags 华强北 (Huaqiangbei), mittags Zug nach Guangzhou ab 福田 (Futian) oder 深圳北 (Shenzhen Nord).</p></div>
+        <div><span class="d">FR 27.11. · 21:55</span><b>Nachtflug</b><p>LJG → SZX, an 00:20. Vom Flughafen mit dem Didi nach 南头 (Nantou), rund eine halbe Stunde. Dem Hotel vorher sagen, dass wir mitten in der Nacht kommen.</p></div>
+        <div><span class="d">SA 28.11.</span><b>CHTF · der einzige Messetag</b><p>Schlusstag der Messe. Trotz der kurzen Nacht früh hin, am letzten Tag bauen Aussteller teils früher ab. Von Nantou mit Linie 12 ohne Umstieg zum Gelände. Der Abend bleibt für 南头古城 (Nantou).</p></div>
+        <div><span class="d">SO 29.11.</span><b>Huaqiangbei → Zug</b><p>Vormittags 华强北 (Huaqiangbei), mittags Zug nach Guangzhou ab 福田 (Futian) oder 深圳北 (Shenzhen Nord).</p></div>
       </div>
     </section>
 
@@ -3389,7 +3496,7 @@ body.hn{background:#F4EBD8;color:#2A1A12}
       <div class="glass gmap szc">
         <div class="gm-filter" id="sz-mapf" role="group" aria-label="Kategorien"><button aria-pressed="true" data-c="fair"><i style="background:#2F6BFF"></i>Messe</button><button aria-pressed="true" data-c="hotel"><i style="background:#12245C"></i>Hotel</button><button aria-pressed="true" data-c="city"><i style="background:#2ED8A8"></i>Stadt</button><button aria-pressed="true" data-c="night"><i style="background:#7C6CFF"></i>Nacht</button><button aria-pressed="true" data-c="base"><i style="background:#DCE5F0"></i>Orientierung</button></div>
         <div class="gm-wrap"><svg id="sz-map" viewBox="0 0 800 660" role="img" aria-label="Schematische Karte von Shenzhen: Messe in Bao'an, Nantou, Huaqiangbei, Nachtleben"></svg></div>
-        <div class="gm-info" id="sz-map-info" aria-live="polite"><b>Auf einen Punkt tippen.</b> Die Messe liegt ganz im Nordwesten, weit weg vom Zentrum. Metro 12 verbindet Nanshan direkt mit dem Gelände.</div>
+        <div class="gm-info" id="sz-map-info" aria-live="polite"><b>Auf einen Punkt tippen.</b> Die Messe liegt ganz im Nordwesten, unser Hotel (HN) in 南头 (Nantou). Metro 12 verbindet beides ohne Umstieg.</div>
         <ul class="gm-off" id="sz-off"><li data-c="base"><b>HK</b> Hongkong <span>↓ südlich, hinter der Shenzhen Bay</span> <a class="gm-a" href="https://uri.amap.com/search?keyword=%E9%A6%99%E6%B8%AF&city=440300&callnative=0" target="_blank" rel="noopener">Karte</a></li></ul>
       </div>
     </section>
@@ -3409,9 +3516,8 @@ body.hn{background:#F4EBD8;color:#2A1A12}
           </div>
         </div>
         <div class="hotels">
-          <div class="glass hotel"><span class="tag">Option A · per Brücke zur Halle</span><h4>Hilton Shenzhen World</h4><p>Über eine Brücke direkt mit dem Gelände verbunden. <a href="https://www.hilton.com/en/hotels/szxechi-hilton-shenzhen-world-exhibition-and-convention-center/" target="_blank" rel="noopener">Hilton</a></p></div>
-          <div class="glass hotel"><span class="tag">Option B · 530 m</span><h4>Crowne Plaza WECC</h4><p>Fünf Minuten zu Fuß zum Gelände. <a href="https://www.ihg.com/crowneplaza/hotels/us/en/shenzhen/szxic/hoteldetail" target="_blank" rel="noopener">Crowne Plaza</a></p></div>
-          <div class="glass hotel"><span class="tag">Fr 27.11. · Altstadt</span><h4>Jiangnan House Nantou</h4><p>乐平街 22 (Leping-Straße 22), mitten in Nantou. <a href="https://www.booking.com/hotel/cn/shen-zhen-nan-tou-you-xiong-jiu-dian.html" target="_blank" rel="noopener">Booking</a></p></div>
+          <div class="glass hotel"><span class="tag">Gebucht · beide Nächte</span><h4>Jiangnan House Nantou</h4><p>乐平街 22 (Leping-Straße 22), mitten in 南头古城 (Nantou), zwei Zimmer. Wir wohnen also nicht am Gelände, sondern in der Altstadt: Linie 12 verbindet Nanshan ohne Umstieg mit der Messe. <a href="https://www.booking.com/hotel/cn/shen-zhen-nan-tou-you-xiong-jiu-dian.html" target="_blank" rel="noopener">Booking</a></p></div>
+          <div class="glass hotel"><span class="tag">Vom Tisch</span><h4>Hilton &amp; Crowne Plaza am Gelände</h4><p>Die Messehotels waren der Plan, solange es zwei Messetage gab. Mit einem einzigen Messetag am 28.11. und dem Zimmer in Nantou braucht es sie nicht mehr.</p></div>
         </div>
       </div>
       <div class="lines">
@@ -3427,7 +3533,6 @@ body.hn{background:#F4EBD8;color:#2A1A12}
       <div class="tiles">
         <article class="glass tile"><span class="ic">HQB</span><h3>Huaqiangbei<span class="zh">华强北 (Huaqiang Nord)</span></h3><p>Der größte Elektronikmarkt der Welt, in Futian. Das Gegenstück zur Messe: Dort sieht man, was die Firmen verkaufen wollen. Hier sieht man, woraus es besteht, Stockwerk für Stockwerk.</p><span class="meta">Sa 28.11. vormittags · ab Nantou ca. 45 min Metro</span></article>
         <article class="glass tile"><span class="ic">NT</span><h3>Nantou<span class="zh">南头古城 (Alte Stadt Nantou)</span></h3><p>Eine 1.700 Jahre alte Stadt mitten in Nanshan, umgebaut von <b>URBANUS</b>. Der einzige historische Ort der Stadt. Frei zugänglich, die Museen kosten nichts.</p><span class="meta">2 h einplanen · Hotel am 27.11.</span></article>
-        <article class="glass tile"><span class="ic">SW</span><h3>Sea World Culture and Arts Center<span class="zh">海上世界文化艺术中心 (Kulturzentrum Meereswelt)</span></h3><p><b>Fumihiko Maki</b>, in 蛇口 (Shekou). Mit Dependance des V&amp;A, Designshop und einem Dachgarten mit Blick auf die Bucht.</p><span class="meta">Di–So bis 20:30</span></article>
       </div>
     </section>
 
@@ -3458,7 +3563,7 @@ body.hn{background:#F4EBD8;color:#2A1A12}
       </div>
     </section>
 
-    <footer class="sc-foot"><a href="#/">← Übersicht</a><span>Weiter: Guangzhou · Sa 28.11.</span></footer>
+    <footer class="sc-foot"><a href="#/">← Übersicht</a><span>Weiter: Guangzhou · So 29.11.</span></footer>
   </div>
 </div>
 
@@ -3466,14 +3571,14 @@ body.hn{background:#F4EBD8;color:#2A1A12}
 <div id="guangzhou" class="hnp" hidden>
   <header class="hn-bar"><div class="in">
     <a href="#/">← Übersicht</a>
-    <nav aria-label="Abschnitte"><button data-jump="hn-buch">Handelsbuch</button><button data-jump="hn-karte">Karte</button><button data-jump="hn-dimsum">Dim Sum</button><button data-jump="hn-arkaden">Arkaden</button><button data-jump="hn-shamian">Shamian</button><button data-jump="hn-villen">Villen</button><button data-jump="hn-export">Export</button></nav>
+    <nav aria-label="Abschnitte"><button data-jump="hn-buch">Handelsbuch</button><button data-jump="hn-karte">Karte</button><button data-jump="hn-dimsum">Dim Sum</button><button data-jump="hn-arkaden">Arkaden</button><button data-jump="hn-shamian">Shamian</button><button data-jump="hn-villen">Villen</button><button data-jump="hn-xiaoyu">Xiaoyu</button><button data-jump="hn-export">Export</button></nav>
     <a class="alt" href="#/guangzhou-a">Frühere Fassung</a>
   </div></header>
 
   <section class="hn-hero">
     <svg id="hn-street" viewBox="0 0 1600 760" preserveAspectRatio="xMidYMax slice" role="img" aria-label="Eine Reihe kantonesischer Arkadenhäuser in Lackrot und Gold, mit hängenden Schildern für Tee, Seide, Porzellan und Dim Sum und schwingenden Laternen"></svg>
     <div class="cartouche">
-      <div class="t1">Station VI · 28.–30. November 2026</div>
+      <div class="t1">Station VI · 29.–30. November 2026 · eine Nacht</div>
       <h1 class="goldtxt">CANTON</h1>
       <span class="zh goldtxt">廣州</span>
       <div class="t2">Tee, Seide, Porzellan, und seit rund 2.200 Jahren ein Hafen zur Welt</div>
@@ -3483,7 +3588,7 @@ body.hn{background:#F4EBD8;color:#2A1A12}
   <div class="hn-wrap">
 
     <div class="stay-bar">
-      <span class="sb-k">Hotel · 2 Nächte · Sa 28.11. – Mo 30.11.</span>
+      <span class="sb-k">Hotel · 1 Nacht · So 29.11. – Mo 30.11.</span>
       <div class="sb-row">
         <b>白天鹅宾馆 <i>(White Swan Hotel)</i></b>
         <span class="w">auf 沙面 (Shamian). Im Haus: 玉堂春暖 (Jade River), ein Stern für kantonesische Küche.</span>
@@ -3500,22 +3605,19 @@ body.hn{background:#F4EBD8;color:#2A1A12}
         <table>
           <thead><tr><th>Datum</th><th>Posten</th><th>Ort</th><th>Chop</th></tr></thead>
           <tbody>
-            <tr><td class="d">Sa 28.11., mittags</td><td>Zug ab Shenzhen. Ankunft in 广州南 (Guangzhou Süd), weit draußen in Panyu. Mit Linie 2 eine halbe Stunde in die Stadt, das Gepäck ins Hotel.</td><td>Panyu → Shamian</td><td class="c"><span class="chop">定</span></td></tr>
-            <tr><td class="d">Sa, nachmittags</td><td>Läden in Dongshankou, dann 逵园 (Kuiyuan) und das Café auf der Terrasse.</td><td>东山口 (Dongshankou)</td><td class="c"><span class="chop">定</span></td></tr>
-            <tr><td class="d">Sa, abends</td><td>Abendessen in Liwan.</td><td>荔湾 (Liwan)</td><td class="c"><span class="chop open">可</span></td></tr>
-            <tr><td class="d">So 29.11., ab 10 Uhr</td><td>Yum Cha im 陶陶居 (Taotaoju), im Stammhaus. Die Galerie im 2. Stock oder der Blick aus dem 5. Stock über die Arkadendächer.</td><td>上下九 (Shangxiajiu)</td><td class="c"><span class="chop">定</span></td></tr>
-            <tr><td class="d">So, vormittags</td><td>Zu Fuß die Arkaden entlang bis 永庆坊 (Yongqingfang).</td><td>恩宁路 (Enning Lu)</td><td class="c"><span class="chop">定</span></td></tr>
-            <tr><td class="d">So, mittags</td><td>永庆食集 (Yongqing-Esshalle), alles einmal durchprobieren.</td><td>Yongqingfang</td><td class="c"><span class="chop">定</span></td></tr>
-            <tr><td class="d">So, nachts</td><td>Fischhaut bei 陈添记 (Chen Tianji). Es gibt nur diesen einen Laden.</td><td>宝华路 (Baohua Lu)</td><td class="c"><span class="chop open">可</span></td></tr>
-            <tr><td class="d">Mo 30.11., vormittags</td><td>Noch einmal Yum Cha, dann ein späterer Zug nach 香港西九龍 (Hongkong West Kowloon), 47 min.</td><td>广州南 (Guangzhou Süd)</td><td class="c"><span class="chop open">可</span></td></tr>
+            <tr><td class="d">So 29.11., mittags</td><td>Zug ab Shenzhen. Ankunft in 广州南 (Guangzhou Süd), weit draußen in Panyu. Mit Linie 2 eine halbe Stunde in die Stadt, das Gepäck ins Hotel auf 沙面 (Shamian).</td><td>Panyu → Shamian</td><td class="c"><span class="chop">定</span></td></tr>
+            <tr><td class="d">So, nachmittags</td><td>Zu Fuß die Arkaden entlang: 上下九 (Shangxiajiu) bis 永庆坊 (Yongqingfang), Startpunkt Metro 黄沙 (Huangsha), Ausgang B.</td><td>恩宁路 (Enning Lu)</td><td class="c"><span class="chop">定</span></td></tr>
+            <tr><td class="d">So, abends</td><td>Abendessen in Liwan, danach die Fischhaut bei 陈添记 (Chen Tianji). Es gibt nur diesen einen Laden.</td><td>荔湾 (Liwan)</td><td class="c"><span class="chop">定</span></td></tr>
+            <tr><td class="d">So, alternativ</td><td>Statt Liwan die Läden in 东山口 (Dongshankou) mit 逵园 (Kuiyuan) — für beides reicht der eine Nachmittag nicht.</td><td>东山口 (Dongshankou)</td><td class="c"><span class="chop open">可</span></td></tr>
+            <tr><td class="d">Mo 30.11., vormittags</td><td>Yum Cha im 陶陶居 (Taotaoju), im Stammhaus — die Galerie im 2. Stock oder der Blick aus dem 5. Stock über die Arkadendächer. Danach ein späterer Vormittagszug nach 香港西九龍 (Hongkong West Kowloon), 47 min.</td><td>广州南 (Guangzhou Süd)</td><td class="c"><span class="chop">定</span></td></tr>
           </tbody>
         </table>
         <div class="foot">Startpunkt zu Fuß: Metrostation 黄沙 (Huangsha), Ausgang B, und zwar mit leerem Magen. Shamian, Yongqingfang und Shangxiajiu liegen dicht beieinander.</div>
       </div>
       <div class="notice-hn">
         <span class="chop">未定</span>
-        <div><b>Noch nicht im Buch verbucht:</b> Ob Guangzhou bleibt, ist offen.
-          <ol><li>Zwei Nächte behalten. Die Küche kommt von hier, und die Stadt liegt direkt auf dem Weg nach Hongkong.</li><li>Nur eine Nacht, dafür drei in Hongkong.</li><li>Streichen und vier Nächte Hongkong. Die Arkaden und Buyer Stores wären nach Chongqing und Chengdu eine Wiederholung, und wir sparen zwei Umzüge.</li></ol></div>
+        <div><b>Noch nicht im Buch verbucht:</b> Nach der Umstellung auf einen Messetag ist Guangzhou auf eine Nacht geschrumpft. Ob sie bleibt, ist offen.
+          <ol><li>So lassen: eine Nacht, Sonntagnachmittag und Montagvormittag. Die Küche kommt von hier, und die Stadt liegt direkt auf dem Weg nach Hongkong.</li><li>Streichen und Hongkong drei Nächte geben.</li><li>Die Nacht stattdessen für Shenzhen-Stadt nutzen, mit 南头 (Nantou) und OCT-Loft.</li><li>Verlängern und einen ganzen Tag in 顺德 (Shunde) anhängen: Möbelmärkte in 乐从 (Lecong) plus Xiaoyus Essensliste.</li></ol></div>
       </div>
     </section>
 
@@ -3527,7 +3629,7 @@ body.hn{background:#F4EBD8;color:#2A1A12}
         <div class="gm-filter" id="gz-mapf" role="group" aria-label="Kategorien"><button aria-pressed="true" data-c="food"><i style="background:#9B1B1E"></i>Dim Sum & Essen</button><button aria-pressed="true" data-c="arch"><i style="background:#1A0C0A"></i>Arkaden & Shamian</button><button aria-pressed="true" data-c="mode"><i style="background:#F0D48A"></i>Dongshankou</button><button aria-pressed="true" data-c="hotel"><i style="background:#C9A04A"></i>Hotel</button><button aria-pressed="true" data-c="base"><i style="background:#EADCC0"></i>Orientierung</button></div>
         <div class="gm-wrap"><svg id="gz-map" viewBox="0 0 840 400" role="img" aria-label="Schematische Karte von Guangzhou: Liwan mit Shamian, Yongqingfang und Shangxiajiu, Dongshankou im Osten"></svg></div>
         <div class="gm-info" id="gz-map-info" aria-live="polite"><b>Auf ein Zeichen tippen.</b> Links liegt Liwan mit Shamian, dort geht alles zu Fuß. Rechts Dongshankou, dahin besser mit der Metro.</div>
-        <ul class="gm-off" id="gz-off"><li data-c="base"><b>南</b> 广州南 (Guangzhou Süd) <span>↓ Panyu · an Sa, ab Mo nach HK</span> <a class="gm-a" href="https://uri.amap.com/search?keyword=%E5%B9%BF%E5%B7%9E%E5%8D%97%E7%AB%99&city=440100&callnative=0" target="_blank" rel="noopener">Karte</a></li><li data-c="arch"><b>佛</b> 佛山 (Foshan) <span>← 15 min Zug ab Guangzhou Süd</span> <a class="gm-a" href="https://uri.amap.com/search?keyword=%E4%BD%9B%E5%B1%B1&city=440100&callnative=0" target="_blank" rel="noopener">Karte</a></li></ul>
+        <ul class="gm-off" id="gz-off"><li data-c="base"><b>南</b> 广州南 (Guangzhou Süd) <span>↓ Panyu · an So, ab Mo nach HK</span> <a class="gm-a" href="https://uri.amap.com/search?keyword=%E5%B9%BF%E5%B7%9E%E5%8D%97%E7%AB%99&city=440100&callnative=0" target="_blank" rel="noopener">Karte</a></li><li data-c="arch"><b>佛</b> 佛山 (Foshan) <span>← 15 min Zug ab Guangzhou Süd · Option</span> <a class="gm-a" href="https://uri.amap.com/search?keyword=%E4%BD%9B%E5%B1%B1&city=440100&callnative=0" target="_blank" rel="noopener">Karte</a></li><li data-c="arch"><b>乐</b> 乐从 (Lecong), Shunde <span>← Möbelstadt · 3 Mio. m² Showrooms</span> <a class="gm-a" href="https://uri.amap.com/search?keyword=%E4%B9%90%E4%BB%8E%E5%AE%B6%E5%85%B7%E5%9F%8E&city=440600&callnative=0" target="_blank" rel="noopener">Karte</a></li></ul>
       </div>
     </section>
 
@@ -3634,20 +3736,49 @@ body.hn{background:#F4EBD8;color:#2A1A12}
         <div class="tcard"><span class="no">No. 2 · Achse</span><h4>Miaoqian Xijie<span class="zh">庙前西街 (Westliche Tempelvorderstraße)</span></h4><p>GROUP STUDIOST, 3MODE, Vital, Captain东山 (Captain Dongshan). Cafés: seed down und 急急脚 (Eilige Füße).</p></div>
         <div class="tcard"><span class="no">No. 3 · Buyer Store</span><h4>FOAMING AROUND</h4><p>Buyer Store und Ausstellungsraum in einem, mit Kooperationen zwischen Kunst, Gastronomie und jungen Designern.</p></div>
         <div class="tcard"><span class="no">No. 4 · Label</span><h4>Moromoro</h4><p>Eigenes Damenlabel im Retro-Stil.</p></div>
-        <div class="tcard"><span class="no">No. 5 · Erster Laden</span><h4>Aesop</h4><p>Der erste Laden in Guangzhou, an der 恤孤院路 (Xugu Yuan Lu).</p></div>
-        <div class="tcard"><span class="no">No. 6 · Ankunft</span><h4>Wege</h4><p>广州南 (Guangzhou Süd) liegt in Panyu, weit draußen. Mit Linie 2 ist man in einer halben Stunde in der Innenstadt.</p></div>
+        <div class="tcard"><span class="no">No. 5 · Ankunft</span><h4>Wege</h4><p>广州南 (Guangzhou Süd) liegt in Panyu, weit draußen. Mit Linie 2 ist man in einer halben Stunde in der Innenstadt.</p></div>
+      </div>
+    </section>
+
+    <section class="hn-sec" id="hn-xiaoyu">
+      <div class="hn-h"><span class="k">Kapitel VI</span><h2>Xiaoyus Liste<span class="zh">小雨的单子 (Xiaoyus Liste)</span></h2>
+        <svg class="orn" viewBox="0 0 180 14" aria-hidden="true"><path d="M0 7 H70 M110 7 H180" stroke="#C9A04A" stroke-width="1.5"/><path d="M80 7 l10 -6 l10 6 l-10 6 Z" fill="#9B1B1E" stroke="#C9A04A"/></svg>
+        <p>Xiaoyu kommt aus Guangzhou. Ihre Liste liegt in 东山口 (Dongshankou) und an der 北京路 (Beijing Lu), also in 越秀 (Yuexiu) — nicht in Liwan, wo unser Hotel steht. Das passt zum Plan: morgens Nudeln, Yum Cha und Kaffee im Modeviertel, abends Seafood. Alle Adressen am besten in Amap suchen.</p></div>
+      <div class="cards-hn">
+        <div class="tcard"><span class="no">Pflicht · Seafood</span><h4>等我送上门<span class="zh">(Warte, ich bring's dir)</span></h4><p>Dai Pai Dong. Liegt direkt neben dem Konkurrenten 贞姐美食 (Schwester Zhens Küche) — bei beiden essen und jeweils andere Gerichte bestellen, beide sind gut. Die schlechten Online-Bewertungen ignorieren: Die zwei kaufen sich gegenseitig negative Kritiken.</p></div>
+        <div class="tcard"><span class="no">Pflicht · Frühstück</span><h4>华福五宝面<span class="zh">(Huafu Fünf-Schätze-Nudeln)</span></h4><p>Laut ihr absolut Pflicht. Die Pilznudeln (limitiert) und die Nudeln mit Rinderinnereien eignen sich als Frühstück, extrem frisch.</p></div>
+        <div class="tcard"><span class="no">Yum Cha · Dongshankou</span><h4>東園·广州味<span class="zh">(Ostgarten · Geschmack von Guangzhou)</span></h4><p>Dim Sum und 烧鹅 (Knuspergans), Filiale Dongshankou. Zwei Etagen voller Einheimischer, viele Gerichte, eine echte Überraschung — und direkt im Modeviertel.</p></div>
+        <div class="tcard"><span class="no">Geschmackssache</span><h4>粤陈记粥底火锅<span class="zh">(Hotpot auf Reisbrei-Basis)</span></h4><p>Sie fand es mittelmäßig, ihr Begleiter gut, lange Schlangen. Muss man selbst entscheiden.</p></div>
+        <div class="tcard"><span class="no">Kaffee · Dongshankou</span><h4>seed down <span class="zh">· 东山土狗</span></h4><p>seed down ist das beste Café im Viertel und gut zum Sitzen. Beim 东山土狗 (Dongshan-Straßenköter) ist der Kaffee schwach, aber in der Sonne vor der Tür sitzen ist schön. Nahe der Beijing Lu: this waaay cafe (versteckt in einer Wohnsiedlung), okeydo (Craft Beer, mit Katze) und frnklin coffee (Plätze an der Straße).</p></div>
+        <div class="tcard"><span class="no">Bar</span><h4>有酒<span class="zh">(Es gibt Wein)</span></h4><p>Plätze direkt an der Straße. Der Besitzer hat ihnen seine selbst geschmorte Ente spendiert und ist mit Ordnungsamt und Polizei befreundet.</p></div>
+        <div class="tcard"><span class="no">Noch auf ihrer Liste</span><h4>桂邻妹·广西美食<span class="zh">(Schwester aus Guangxi)</span></h4><p>Hauptfiliale, dazu 台山老表咸汤圆 (salzige Klebreisbällchen aus Taishan). Ihre Viertel: 越秀 (Yuexiu) und die Altstadtgassen — sie hat einmal in einer Markthalle gegessen, großartig, aber man wird fast von Lastendreirädern überfahren. Lieber ein ordentliches Restaurant.</p></div>
       </div>
     </section>
 
     <section class="hn-sec" id="hn-export">
-      <div class="hn-h"><span class="k">Kapitel VI</span><h2>Ausfuhr: Foshan<span class="zh">佛山 (Buddha-Berg)</span></h2>
+      <div class="hn-h"><span class="k">Kapitel VII</span><h2>Ausfuhr: Foshan<span class="zh">佛山 (Buddha-Berg)</span></h2>
         <svg class="orn" viewBox="0 0 180 14" aria-hidden="true"><path d="M0 7 H70 M110 7 H180" stroke="#C9A04A" stroke-width="1.5"/><path d="M80 7 l10 -6 l10 6 l-10 6 Z" fill="#9B1B1E" stroke="#C9A04A"/></svg>
-        <p>Mit dem Zug 15 Minuten ab Guangzhou Süd liegt das Zentrum der chinesischen Bau- und Einrichtungsindustrie. Ende November ist Nebensaison, in den Showrooms ist es ruhig.</p></div>
+        <p>Mit dem Zug 15 Minuten ab Guangzhou Süd liegt das Zentrum der chinesischen Bau- und Einrichtungsindustrie. Ende November ist Nebensaison, in den Showrooms ist es ruhig. <b>Offene Option:</b> Mit nur einer Nacht in Guangzhou passt das nicht hinein. Wenn die Nacht hier bleibt oder eine zweite dazukommt, wäre ein ganzer Tag in 顺德 (Shunde) drin — die Möbelmärkte von 乐从 (Lecong) und dazu Xiaoyus Essensliste.</p></div>
       <div class="labels">
         <div class="label"><span class="big goldtxt">瓷</span><span class="de">Nanzhuang</span><p>南庄 (Südgut). Zusammen mit Shiwan die größte Keramik- und Fliesenproduktion der Welt, inklusive Sinterstein und Sanitär.</p></div>
         <div class="label"><span class="big goldtxt">陶</span><span class="de">Shiwan</span><p>石湾 (Steinbucht). Keramik, Fliesen, Sanitär.</p></div>
         <div class="label"><span class="big goldtxt">木</span><span class="de">Lecong</span><p>乐从 (Lecong), Shunde. Der größte Möbelhandel der Welt: über 3 Mio. m² Showrooms, mehr als 3.400 Händler. Die Fabriken sind im Nachbarort 龙江 (Longjiang).</p></div>
         <div class="label"><span class="big goldtxt">鋁</span><span class="de">Dali</span><p>大沥 (Dali), Nanhai. Chinas größtes Zentrum für Aluminiumprofile, auch thermisch getrennte Fenster und Türen.</p></div>
+      </div>
+      <div class="ledger-hn" style="margin-top:34px">
+        <div class="head"><b>顺德 (Shunde) · Essen zum Möbelmarkt</b><span>Empfehlungen von Xiaoyu</span></div>
+        <table>
+          <thead><tr><th>Lokal</th><th>Ihr Tipp</th></tr></thead>
+          <tbody>
+            <tr><td class="d">大吉饭堂</td><td>节瓜焖虾蝼 — Haargurke geschmort mit Fangschreckenkrebs, „viel zu gut“.</td></tr>
+            <tr><td class="d">大码头睿淇小食店</td><td>„Alles viel zu gut“.</td></tr>
+            <tr><td class="d">太艮毋米粥</td><td>一鱼两吃, ein Fisch auf zwei Arten. 毋米粥 heißt „Reisbrei ohne Reis“ — nur die Brühe als Hotpot-Basis, eine Shunde-Spezialität.</td></tr>
+            <tr><td class="d">银辉味馆</td><td>Ohne Kommentar auf ihrer Liste.</td></tr>
+            <tr><td class="d">新基豆腐店</td><td>Tofu.</td></tr>
+            <tr><td class="d">味可道早茶</td><td>Yum Cha.</td></tr>
+          </tbody>
+        </table>
+        <div class="foot">顺德 (Shunde) ist ein Bezirk von Foshan, gut eine halbe Stunde ab 广州南 (Guangzhou Süd), und seit 2014 UNESCO City of Gastronomy. Hier liegt auch 乐从 (Lecong). Mögliche Form: ein Tag ab Guangzhou, vormittags Lecong, mittags und abends essen. Xiaoyu war fünf Tage dort, hat jeden Tag nur gegessen und will für einen Monat zurück.</div>
       </div>
     </section>
   </div>
@@ -4059,6 +4190,13 @@ body.hn{background:#F4EBD8;color:#2A1A12}
       out.textContent= t<.25?K[0].lab:(t<.75?K[1].lab:K[2].lab); }
     rng.addEventListener('input',function(){apply(+rng.value);}); apply(+rng.value);
 
+    // Der Berg soll bei jeder Fensterbreite gleich stehen: viewBox folgt dem Seitenverhaeltnis,
+    // die Basis bleibt unten (y = 760), nach oben kommt Himmel dazu.
+    window.lmFit=function(){ var r=hero.getBoundingClientRect(); if(!r.width||!r.height) return;
+      var H=1600*r.height/r.width; if(H<660) H=660; if(H>1120) H=1120;
+      svg.setAttribute('viewBox','0 '+(760-H).toFixed(0)+' 1600 '+H.toFixed(0)); };
+    window.lmFit(); window.addEventListener('resize',window.lmFit);
+
     // Kleine Gipfelreihe mit Nummern
     var pk=document.getElementById('lm-peaks');
     if(pk){ var Q=P.map(function(p){return [(p[0]-330)*0.8, p[1]-70];});
@@ -4232,15 +4370,16 @@ body.hn{background:#F4EBD8;color:#2A1A12}
 
   // ---------- Chengdu: Store-Filter ----------
   document.querySelectorAll('.st-filter button').forEach(function(b){ b.addEventListener('click',function(){
-    var f=b.dataset.f; b.parentNode.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});
-    document.querySelectorAll('.st-row').forEach(function(r){ r.hidden = !(f==='all' || r.dataset.s===f || r.dataset.a===f); });
+    var f=b.dataset.f||b.dataset.m, box=b.closest('.stores')||document;
+    b.parentNode.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});
+    box.querySelectorAll('.st-row').forEach(function(r){ r.hidden = !(f==='all' || r.dataset.s===f || r.dataset.a===f || r.dataset.m===f); });
   }); });
 
 
   // ---------- Chengdu: Karte ----------
   (function(){
     var svg=document.getElementById('cd-map'); if(!svg) return;
-    var D=[{"c": "mode", "k": "01", "n": "hug", "w": "晶融汇 (Jingronghui)", "t": "Sichere Wette", "lat": 30.6556, "lon": 104.0838, "u": "https://uri.amap.com/search?keyword=%E6%99%B6%E8%9E%8D%E6%B1%87&city=510100&callnative=0"}, {"c": "mode", "k": "02", "n": "(SO)WHAT", "w": "晶融汇, EG", "t": "Sichere Wette", "lat": 30.655, "lon": 104.0848, "u": "https://uri.amap.com/search?keyword=%E6%99%B6%E8%9E%8D%E6%B1%87&city=510100&callnative=0"}, {"c": "mode", "k": "03", "n": "Dressing For Fun", "w": "干槐树街 (Straße der trockenen Akazie)", "t": "Sichere Wette", "lat": 30.6612, "lon": 104.0856, "u": "https://uri.amap.com/search?keyword=%E5%B9%B2%E6%A7%90%E6%A0%91%E8%A1%97&city=510100&callnative=0"}, {"c": "mode", "k": "05", "n": "X-select", "w": "MixC, 2. OG", "t": "Prüfen", "lat": 30.659, "lon": 104.1035, "u": "https://uri.amap.com/search?keyword=%E6%88%90%E9%83%BD%E4%B8%87%E8%B1%A1%E5%9F%8E&city=510100&callnative=0"}, {"c": "mode", "k": "07", "n": "Luxemporium", "w": "科华中路 9 (Kehua-Mittelstraße 9)", "t": "Prüfen", "lat": 30.6385, "lon": 104.0775, "u": "https://uri.amap.com/search?keyword=%E7%A7%91%E5%8D%8E%E4%B8%AD%E8%B7%AF9%E5%8F%B7&city=510100&callnative=0"}, {"c": "mode", "k": "06", "n": "Le Sélect", "w": "Yintai in99, weiter südlich", "t": "Prüfen", "lat": 30.579, "lon": 104.068, "u": "https://uri.amap.com/search?keyword=%E9%93%B6%E6%B3%B0in99&city=510100&callnative=0"}, {"c": "mode", "k": "08", "n": "OUTOFSTOCK", "w": "交子大道 500, weiter südlich", "t": "Prüfen", "lat": 30.58, "lon": 104.059, "u": "https://uri.amap.com/search?keyword=%E4%BA%A4%E5%AD%90%E5%A4%A7%E9%81%93500%E5%8F%B7&city=510100&callnative=0"}, {"c": "food", "k": "F1", "n": "老刘烧烤 (Lao Lius Grill)", "w": "玉林三巷 (Dritte Yulin-Gasse)", "t": "Pflicht", "lat": 30.6312, "lon": 104.0588, "u": "https://uri.amap.com/search?keyword=%E8%80%81%E5%88%98%E7%83%A7%E7%83%A4%20%E7%8E%89%E6%9E%97&city=510100&callnative=0"}, {"c": "food", "k": "F2", "n": "爱恨怪豆花 (Liebe-Hass-Tofupudding)", "w": "芳华街 (Fanghua-Straße)", "t": "Best Value", "lat": 30.6334, "lon": 104.0622, "u": "https://uri.amap.com/search?keyword=%E7%88%B1%E6%81%A8%E6%80%AA%E8%B1%86%E8%8A%B1&city=510100&callnative=0"}, {"c": "food", "k": "F3", "n": "何眼镜芋儿鸡 (Taro-Huhn)", "w": "双桥路 (Doppelbrückenstraße)", "t": "Open Air", "lat": 30.6562, "lon": 104.1162, "u": "https://uri.amap.com/search?keyword=%E4%BD%95%E7%9C%BC%E9%95%9C%E8%8A%8B%E5%84%BF%E9%B8%A1&city=510100&callnative=0"}, {"c": "food", "k": "F4", "n": "明婷饭店 (Restaurant Mingting)", "w": "外曹家巷 (Äußere Caojia-Gasse)", "t": "Klassiker", "lat": 30.6762, "lon": 104.0792, "u": "https://uri.amap.com/search?keyword=%E6%98%8E%E5%A9%B7%E9%A5%AD%E5%BA%97&city=510100&callnative=0"}, {"c": "food", "k": "F6", "n": "电台巷火锅 (Radiogassen-Hotpot)", "w": "Kehua Bei Lu", "t": "Hotpot", "lat": 30.633, "lon": 104.077, "u": "https://uri.amap.com/search?keyword=%E7%94%B5%E5%8F%B0%E5%B7%B7%E7%81%AB%E9%94%85&city=510100&callnative=0"}, {"c": "mich", "k": "★1", "n": "谧寻茶室 (Mi Xun Teehaus)", "w": "Im Upper House", "t": "★ + Grüner Stern", "lat": 30.6531, "lon": 104.082, "u": "https://uri.amap.com/search?keyword=%E8%B0%A7%E5%AF%BB%E8%8C%B6%E5%AE%A4&city=510100&callnative=0"}, {"c": "mich", "k": "★2", "n": "玉芝兰 (Yu Zhi Lan)", "w": "Qingyang", "t": "★★ · reservieren", "lat": 30.6682, "lon": 104.0552, "u": "https://uri.amap.com/search?keyword=%E7%8E%89%E8%8A%9D%E5%85%B0&city=510100&callnative=0"}, {"c": "mich", "k": "★3", "n": "马旺子 (Ma's Kitchen)", "w": "Gegenüber vom Upper House", "t": "★", "lat": 30.6546, "lon": 104.0812, "u": "https://uri.amap.com/search?keyword=%E9%A9%AC%E6%97%BA%E5%AD%90&city=510100&callnative=0"}, {"c": "des", "k": "D1", "n": "方所 (Fangsuo)", "w": "Taikoo Li, UG", "t": "Stärkster Innenraum", "lat": 30.6528, "lon": 104.0845, "u": "https://uri.amap.com/search?keyword=%E6%96%B9%E6%89%80%20%E8%BF%9C%E6%B4%8B%E5%A4%AA%E5%8F%A4%E9%87%8C&city=510100&callnative=0"}, {"c": "des", "k": "D2", "n": "东郊记忆 (Erinnerung an die Ostvorstadt)", "w": "Fabrikgelände", "t": "Werktags", "lat": 30.6702, "lon": 104.1148, "u": "https://uri.amap.com/search?keyword=%E4%B8%9C%E9%83%8A%E8%AE%B0%E5%BF%86&city=510100&callnative=0"}, {"c": "hood", "k": "V1", "n": "玉林 (Yulin)", "w": "Wuhou · abends", "t": "Viertel zum Herumlaufen", "lat": 30.6322, "lon": 104.0602, "u": "https://uri.amap.com/search?keyword=%E7%8E%89%E6%9E%97%E7%94%9F%E6%B4%BB%E5%B9%BF%E5%9C%BA&city=510100&callnative=0"}, {"c": "hood", "k": "V2", "n": "建设巷 (Aufbaugasse)", "w": "Osten", "t": "Streetfood", "lat": 30.6772, "lon": 104.1062, "u": "https://uri.amap.com/search?keyword=%E5%BB%BA%E8%AE%BE%E5%B7%B7&city=510100&callnative=0"}, {"c": "hood", "k": "V3", "n": "香香巷 (Duftgasse)", "w": "bei Taikoo Li", "t": "voll, aber vielfältig", "lat": 30.656, "lon": 104.0878, "u": "https://uri.amap.com/search?keyword=%E9%A6%99%E9%A6%99%E5%B7%B7&city=510100&callnative=0"}, {"c": "base", "k": "H", "n": "博舍 (The Upper House)", "w": "Taikoo Li", "t": "Unser Hotel", "lat": 30.6536, "lon": 104.083, "u": "https://uri.amap.com/search?keyword=%E5%8D%9A%E8%88%8D%E9%85%92%E5%BA%97&city=510100&callnative=0"}, {"c": "base", "k": "T", "n": "天府广场 (Tianfu-Platz)", "w": "Stadtmitte", "t": "Orientierung", "lat": 30.6573, "lon": 104.066, "u": "https://uri.amap.com/search?keyword=%E5%A4%A9%E5%BA%9C%E5%B9%BF%E5%9C%BA&city=510100&callnative=0"}, {"c": "base", "k": "B", "n": "成都东站 (Chengdu Ost)", "w": "Ankunft Do 19.11.", "t": "Bahnhof", "lat": 30.6292, "lon": 104.141, "u": "https://uri.amap.com/search?keyword=%E6%88%90%E9%83%BD%E4%B8%9C%E7%AB%99&city=510100&callnative=0"}];
+    var D=[{"c": "mode", "k": "01", "n": "hug", "w": "晶融汇 (Jingronghui)", "t": "Sichere Wette", "lat": 30.6556, "lon": 104.0838, "u": "https://uri.amap.com/search?keyword=%E6%99%B6%E8%9E%8D%E6%B1%87&city=510100&callnative=0"}, {"c": "mode", "k": "02", "n": "(SO)WHAT", "w": "晶融汇, EG", "t": "Sichere Wette", "lat": 30.655, "lon": 104.0848, "u": "https://uri.amap.com/search?keyword=%E6%99%B6%E8%9E%8D%E6%B1%87&city=510100&callnative=0"}, {"c": "mode", "k": "03", "n": "Dressing For Fun", "w": "干槐树街 (Straße der trockenen Akazie)", "t": "Sichere Wette", "lat": 30.6612, "lon": 104.0856, "u": "https://uri.amap.com/search?keyword=%E5%B9%B2%E6%A7%90%E6%A0%91%E8%A1%97&city=510100&callnative=0"}, {"c": "mode", "k": "05", "n": "X-select", "w": "MixC, 2. OG", "t": "Prüfen", "lat": 30.659, "lon": 104.1035, "u": "https://uri.amap.com/search?keyword=%E6%88%90%E9%83%BD%E4%B8%87%E8%B1%A1%E5%9F%8E&city=510100&callnative=0"}, {"c": "mode", "k": "07", "n": "Luxemporium", "w": "科华中路 9 (Kehua-Mittelstraße 9)", "t": "Prüfen", "lat": 30.6385, "lon": 104.0775, "u": "https://uri.amap.com/search?keyword=%E7%A7%91%E5%8D%8E%E4%B8%AD%E8%B7%AF9%E5%8F%B7&city=510100&callnative=0"}, {"c": "mode", "k": "06", "n": "Le Sélect", "w": "Yintai in99, weiter südlich", "t": "Prüfen", "lat": 30.579, "lon": 104.068, "u": "https://uri.amap.com/search?keyword=%E9%93%B6%E6%B3%B0in99&city=510100&callnative=0"}, {"c": "mode", "k": "08", "n": "OUTOFSTOCK", "w": "交子大道 500, weiter südlich", "t": "Prüfen", "lat": 30.58, "lon": 104.059, "u": "https://uri.amap.com/search?keyword=%E4%BA%A4%E5%AD%90%E5%A4%A7%E9%81%93500%E5%8F%B7&city=510100&callnative=0"}, {"c": "food", "k": "F1", "n": "老刘烧烤 (Lao Lius Grill)", "w": "玉林三巷 (Dritte Yulin-Gasse)", "t": "Pflicht", "lat": 30.6312, "lon": 104.0588, "u": "https://uri.amap.com/search?keyword=%E8%80%81%E5%88%98%E7%83%A7%E7%83%A4%20%E7%8E%89%E6%9E%97&city=510100&callnative=0"}, {"c": "food", "k": "F2", "n": "爱恨怪豆花 (Liebe-Hass-Tofupudding)", "w": "芳华街 (Fanghua-Straße)", "t": "Best Value", "lat": 30.6334, "lon": 104.0622, "u": "https://uri.amap.com/search?keyword=%E7%88%B1%E6%81%A8%E6%80%AA%E8%B1%86%E8%8A%B1&city=510100&callnative=0"}, {"c": "food", "k": "F3", "n": "何眼镜芋儿鸡 (Taro-Huhn)", "w": "双桥路 (Doppelbrückenstraße)", "t": "Open Air", "lat": 30.6562, "lon": 104.1162, "u": "https://uri.amap.com/search?keyword=%E4%BD%95%E7%9C%BC%E9%95%9C%E8%8A%8B%E5%84%BF%E9%B8%A1&city=510100&callnative=0"}, {"c": "food", "k": "F4", "n": "明婷饭店 (Restaurant Mingting)", "w": "外曹家巷 (Äußere Caojia-Gasse)", "t": "Klassiker", "lat": 30.6762, "lon": 104.0792, "u": "https://uri.amap.com/search?keyword=%E6%98%8E%E5%A9%B7%E9%A5%AD%E5%BA%97&city=510100&callnative=0"}, {"c": "food", "k": "F6", "n": "电台巷火锅 (Radiogassen-Hotpot)", "w": "Kehua Bei Lu", "t": "Hotpot", "lat": 30.633, "lon": 104.077, "u": "https://uri.amap.com/search?keyword=%E7%94%B5%E5%8F%B0%E5%B7%B7%E7%81%AB%E9%94%85&city=510100&callnative=0"}, {"c": "mich", "k": "★1", "n": "谧寻茶室 (Mi Xun Teehaus)", "w": "Im Upper House", "t": "★ + Grüner Stern", "lat": 30.6531, "lon": 104.082, "u": "https://uri.amap.com/search?keyword=%E8%B0%A7%E5%AF%BB%E8%8C%B6%E5%AE%A4&city=510100&callnative=0"}, {"c": "mich", "k": "★2", "n": "玉芝兰 (Yu Zhi Lan)", "w": "Qingyang", "t": "★★ · reservieren", "lat": 30.6682, "lon": 104.0552, "u": "https://uri.amap.com/search?keyword=%E7%8E%89%E8%8A%9D%E5%85%B0&city=510100&callnative=0"}, {"c": "mich", "k": "★3", "n": "马旺子 (Ma's Kitchen)", "w": "Gegenüber vom Upper House", "t": "★", "lat": 30.6546, "lon": 104.0812, "u": "https://uri.amap.com/search?keyword=%E9%A9%AC%E6%97%BA%E5%AD%90&city=510100&callnative=0"}, {"c": "des", "k": "D1", "n": "方所 (Fangsuo)", "w": "Taikoo Li, UG", "t": "Stärkster Innenraum", "lat": 30.6528, "lon": 104.0845, "u": "https://uri.amap.com/search?keyword=%E6%96%B9%E6%89%80%20%E8%BF%9C%E6%B4%8B%E5%A4%AA%E5%8F%A4%E9%87%8C&city=510100&callnative=0"}, {"c": "des", "k": "D2", "n": "东郊记忆 (Erinnerung an die Ostvorstadt)", "w": "Fabrikgelände", "t": "Werktags", "lat": 30.6702, "lon": 104.1148, "u": "https://uri.amap.com/search?keyword=%E4%B8%9C%E9%83%8A%E8%AE%B0%E5%BF%86&city=510100&callnative=0"}, {"c": "hood", "k": "V1", "n": "玉林 (Yulin)", "w": "Wuhou · abends", "t": "Viertel zum Herumlaufen", "lat": 30.6322, "lon": 104.0602, "u": "https://uri.amap.com/search?keyword=%E7%8E%89%E6%9E%97%E7%94%9F%E6%B4%BB%E5%B9%BF%E5%9C%BA&city=510100&callnative=0"}, {"c": "hood", "k": "V2", "n": "建设巷 (Aufbaugasse)", "w": "Osten", "t": "Streetfood", "lat": 30.6772, "lon": 104.1062, "u": "https://uri.amap.com/search?keyword=%E5%BB%BA%E8%AE%BE%E5%B7%B7&city=510100&callnative=0"}, {"c": "hood", "k": "V3", "n": "香香巷 (Duftgasse)", "w": "bei Taikoo Li", "t": "voll, aber vielfältig", "lat": 30.656, "lon": 104.0878, "u": "https://uri.amap.com/search?keyword=%E9%A6%99%E9%A6%99%E5%B7%B7&city=510100&callnative=0"}, {"c": "base", "k": "H", "n": "博舍 (The Upper House)", "w": "Taikoo Li", "t": "Unser Hotel", "lat": 30.6536, "lon": 104.083, "u": "https://uri.amap.com/search?keyword=%E5%8D%9A%E8%88%8D%E9%85%92%E5%BA%97&city=510100&callnative=0"}, {"c": "base", "k": "T", "n": "天府广场 (Tianfu-Platz)", "w": "Stadtmitte", "t": "Orientierung", "lat": 30.6573, "lon": 104.066, "u": "https://uri.amap.com/search?keyword=%E5%A4%A9%E5%BA%9C%E5%B9%BF%E5%9C%BA&city=510100&callnative=0"}, {"c": "base", "k": "B", "n": "成都东站 (Chengdu Ost)", "w": "an Fr 20.11. · ab Di 24.11.", "t": "Bahnhof", "lat": 30.6292, "lon": 104.141, "u": "https://uri.amap.com/search?keyword=%E6%88%90%E9%83%BD%E4%B8%9C%E7%AB%99&city=510100&callnative=0"}];
     var COL={mode:'#FFCD35',food:'#EB6C44',mich:'#FFF2D4',des:'#6FB7E0',hood:'#7FC48A',base:'#FFFFFF'};
     var CAT={mode:'Mode',food:'Fliegen-Lokal',mich:'Michelin',des:'Design',hood:'Viertel',base:'Orientierung'};
     var L0=104.035,A0=30.685,K=8000,KY=9280;
@@ -4263,7 +4402,7 @@ body.hn{background:#F4EBD8;color:#2A1A12}
     g+='<ellipse cx="'+X(104.108)+'" cy="'+Y(30.665)+'" rx="70" ry="70" fill="#FFCD35" fill-opacity=".05" stroke="#FFCD35" stroke-opacity=".45" stroke-dasharray="5 5"/>';
     g+='<text x="'+(X(104.108)-40)+'" y="'+(Y(30.665)+88)+'" font-family="Anton,Impact,sans-serif" font-size="14" fill="#FFCD35">BLOCK B · OSTEN</text>';
     // Rand-Hinweise
-    g+='<g font-family="DM Mono,monospace" font-size="11" fill="#FFF2D4" opacity=".75"><text x="8" y="650">↙ Flughafen 双流 (Shuangliu)</text><text x="440" y="650" text-anchor="middle">↓ in99 · Jiaozi-Allee (06, 08), ca. 6 km südlich</text><text x="912" y="18" text-anchor="end">N ↑</text></g>';
+    g+='<g font-family="DM Mono,monospace" font-size="11" fill="#FFF2D4" opacity=".75"><text x="8" y="650">↙ Flughafen 天府 (Tianfu) · 50 km</text><text x="440" y="650" text-anchor="middle">↓ in99 · Jiaozi-Allee (06, 08), ca. 6 km südlich</text><text x="912" y="18" text-anchor="end">N ↑</text></g>';
     // Positionen berechnen und Überlappungen auseinanderschieben (mit Führungslinie zum echten Ort)
     D.forEach(function(p){ p.x0=X(p.lon); p.y0=Y(p.lat); if(p.lat<30.615){ p.y0=620; p.x0+=(p.k==='06'?30:-30); } p.x=p.x0; p.y=p.y0; p.r=p.c==='hood'?26:17; });
     for(var it=0;it<160;it++){ for(var a=0;a<D.length;a++) for(var b2=a+1;b2<D.length;b2++){ var A=D[a],B=D[b2];
@@ -4316,7 +4455,7 @@ body.hn{background:#F4EBD8;color:#2A1A12}
   };
   function riv(X,Y,pts,w,col,op){ return '<path d="'+pts.map(function(p,i){return (i?'L':'M')+X(p[1]).toFixed(1)+' '+Y(p[0]).toFixed(1);}).join(' ')+'" fill="none" stroke="'+col+'" stroke-opacity="'+op+'" stroke-width="'+w+'" stroke-linecap="round" stroke-linejoin="round"/>'; }
   // Xi'an
-  makeMap({svg:'xa-map',info:'xa-map-info',filter:'#xa-mapf',off:'#xa-off',pts:[{"c": "hotel", "k": "H", "n": "垓里民宿 (Pension unter der Stadtmauer)", "w": "顺城南路 (Shuncheng Nanlu), innen an der Südmauer", "t": "2 Nächte · 14.–16.11.", "lat": 34.2532, "lon": 108.9478, "u": "https://uri.amap.com/search?keyword=%E5%9E%A3%E9%87%8C%E6%B0%91%E5%AE%BF&city=610100&callnative=0"}, {"c": "markt", "k": "M1", "n": "西仓集市 (Xicang-Markt)", "w": "in der Altstadt, Nordwesten", "t": "So 15.11. vormittags", "lat": 34.268, "lon": 108.938, "u": "https://uri.amap.com/search?keyword=%E8%A5%BF%E4%BB%93%E9%9B%86%E5%B8%82&city=610100&callnative=0"}, {"c": "markt", "k": "M2", "n": "小南门早市 (Morgenmarkt am Kleinen Südtor)", "w": "an der Stadtmauer", "t": "7–9 Uhr", "lat": 34.2528, "lon": 108.9385, "u": "https://uri.amap.com/search?keyword=%E5%B0%8F%E5%8D%97%E9%97%A8%E6%97%A9%E5%B8%82&city=610100&callnative=0"}, {"c": "food", "k": "S6", "n": "洒金桥 (Sajinqiao)", "w": "westlich des Muslimviertels", "t": "Hier essen die Einheimischen", "lat": 34.2662, "lon": 108.9335, "u": "https://uri.amap.com/search?keyword=%E6%B4%92%E9%87%91%E6%A1%A5&city=610100&callnative=0"}, {"c": "food", "k": "S7", "n": "永兴坊 (Yongxingfang)", "w": "Nordosten, am Osttor", "t": "Kuratierte Fressgasse", "lat": 34.2645, "lon": 108.9665, "u": "https://uri.amap.com/search?keyword=%E6%B0%B8%E5%85%B4%E5%9D%8A&city=610100&callnative=0"}, {"c": "food", "k": "S8", "n": "回民街 (Straße der Hui)", "w": "hinter dem Trommelturm", "t": "Seitengassen 大皮院 und 北广济街", "lat": 34.264, "lon": 108.942, "u": "https://uri.amap.com/search?keyword=%E5%9B%9E%E6%B0%91%E8%A1%97&city=610100&callnative=0"}, {"c": "food", "k": "R1", "n": "西安饭庄 (Xi'an-Restaurant)", "w": "东大街 (Ost-Straße)", "t": "Institution seit 1929", "lat": 34.2603, "lon": 108.9565, "u": "https://uri.amap.com/search?keyword=%E8%A5%BF%E5%AE%89%E9%A5%AD%E5%BA%84%20%E4%B8%9C%E5%A4%A7%E8%A1%97&city=610100&callnative=0"}, {"c": "food", "k": "R2", "n": "同盛祥 (Tongshengxiang)", "w": "am Glockenturm", "t": "Paomo seit 1920", "lat": 34.2614, "lon": 108.9455, "u": "https://uri.amap.com/search?keyword=%E5%90%8C%E7%9B%9B%E7%A5%A5%20%E9%92%9F%E6%A5%BC&city=610100&callnative=0"}, {"c": "food", "k": "R3", "n": "醉长安 (Trunkenes Chang'an)", "w": "湘子庙街 (Xiangzi-Tempel-Gasse)", "t": "Hofhaus", "lat": 34.2546, "lon": 108.9462, "u": "https://uri.amap.com/search?keyword=%E9%86%89%E9%95%BF%E5%AE%89%20%E6%B9%98%E5%AD%90%E5%BA%99&city=610100&callnative=0"}, {"c": "see", "k": "A1", "n": "万象城 · 生命之树 (MixC · Baum des Lebens)", "w": "am Fernsehturm, Metro 2 电视塔", "t": "Heatherwick 2024", "lat": 34.2055, "lon": 108.949, "u": "https://uri.amap.com/search?keyword=%E8%A5%BF%E5%AE%89%E4%B8%87%E8%B1%A1%E5%9F%8E&city=610100&callnative=0"}, {"c": "see", "k": "A2", "n": "大华1935 (Dahua 1935)", "w": "nordöstlich der Mauer", "t": "Umgebaute Weberei", "lat": 34.28, "lon": 108.975, "u": "https://uri.amap.com/search?keyword=%E5%A4%A7%E5%8D%8E1935&city=610100&callnative=0"}, {"c": "see", "k": "A4", "n": "碑林博物馆 (Stelenwald-Museum)", "w": "Altstadt, Süden", "t": "Steinstelen", "lat": 34.2546, "lon": 108.957, "u": "https://uri.amap.com/search?keyword=%E7%A2%91%E6%9E%97%E5%8D%9A%E7%89%A9%E9%A6%86&city=610100&callnative=0"}, {"c": "see", "k": "A5", "n": "陕西历史博物馆 (Historisches Museum Shaanxi)", "w": "südlich der Mauer", "t": "Tickets vorher online", "lat": 34.224, "lon": 108.954, "u": "https://uri.amap.com/search?keyword=%E9%99%95%E8%A5%BF%E5%8E%86%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A6%86&city=610100&callnative=0"}, {"c": "see", "k": "A8", "n": "钟楼 (Glockenturm)", "w": "Mitte", "t": "", "lat": 34.261, "lon": 108.947, "u": "https://uri.amap.com/search?keyword=%E9%92%9F%E6%A5%BC&city=610100&callnative=0"}, {"c": "see", "k": "A9", "n": "广仁寺 (Guangren-Tempel)", "w": "Altstadt, Nordwestecke", "t": "Tibetischer Tempel", "lat": 34.2722, "lon": 108.9295, "u": "https://uri.amap.com/search?keyword=%E5%B9%BF%E4%BB%81%E5%AF%BA&city=610100&callnative=0"}, {"c": "see", "k": "A9", "n": "兴善寺 (Xingshan-Tempel)", "w": "südlich", "t": "", "lat": 34.2362, "lon": 108.9452, "u": "https://uri.amap.com/search?keyword=%E5%A4%A7%E5%85%B4%E5%96%84%E5%AF%BA&city=610100&callnative=0"}, {"c": "see", "k": "A9", "n": "八仙庵 (Acht-Unsterbliche-Kloster)", "w": "östlich der Mauer", "t": "", "lat": 34.2622, "lon": 108.98, "u": "https://uri.amap.com/search?keyword=%E5%85%AB%E4%BB%99%E5%AE%AB&city=610100&callnative=0"}, {"c": "see", "k": "A10", "n": "大唐不夜城 (Tang-Stadt ohne Nacht)", "w": "Süden, am Großen Wildganspagode", "t": "abends", "lat": 34.215, "lon": 108.964, "u": "https://uri.amap.com/search?keyword=%E5%A4%A7%E5%94%90%E4%B8%8D%E5%A4%9C%E5%9F%8E&city=610100&callnative=0"}, {"c": "see", "k": "A8", "n": "曲江遗址公园 (Ruinenpark Qujiang)", "w": "Südosten", "t": "", "lat": 34.206, "lon": 108.978, "u": "https://uri.amap.com/search?keyword=%E6%9B%B2%E6%B1%9F%E6%B1%A0%E9%81%97%E5%9D%80%E5%85%AC%E5%9B%AD&city=610100&callnative=0"}, {"c": "bar", "k": "B1", "n": "襄子craft beer · Niwowo", "w": "顺城南路 (Shuncheng Nanlu), an der Mauer", "t": "100 m auseinander · Lage ungefähr", "lat": 34.2524, "lon": 108.9505, "u": "https://uri.amap.com/search?keyword=%E9%A1%BA%E5%9F%8E%E5%8D%97%E8%B7%AF%20%E8%A5%84%E5%AD%90%E7%B2%BE%E9%85%BF&city=610100&callnative=0"}],
+  makeMap({svg:'xa-map',info:'xa-map-info',filter:'#xa-mapf',off:'#xa-off',pts:[{"c": "hotel", "k": "H", "n": "垣里民宿 (Pension unter der Stadtmauer)", "w": "顺城南路 (Shuncheng Nanlu), innen an der Südmauer", "t": "3 Nächte · 14.–17.11.", "lat": 34.2532, "lon": 108.9478, "u": "https://uri.amap.com/search?keyword=%E5%9E%A3%E9%87%8C%E6%B0%91%E5%AE%BF&city=610100&callnative=0"}, {"c": "markt", "k": "M1", "n": "西仓集市 (Xicang-Markt)", "w": "in der Altstadt, Nordwesten", "t": "So 15.11. vormittags", "lat": 34.268, "lon": 108.938, "u": "https://uri.amap.com/search?keyword=%E8%A5%BF%E4%BB%93%E9%9B%86%E5%B8%82&city=610100&callnative=0"}, {"c": "markt", "k": "M2", "n": "小南门早市 (Morgenmarkt am Kleinen Südtor)", "w": "an der Stadtmauer", "t": "7–9 Uhr", "lat": 34.2528, "lon": 108.9385, "u": "https://uri.amap.com/search?keyword=%E5%B0%8F%E5%8D%97%E9%97%A8%E6%97%A9%E5%B8%82&city=610100&callnative=0"}, {"c": "food", "k": "S6", "n": "洒金桥 (Sajinqiao)", "w": "westlich des Muslimviertels", "t": "Hier essen die Einheimischen", "lat": 34.2662, "lon": 108.9335, "u": "https://uri.amap.com/search?keyword=%E6%B4%92%E9%87%91%E6%A1%A5&city=610100&callnative=0"}, {"c": "food", "k": "S7", "n": "永兴坊 (Yongxingfang)", "w": "Nordosten, am Osttor", "t": "Kuratierte Fressgasse", "lat": 34.2645, "lon": 108.9665, "u": "https://uri.amap.com/search?keyword=%E6%B0%B8%E5%85%B4%E5%9D%8A&city=610100&callnative=0"}, {"c": "food", "k": "S8", "n": "回民街 (Straße der Hui)", "w": "hinter dem Trommelturm", "t": "Seitengassen 大皮院 und 北广济街", "lat": 34.264, "lon": 108.942, "u": "https://uri.amap.com/search?keyword=%E5%9B%9E%E6%B0%91%E8%A1%97&city=610100&callnative=0"}, {"c": "food", "k": "R1", "n": "西安饭庄 (Xi'an-Restaurant)", "w": "东大街 (Ost-Straße)", "t": "Institution seit 1929", "lat": 34.2603, "lon": 108.9565, "u": "https://uri.amap.com/search?keyword=%E8%A5%BF%E5%AE%89%E9%A5%AD%E5%BA%84%20%E4%B8%9C%E5%A4%A7%E8%A1%97&city=610100&callnative=0"}, {"c": "food", "k": "R2", "n": "同盛祥 (Tongshengxiang)", "w": "am Glockenturm", "t": "Paomo seit 1920", "lat": 34.2614, "lon": 108.9455, "u": "https://uri.amap.com/search?keyword=%E5%90%8C%E7%9B%9B%E7%A5%A5%20%E9%92%9F%E6%A5%BC&city=610100&callnative=0"}, {"c": "food", "k": "R3", "n": "醉长安 (Trunkenes Chang'an)", "w": "湘子庙街 (Xiangzi-Tempel-Gasse)", "t": "Hofhaus", "lat": 34.2546, "lon": 108.9462, "u": "https://uri.amap.com/search?keyword=%E9%86%89%E9%95%BF%E5%AE%89%20%E6%B9%98%E5%AD%90%E5%BA%99&city=610100&callnative=0"}, {"c": "see", "k": "A1", "n": "万象城 · 生命之树 (MixC · Baum des Lebens)", "w": "am Fernsehturm, Metro 2 电视塔", "t": "Heatherwick 2024", "lat": 34.2055, "lon": 108.949, "u": "https://uri.amap.com/search?keyword=%E8%A5%BF%E5%AE%89%E4%B8%87%E8%B1%A1%E5%9F%8E&city=610100&callnative=0"}, {"c": "see", "k": "A2", "n": "大华1935 (Dahua 1935)", "w": "nordöstlich der Mauer", "t": "Umgebaute Weberei", "lat": 34.28, "lon": 108.975, "u": "https://uri.amap.com/search?keyword=%E5%A4%A7%E5%8D%8E1935&city=610100&callnative=0"}, {"c": "see", "k": "A4", "n": "碑林博物馆 (Stelenwald-Museum)", "w": "Altstadt, Süden", "t": "Steinstelen", "lat": 34.2546, "lon": 108.957, "u": "https://uri.amap.com/search?keyword=%E7%A2%91%E6%9E%97%E5%8D%9A%E7%89%A9%E9%A6%86&city=610100&callnative=0"}, {"c": "see", "k": "A5", "n": "陕西历史博物馆 (Historisches Museum Shaanxi)", "w": "südlich der Mauer", "t": "Tickets vorher online", "lat": 34.224, "lon": 108.954, "u": "https://uri.amap.com/search?keyword=%E9%99%95%E8%A5%BF%E5%8E%86%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A6%86&city=610100&callnative=0"}, {"c": "see", "k": "A8", "n": "钟楼 (Glockenturm)", "w": "Mitte", "t": "", "lat": 34.261, "lon": 108.947, "u": "https://uri.amap.com/search?keyword=%E9%92%9F%E6%A5%BC&city=610100&callnative=0"}, {"c": "see", "k": "A9", "n": "广仁寺 (Guangren-Tempel)", "w": "Altstadt, Nordwestecke", "t": "Tibetischer Tempel", "lat": 34.2722, "lon": 108.9295, "u": "https://uri.amap.com/search?keyword=%E5%B9%BF%E4%BB%81%E5%AF%BA&city=610100&callnative=0"}, {"c": "see", "k": "A9", "n": "兴善寺 (Xingshan-Tempel)", "w": "südlich", "t": "", "lat": 34.2362, "lon": 108.9452, "u": "https://uri.amap.com/search?keyword=%E5%A4%A7%E5%85%B4%E5%96%84%E5%AF%BA&city=610100&callnative=0"}, {"c": "see", "k": "A9", "n": "八仙庵 (Acht-Unsterbliche-Kloster)", "w": "östlich der Mauer", "t": "", "lat": 34.2622, "lon": 108.98, "u": "https://uri.amap.com/search?keyword=%E5%85%AB%E4%BB%99%E5%AE%AB&city=610100&callnative=0"}, {"c": "see", "k": "A10", "n": "大唐不夜城 (Tang-Stadt ohne Nacht)", "w": "Süden, am Großen Wildganspagode", "t": "abends", "lat": 34.215, "lon": 108.964, "u": "https://uri.amap.com/search?keyword=%E5%A4%A7%E5%94%90%E4%B8%8D%E5%A4%9C%E5%9F%8E&city=610100&callnative=0"}, {"c": "see", "k": "A8", "n": "曲江遗址公园 (Ruinenpark Qujiang)", "w": "Südosten", "t": "", "lat": 34.206, "lon": 108.978, "u": "https://uri.amap.com/search?keyword=%E6%9B%B2%E6%B1%9F%E6%B1%A0%E9%81%97%E5%9D%80%E5%85%AC%E5%9B%AD&city=610100&callnative=0"}, {"c": "bar", "k": "B1", "n": "襄子craft beer · Niwowo", "w": "顺城南路 (Shuncheng Nanlu), an der Mauer", "t": "100 m auseinander · Lage ungefähr", "lat": 34.2524, "lon": 108.9505, "u": "https://uri.amap.com/search?keyword=%E9%A1%BA%E5%9F%8E%E5%8D%97%E8%B7%AF%20%E8%A5%84%E5%AD%90%E7%B2%BE%E9%85%BF&city=610100&callnative=0"}],
     L0:108.915,A0:34.285,K:10000,KY:12100,r:17,font:'Open Sans,Arial,sans-serif',stroke:'#231F20',txt:'#231F20',lead:'#8E0808',
     txtc:{hotel:'#FFFFFF'},
     col:{markt:'#FFCD15',food:'#D0342C',see:'#FFFFFF',bar:'#7FB6E6',hotel:'#8E0808',base:'#231F20'},
@@ -4331,7 +4470,7 @@ body.hn{background:#F4EBD8;color:#2A1A12}
       g+='<text x="16" y="1016" font-family="Open Sans,sans-serif" font-size="12" fill="#6b6060">Schematisch nach ungefähren Koordinaten · N ↑</text>';
       return g; }});
   // Chongqing (Blade Runner)
-  makeMap({svg:'cq-map',info:'cq-map-info',filter:'#cq-mapf',off:'#cq-off',pts:[{"c": "hang", "k": "02.1", "n": "龙门浩老街 (Longmenhao)", "w": "Südufer · unser Hotel", "t": "Oben anfangen", "lat": 29.5482, "lon": 106.5885, "u": "https://uri.amap.com/search?keyword=%E9%BE%99%E9%97%A8%E6%B5%A9%E8%80%81%E8%A1%97&city=500000&callnative=0"}, {"c": "hang", "k": "02.2", "n": "弹子石老街 (Danzishi)", "w": "Südufer, gegenüber Chaotianmen", "t": "ab 19:30 Licht", "lat": 29.5705, "lon": 106.6010, "u": "https://uri.amap.com/search?keyword=%E5%BC%B9%E5%AD%90%E7%9F%B3%E8%80%81%E8%A1%97&city=500000&callnative=0"}, {"c": "hang", "k": "02.3", "n": "山城巷 (Bergstadt-Gasse)", "w": "Südhang der Halbinsel", "t": "Stelzenhäuser", "lat": 29.5522, "lon": 106.58, "u": "https://uri.amap.com/search?keyword=%E5%B1%B1%E5%9F%8E%E5%B7%B7&city=500000&callnative=0"}, {"c": "hang", "k": "02.4", "n": "十八梯 (Achtzehn Stufen)", "w": "zwischen Oberstadt und Jangtse", "t": "saniert", "lat": 29.5512, "lon": 106.5738, "u": "https://uri.amap.com/search?keyword=%E5%8D%81%E5%85%AB%E6%A2%AF&city=500000&callnative=0"}, {"c": "hang", "k": "02.5", "n": "李子坝 (Pflaumendamm)", "w": "Jialing-Seite", "t": "Monorail im Wohnhaus", "lat": 29.5522, "lon": 106.5312, "u": "https://uri.amap.com/search?keyword=%E6%9D%8E%E5%AD%90%E5%9D%9D%E8%BD%BB%E8%BD%A8%E7%AB%99&city=500000&callnative=0"}, {"c": "food", "k": "03.1", "n": "珮姐老火锅 (Peijie)", "w": "较场口 (Jiaochangkou)", "t": "Erste Wahl · reservieren", "lat": 29.5532, "lon": 106.5722, "u": "https://uri.amap.com/search?keyword=%E7%8F%AE%E5%A7%90%E8%80%81%E7%81%AB%E9%94%85%20%E8%BE%83%E5%9C%BA%E5%8F%A3&city=500000&callnative=0"}, {"c": "food", "k": "03.3", "n": "枇杷园 (Mispelgarten)", "w": "南山 (Nanshan)", "t": "Nachtblick · Lage ungefähr", "lat": 29.542, "lon": 106.625, "u": "https://uri.amap.com/search?keyword=%E6%9E%87%E6%9D%B7%E5%9B%AD%E7%81%AB%E9%94%85%20%E5%8D%97%E5%B1%B1&city=500000&callnative=0"}, {"c": "food", "k": "03.4", "n": "仙隆井 (Xianlongjing)", "w": "南山 (Nanshan)", "t": "Laternen · Lage ungefähr", "lat": 29.536, "lon": 106.618, "u": "https://uri.amap.com/search?keyword=%E4%BB%99%E9%9A%86%E4%BA%95%E7%81%AB%E9%94%85&city=500000&callnative=0"}, {"c": "art", "k": "04.1", "n": "鹅岭二厂 (Testbed 2)", "w": "鹅岭 (Gänsegrat)", "t": "neben Liziba", "lat": 29.5532, "lon": 106.536, "u": "https://uri.amap.com/search?keyword=%E9%B9%85%E5%B2%AD%E4%BA%8C%E5%8E%82&city=500000&callnative=0"}, {"c": "mode", "k": "05.1", "n": "SND · WFC", "w": "民族路 188 (Minzu-Straße 188)", "t": "ältester Buyer Store", "lat": 29.5612, "lon": 106.5792, "u": "https://uri.amap.com/search?keyword=%E9%87%8D%E5%BA%86%E7%8E%AF%E7%90%83%E9%87%91%E8%9E%8D%E4%B8%AD%E5%BF%83&city=500000&callnative=0"}, {"c": "mode", "k": "05.2", "n": "超凡百货 (Super Normal)", "w": "长嘉汇 (Changjiahui)", "t": "GESCHLOSSEN seit 01/2024", "lat": 29.566, "lon": 106.5988, "u": "https://uri.amap.com/search?keyword=%E9%95%BF%E5%98%89%E6%B1%87&city=500000&callnative=0"}, {"c": "base", "k": "H", "n": "SUNYATA 既下山 (Hotel)", "w": "龙门浩 (Longmenhao)", "t": "16.–19.11.", "lat": 29.5476, "lon": 106.5896, "u": "https://uri.amap.com/search?keyword=%E9%87%8D%E5%BA%86%E6%97%A2%E4%B8%8B%E5%B1%B1&city=500000&callnative=0"}, {"c": "base", "k": "J", "n": "解放碑 (Befreiungsdenkmal)", "w": "Oberstadt", "t": "Seilbahn-Talstation in der Nähe", "lat": 29.5576, "lon": 106.577, "u": "https://uri.amap.com/search?keyword=%E8%A7%A3%E6%94%BE%E7%A2%91&city=500000&callnative=0"}, {"c": "base", "k": "C", "n": "朝天门 (Chaotianmen)", "w": "Spitze der Halbinsel", "t": "Zusammenfluss", "lat": 29.5652, "lon": 106.588, "u": "https://uri.amap.com/search?keyword=%E6%9C%9D%E5%A4%A9%E9%97%A8&city=500000&callnative=0"}, {"c": "base", "k": "HY", "n": "洪崖洞 (Hongyadong)", "w": "Jialing-Ufer", "t": "die volle Alternative zu Danzishi", "lat": 29.563, "lon": 106.579, "u": "https://uri.amap.com/search?keyword=%E6%B4%AA%E5%B4%96%E6%B4%9E&city=500000&callnative=0"}],
+  makeMap({svg:'cq-map',info:'cq-map-info',filter:'#cq-mapf',off:'#cq-off',pts:[{"c": "hang", "k": "02.1", "n": "龙门浩老街 (Longmenhao)", "w": "Südufer · unser Hotel", "t": "Oben anfangen", "lat": 29.5482, "lon": 106.5885, "u": "https://uri.amap.com/search?keyword=%E9%BE%99%E9%97%A8%E6%B5%A9%E8%80%81%E8%A1%97&city=500000&callnative=0"}, {"c": "hang", "k": "02.2", "n": "弹子石老街 (Danzishi)", "w": "Südufer, gegenüber Chaotianmen", "t": "ab 19:30 Licht", "lat": 29.5705, "lon": 106.6010, "u": "https://uri.amap.com/search?keyword=%E5%BC%B9%E5%AD%90%E7%9F%B3%E8%80%81%E8%A1%97&city=500000&callnative=0"}, {"c": "hang", "k": "02.3", "n": "山城巷 (Bergstadt-Gasse)", "w": "Südhang der Halbinsel", "t": "Stelzenhäuser", "lat": 29.5522, "lon": 106.58, "u": "https://uri.amap.com/search?keyword=%E5%B1%B1%E5%9F%8E%E5%B7%B7&city=500000&callnative=0"}, {"c": "hang", "k": "02.4", "n": "十八梯 (Achtzehn Stufen)", "w": "zwischen Oberstadt und Jangtse", "t": "saniert", "lat": 29.5512, "lon": 106.5738, "u": "https://uri.amap.com/search?keyword=%E5%8D%81%E5%85%AB%E6%A2%AF&city=500000&callnative=0"}, {"c": "hang", "k": "02.5", "n": "李子坝 (Pflaumendamm)", "w": "Jialing-Seite", "t": "Monorail im Wohnhaus", "lat": 29.5522, "lon": 106.5312, "u": "https://uri.amap.com/search?keyword=%E6%9D%8E%E5%AD%90%E5%9D%9D%E8%BD%BB%E8%BD%A8%E7%AB%99&city=500000&callnative=0"}, {"c": "food", "k": "03.1", "n": "珮姐老火锅 (Peijie)", "w": "较场口 (Jiaochangkou)", "t": "Erste Wahl · reservieren", "lat": 29.5532, "lon": 106.5722, "u": "https://uri.amap.com/search?keyword=%E7%8F%AE%E5%A7%90%E8%80%81%E7%81%AB%E9%94%85%20%E8%BE%83%E5%9C%BA%E5%8F%A3&city=500000&callnative=0"}, {"c": "food", "k": "03.3", "n": "枇杷园 (Mispelgarten)", "w": "南山 (Nanshan)", "t": "Nachtblick · Lage ungefähr", "lat": 29.542, "lon": 106.625, "u": "https://uri.amap.com/search?keyword=%E6%9E%87%E6%9D%B7%E5%9B%AD%E7%81%AB%E9%94%85%20%E5%8D%97%E5%B1%B1&city=500000&callnative=0"}, {"c": "food", "k": "03.4", "n": "仙隆井 (Xianlongjing)", "w": "南山 (Nanshan)", "t": "Laternen · Lage ungefähr", "lat": 29.536, "lon": 106.618, "u": "https://uri.amap.com/search?keyword=%E4%BB%99%E9%9A%86%E4%BA%95%E7%81%AB%E9%94%85&city=500000&callnative=0"}, {"c": "art", "k": "04.1", "n": "鹅岭二厂 (Testbed 2)", "w": "鹅岭 (Gänsegrat)", "t": "neben Liziba", "lat": 29.5532, "lon": 106.536, "u": "https://uri.amap.com/search?keyword=%E9%B9%85%E5%B2%AD%E4%BA%8C%E5%8E%82&city=500000&callnative=0"}, {"c": "mode", "k": "05.1", "n": "SND · WFC", "w": "民族路 188 (Minzu-Straße 188)", "t": "ältester Buyer Store", "lat": 29.5612, "lon": 106.5792, "u": "https://uri.amap.com/search?keyword=%E9%87%8D%E5%BA%86%E7%8E%AF%E7%90%83%E9%87%91%E8%9E%8D%E4%B8%AD%E5%BF%83&city=500000&callnative=0"}, {"c": "base", "k": "H", "n": "SUNYATA CHONGQING River View 既下山", "w": "龙门浩 (Longmenhao)", "t": "17.–20.11.", "lat": 29.5476, "lon": 106.5896, "u": "https://uri.amap.com/search?keyword=%E9%87%8D%E5%BA%86%E6%97%A2%E4%B8%8B%E5%B1%B1&city=500000&callnative=0"}, {"c": "base", "k": "J", "n": "解放碑 (Befreiungsdenkmal)", "w": "Oberstadt", "t": "Seilbahn-Talstation in der Nähe", "lat": 29.5576, "lon": 106.577, "u": "https://uri.amap.com/search?keyword=%E8%A7%A3%E6%94%BE%E7%A2%91&city=500000&callnative=0"}, {"c": "base", "k": "C", "n": "朝天门 (Chaotianmen)", "w": "Spitze der Halbinsel", "t": "Zusammenfluss", "lat": 29.5652, "lon": 106.588, "u": "https://uri.amap.com/search?keyword=%E6%9C%9D%E5%A4%A9%E9%97%A8&city=500000&callnative=0"}, {"c": "base", "k": "HY", "n": "洪崖洞 (Hongyadong)", "w": "Jialing-Ufer", "t": "die volle Alternative zu Danzishi", "lat": 29.563, "lon": 106.579, "u": "https://uri.amap.com/search?keyword=%E6%B4%AA%E5%B4%96%E6%B4%9E&city=500000&callnative=0"}],
     L0:106.520,A0:29.585,K:7000,KY:8050,r:18,font:'IBM Plex Mono,monospace',stroke:'#07060B',txt:'#07060B',lead:'#E7DCEB',glow:true,
     col:{hang:'#37E1FF',food:'#FF3D8B',art:'#FFA640',mode:'#F6EEF8',base:'#8A7A9A'},
     cat:{hang:'Hangstadt',food:'Essen',art:'Kunst',mode:'Mode',base:'Orientierung'},
@@ -4353,7 +4492,7 @@ body.hn{background:#F4EBD8;color:#2A1A12}
 
   function sea(X,Y,pts,col,op){ return '<path d="'+pts.map(function(p,i){return (i?'L':'M')+X(p[1]).toFixed(1)+' '+Y(p[0]).toFixed(1);}).join(' ')+' Z" fill="'+col+'" fill-opacity="'+op+'"/>'; }
   // Lijiang
-  makeMap({svg:'lj-map',info:'lj-map-info',filter:'#lj-mapf',off:'#lj-off',pts:[{"c": "trek", "k": "T1", "n": "Einstieg · Naxi Family Guesthouse", "w": "unterhalb, weiter drinnen als 桥头 (Qiaotou)", "t": "Bus hält hier", "lat": 27.168, "lon": 100.034, "u": "https://uri.amap.com/search?keyword=%E7%BA%B3%E8%A5%BF%E9%9B%85%E9%98%81%20%E8%99%8E%E8%B7%B3%E5%B3%A1&city=530700&callnative=0"}, {"c": "trek", "k": "T2", "n": "28 Kehren · 2.670 m", "w": "höchster Punkt", "t": "1,5 h Steigung", "lat": 27.186, "lon": 100.054, "u": "https://uri.amap.com/search?keyword=%E8%99%8E%E8%B7%B3%E5%B3%A128%E9%81%93%E6%8B%90&city=530700&callnative=0"}, {"c": "trek", "k": "T3", "n": "中途客栈 (Halfway Guesthouse)", "w": "Nacht 23.11.", "t": "kein Zimmer im obersten Stock", "lat": 27.205, "lon": 100.092, "u": "https://uri.amap.com/search?keyword=%E4%B8%AD%E9%80%94%E5%AE%A2%E6%A0%88%20%E8%99%8E%E8%B7%B3%E5%B3%A1&city=530700&callnative=0"}, {"c": "trek", "k": "T4", "n": "Tina's", "w": "Ende der Hochroute", "t": "Rückfahrt 16:30", "lat": 27.199, "lon": 100.116, "u": "https://uri.amap.com/search?keyword=%E8%99%8E%E8%B7%B3%E5%B3%A1%20Tina%27s&city=530700&callnative=0"}, {"c": "ort", "k": "O1", "n": "束河 (Shuhe)", "w": "Naxi-Höfe, Qinglong-Brücke", "t": "der Architekturpunkt", "lat": 26.925, "lon": 100.207, "u": "https://uri.amap.com/search?keyword=%E6%9D%9F%E6%B2%B3%E5%8F%A4%E9%95%87&city=530700&callnative=0"}, {"c": "ort", "k": "O2", "n": "白沙 (Baisha)", "w": "Wandmalereien im Dabaoji-Palast", "t": "für die Malereien hin", "lat": 26.955, "lon": 100.212, "u": "https://uri.amap.com/search?keyword=%E7%99%BD%E6%B2%99%E5%A3%81%E7%94%BB&city=530700&callnative=0"}, {"c": "ort", "k": "O3", "n": "玉湖村 (Dorf am Jadesee)", "w": "Steindorf, Joseph Rock", "t": "Amap statt Google", "lat": 26.99, "lon": 100.203, "u": "https://uri.amap.com/search?keyword=%E7%8E%89%E6%B9%96%E6%9D%91&city=530700&callnative=0"}, {"c": "food", "k": "E1", "n": "钰洁腊排骨 (Yujie Pökelrippen)", "w": "象山市场 (Markt am Elefantenberg), Neustadt", "t": "1 Topf ≈ 60 ¥", "lat": 26.89, "lon": 100.239, "u": "https://uri.amap.com/search?keyword=%E9%92%B0%E6%B4%81%E8%85%8A%E6%8E%92%E9%AA%A8%20%E8%B1%A1%E5%B1%B1%E5%B8%82%E5%9C%BA&city=530700&callnative=0"}, {"c": "food", "k": "E2", "n": "忠义市场 (Zhongyi-Markt)", "w": "Altstadt", "t": "Tag- und Nachtmarkt", "lat": 26.8685, "lon": 100.2365, "u": "https://uri.amap.com/search?keyword=%E5%BF%A0%E4%B9%89%E5%B8%82%E5%9C%BA&city=530700&callnative=0"}, {"c": "hotel", "k": "H1", "n": "InterContinental Ancient Town", "w": "Südwestecke der Altstadt", "t": "Nacht 22.11. (oder Amandayan)", "lat": 26.8672, "lon": 100.2285, "u": "https://uri.amap.com/search?keyword=%E4%B8%BD%E6%B1%9F%E5%8F%A4%E5%9F%8E%E6%B4%B2%E9%99%85%E9%85%92%E5%BA%97&city=530700&callnative=0"}, {"c": "hotel", "k": "H2", "n": "Amandayan", "w": "auf dem Löwenhügel", "t": "Nacht 24.11.", "lat": 26.8705, "lon": 100.232, "u": "https://uri.amap.com/search?keyword=%E4%B8%BD%E6%B1%9F%E5%AE%89%E7%BC%A6%E5%A4%A7%E7%A0%94&city=530700&callnative=0"}, {"c": "base", "k": "BUS", "n": "丽江客运站 (Busbahnhof)", "w": "Kangzhong Lu 25", "t": "Bus 08:30 / 09:00 / 09:30", "lat": 26.8598, "lon": 100.2305, "u": "https://uri.amap.com/search?keyword=%E4%B8%BD%E6%B1%9F%E5%AE%A2%E8%BF%90%E7%AB%99&city=530700&callnative=0"}, {"c": "base", "k": "▲", "n": "扇子陡 (Fächer-Steilwand)", "w": "玉龙雪山 (Jadedrachen-Schneeberg)", "t": "5.596 m", "lat": 27.1, "lon": 100.185, "u": "https://uri.amap.com/search?keyword=%E7%8E%89%E9%BE%99%E9%9B%AA%E5%B1%B1&city=530700&callnative=0"}],
+  makeMap({svg:'lj-map',info:'lj-map-info',filter:'#lj-mapf',off:'#lj-off',pts:[{"c": "trek", "k": "T1", "n": "Einstieg · Naxi Family Guesthouse", "w": "unterhalb, weiter drinnen als 桥头 (Qiaotou)", "t": "Bus hält hier", "lat": 27.168, "lon": 100.034, "u": "https://uri.amap.com/search?keyword=%E7%BA%B3%E8%A5%BF%E9%9B%85%E9%98%81%20%E8%99%8E%E8%B7%B3%E5%B3%A1&city=530700&callnative=0"}, {"c": "trek", "k": "T2", "n": "28 Kehren · 2.670 m", "w": "höchster Punkt", "t": "1,5 h Steigung", "lat": 27.186, "lon": 100.054, "u": "https://uri.amap.com/search?keyword=%E8%99%8E%E8%B7%B3%E5%B3%A128%E9%81%93%E6%8B%90&city=530700&callnative=0"}, {"c": "trek", "k": "T3", "n": "中途客栈 (Halfway Guesthouse)", "w": "Nacht 23.11.", "t": "kein Zimmer im obersten Stock", "lat": 27.205, "lon": 100.092, "u": "https://uri.amap.com/search?keyword=%E4%B8%AD%E9%80%94%E5%AE%A2%E6%A0%88%20%E8%99%8E%E8%B7%B3%E5%B3%A1&city=530700&callnative=0"}, {"c": "trek", "k": "T4", "n": "Tina's", "w": "Ende der Hochroute", "t": "Rückfahrt 16:30", "lat": 27.199, "lon": 100.116, "u": "https://uri.amap.com/search?keyword=%E8%99%8E%E8%B7%B3%E5%B3%A1%20Tina%27s&city=530700&callnative=0"}, {"c": "ort", "k": "O1", "n": "束河 (Shuhe)", "w": "Naxi-Höfe, Qinglong-Brücke", "t": "der Architekturpunkt", "lat": 26.925, "lon": 100.207, "u": "https://uri.amap.com/search?keyword=%E6%9D%9F%E6%B2%B3%E5%8F%A4%E9%95%87&city=530700&callnative=0"}, {"c": "ort", "k": "O2", "n": "白沙 (Baisha)", "w": "Wandmalereien im Dabaoji-Palast", "t": "für die Malereien hin", "lat": 26.955, "lon": 100.212, "u": "https://uri.amap.com/search?keyword=%E7%99%BD%E6%B2%99%E5%A3%81%E7%94%BB&city=530700&callnative=0"}, {"c": "ort", "k": "O3", "n": "玉湖村 (Dorf am Jadesee)", "w": "Steindorf, Joseph Rock", "t": "Amap statt Google", "lat": 26.99, "lon": 100.203, "u": "https://uri.amap.com/search?keyword=%E7%8E%89%E6%B9%96%E6%9D%91&city=530700&callnative=0"}, {"c": "food", "k": "E1", "n": "钰洁腊排骨 (Yujie Pökelrippen)", "w": "象山市场 (Markt am Elefantenberg), Neustadt", "t": "1 Topf ≈ 60 ¥", "lat": 26.89, "lon": 100.239, "u": "https://uri.amap.com/search?keyword=%E9%92%B0%E6%B4%81%E8%85%8A%E6%8E%92%E9%AA%A8%20%E8%B1%A1%E5%B1%B1%E5%B8%82%E5%9C%BA&city=530700&callnative=0"}, {"c": "food", "k": "E2", "n": "忠义市场 (Zhongyi-Markt)", "w": "Altstadt", "t": "Tag- und Nachtmarkt", "lat": 26.8685, "lon": 100.2365, "u": "https://uri.amap.com/search?keyword=%E5%BF%A0%E4%B9%89%E5%B8%82%E5%9C%BA&city=530700&callnative=0"}, {"c": "hotel", "k": "H1", "n": "安隅 (Anyu Hotel)", "w": "Südtor der Altstadt 大研 (Dayan)", "t": "Nacht 24.11. · gebucht", "lat": 26.8672, "lon": 100.2285, "u": "https://uri.amap.com/search?keyword=%E4%B8%BD%E6%B1%9F%E5%8F%A4%E5%9F%8E%E6%B4%B2%E9%99%85%E9%85%92%E5%BA%97&city=530700&callnative=0"}, {"c": "hotel", "k": "H2", "n": "Amandayan", "w": "auf dem Löwenhügel", "t": "Nacht 26.11. · noch offen", "lat": 26.8705, "lon": 100.232, "u": "https://uri.amap.com/search?keyword=%E4%B8%BD%E6%B1%9F%E5%AE%89%E7%BC%A6%E5%A4%A7%E7%A0%94&city=530700&callnative=0"}, {"c": "base", "k": "BUS", "n": "丽江客运站 (Busbahnhof)", "w": "Kangzhong Lu 25", "t": "Bus 08:30 / 09:00 / 09:30", "lat": 26.8598, "lon": 100.2305, "u": "https://uri.amap.com/search?keyword=%E4%B8%BD%E6%B1%9F%E5%AE%A2%E8%BF%90%E7%AB%99&city=530700&callnative=0"}, {"c": "base", "k": "▲", "n": "扇子陡 (Fächer-Steilwand)", "w": "玉龙雪山 (Jadedrachen-Schneeberg)", "t": "5.596 m", "lat": 27.1, "lon": 100.185, "u": "https://uri.amap.com/search?keyword=%E7%8E%89%E9%BE%99%E9%9B%AA%E5%B1%B1&city=530700&callnative=0"}],
     L0:100.00,A0:27.235,K:2860,KY:3200,r:17,font:'Alegreya,Georgia,serif',stroke:'#1F2A3A',txt:'#1F2A3A',lead:'#1E4E8C',txtc:{trek:'#fff',food:'#fff',base:'#fff',hotel:'#fff'},
     col:{trek:'#E07A2E',ort:'#F2D7B0',food:'#B5412B',hotel:'#1E4E8C',base:'#51607A'},
     cat:{trek:'Trek',ort:'Freier Tag',food:'Essen',hotel:'Hotel',base:'Orientierung'},
@@ -4370,7 +4509,7 @@ body.hn{background:#F4EBD8;color:#2A1A12}
       g+='<text x="14" y="1216" font-family="Alegreya,serif" font-size="13" fill="#51607A">Schematisch nach ungefähren Koordinaten · N ↑</text>';
       return g; }});
   // Shenzhen
-  makeMap({svg:'sz-map',info:'sz-map-info',filter:'#sz-mapf',off:'#sz-off',pts:[{"c": "hotel", "k": "HN", "n": "Jiangnan House Nantou", "w": "乐平街 22 (Leping-Straße 22), 南头 (Nantou)", "t": "Nacht 27.11.", "lat": 22.5452, "lon": 113.9268, "u": "https://uri.amap.com/search?keyword=%E6%B7%B1%E5%9C%B3%E5%8D%97%E5%A4%B4%E6%82%A0%E7%86%8A%E9%85%92%E5%BA%97&city=440300&callnative=0"}, {"c": "fair", "k": "M", "n": "深圳国际会展中心 (Shenzhen World)", "w": "福海 (Fuhai), 宝安 (Bao'an)", "t": "CHTF 26.–28.11.", "lat": 22.704, "lon": 113.772, "u": "https://uri.amap.com/search?keyword=%E6%B7%B1%E5%9C%B3%E5%9B%BD%E9%99%85%E4%BC%9A%E5%B1%95%E4%B8%AD%E5%BF%83&city=440300&callnative=0"}, {"c": "hotel", "k": "HA", "n": "Hilton Shenzhen World", "w": "per Brücke zur Halle", "t": "Option A", "lat": 22.7075, "lon": 113.7745, "u": "https://uri.amap.com/search?keyword=%E6%B7%B1%E5%9C%B3%E5%9B%BD%E9%99%85%E4%BC%9A%E5%B1%95%E4%B8%AD%E5%BF%83%E5%B8%8C%E5%B0%94%E9%A1%BF%E9%85%92%E5%BA%97&city=440300&callnative=0"}, {"c": "hotel", "k": "HB", "n": "Crowne Plaza WECC", "w": "530 m zum Gelände", "t": "Option B", "lat": 22.7005, "lon": 113.7765, "u": "https://uri.amap.com/search?keyword=%E6%B7%B1%E5%9C%B3%E5%9B%BD%E9%99%85%E4%BC%9A%E5%B1%95%E4%B8%AD%E5%BF%83%E7%9A%87%E5%86%A0%E5%81%87%E6%97%A5%E9%85%92%E5%BA%97&city=440300&callnative=0"}, {"c": "city", "k": "NT", "n": "南头古城 (Alte Stadt Nantou)", "w": "Nanshan · Hotel HN liegt darin", "t": "URBANUS", "lat": 22.543, "lon": 113.923, "u": "https://uri.amap.com/search?keyword=%E5%8D%97%E5%A4%B4%E5%8F%A4%E5%9F%8E&city=440300&callnative=0"}, {"c": "city", "k": "HQB", "n": "华强北 (Huaqiangbei)", "w": "Futian", "t": "Sa vormittags", "lat": 22.5445, "lon": 114.085, "u": "https://uri.amap.com/search?keyword=%E5%8D%8E%E5%BC%BA%E5%8C%97&city=440300&callnative=0"}, {"c": "city", "k": "SW", "n": "海上世界文化艺术中心 (Sea World)", "w": "蛇口 (Shekou)", "t": "Fumihiko Maki", "lat": 22.4835, "lon": 113.915, "u": "https://uri.amap.com/search?keyword=%E6%B5%B7%E4%B8%8A%E4%B8%96%E7%95%8C%E6%96%87%E5%8C%96%E8%89%BA%E6%9C%AF%E4%B8%AD%E5%BF%83&city=440300&callnative=0"}, {"c": "night", "k": "OCT", "n": "OCT-Loft · B10 Live", "w": "华侨城 (OCT)", "t": "Livemusik", "lat": 22.541, "lon": 113.99, "u": "https://uri.amap.com/search?keyword=%E5%8D%8E%E4%BE%A8%E5%9F%8E%E5%88%9B%E6%84%8F%E6%96%87%E5%8C%96%E5%9B%AD&city=440300&callnative=0"}, {"c": "night", "k": "LED", "n": "人才公园 (Talent Park)", "w": "后海 (Houhai)", "t": "LED-Show Fr/Sa ab 20:00", "lat": 22.513, "lon": 113.948, "u": "https://uri.amap.com/search?keyword=%E6%B7%B1%E5%9C%B3%E4%BA%BA%E6%89%8D%E5%85%AC%E5%9B%AD&city=440300&callnative=0"}, {"c": "night", "k": "FT", "n": "OIL Club · Coco Park", "w": "福田 (Futian)", "t": "Techno & House", "lat": 22.533, "lon": 114.059, "u": "https://uri.amap.com/search?keyword=COCO%20Park%20%E7%A6%8F%E7%94%B0&city=440300&callnative=0"}, {"c": "night", "k": "SK", "n": "Shekou · TAPS · Brown Sugar Jar", "w": "蛇口 (Shekou)", "t": "ruhiger", "lat": 22.488, "lon": 113.912, "u": "https://uri.amap.com/search?keyword=%E8%9B%87%E5%8F%A3%20%E6%B5%B7%E4%B8%8A%E4%B8%96%E7%95%8C&city=440300&callnative=0"}, {"c": "base", "k": "SZX", "n": "Flughafen Bao'an", "w": "7 km zur Messe", "t": "an Do 00:20", "lat": 22.639, "lon": 113.811, "u": "https://uri.amap.com/search?keyword=%E6%B7%B1%E5%9C%B3%E5%AE%9D%E5%AE%89%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA&city=440300&callnative=0"}, {"c": "base", "k": "FTS", "n": "福田站 (Futian, Bahnhof)", "w": "Zug nach Guangzhou", "t": "Sa mittags", "lat": 22.539, "lon": 114.055, "u": "https://uri.amap.com/search?keyword=%E7%A6%8F%E7%94%B0%E7%AB%99&city=440300&callnative=0"}, {"c": "base", "k": "NS", "n": "深圳北 (Shenzhen Nord)", "w": "Alternative", "t": "Zug nach Guangzhou", "lat": 22.609, "lon": 114.029, "u": "https://uri.amap.com/search?keyword=%E6%B7%B1%E5%9C%B3%E5%8C%97%E7%AB%99&city=440300&callnative=0"}],
+  makeMap({svg:'sz-map',info:'sz-map-info',filter:'#sz-mapf',off:'#sz-off',pts:[{"c": "hotel", "k": "HN", "n": "Jiangnan House Nantou", "w": "乐平街 22 (Leping-Straße 22), 南头 (Nantou)", "t": "gebucht · 27. + 28.11.", "lat": 22.5452, "lon": 113.9268, "u": "https://uri.amap.com/search?keyword=%E6%B7%B1%E5%9C%B3%E5%8D%97%E5%A4%B4%E6%82%A0%E7%86%8A%E9%85%92%E5%BA%97&city=440300&callnative=0"}, {"c": "fair", "k": "M", "n": "深圳国际会展中心 (Shenzhen World)", "w": "福海 (Fuhai), 宝安 (Bao'an)", "t": "CHTF 26.–28.11. · wir am 28.11.", "lat": 22.704, "lon": 113.772, "u": "https://uri.amap.com/search?keyword=%E6%B7%B1%E5%9C%B3%E5%9B%BD%E9%99%85%E4%BC%9A%E5%B1%95%E4%B8%AD%E5%BF%83&city=440300&callnative=0"}, {"c": "city", "k": "NT", "n": "南头古城 (Alte Stadt Nantou)", "w": "Nanshan · unser Quartier", "t": "URBANUS", "lat": 22.543, "lon": 113.923, "u": "https://uri.amap.com/search?keyword=%E5%8D%97%E5%A4%B4%E5%8F%A4%E5%9F%8E&city=440300&callnative=0"}, {"c": "city", "k": "HQB", "n": "华强北 (Huaqiangbei)", "w": "Futian", "t": "Sa vormittags", "lat": 22.5445, "lon": 114.085, "u": "https://uri.amap.com/search?keyword=%E5%8D%8E%E5%BC%BA%E5%8C%97&city=440300&callnative=0"}, {"c": "night", "k": "OCT", "n": "OCT-Loft · B10 Live", "w": "华侨城 (OCT)", "t": "Livemusik", "lat": 22.541, "lon": 113.99, "u": "https://uri.amap.com/search?keyword=%E5%8D%8E%E4%BE%A8%E5%9F%8E%E5%88%9B%E6%84%8F%E6%96%87%E5%8C%96%E5%9B%AD&city=440300&callnative=0"}, {"c": "night", "k": "LED", "n": "人才公园 (Talent Park)", "w": "后海 (Houhai)", "t": "LED-Show Fr/Sa ab 20:00", "lat": 22.513, "lon": 113.948, "u": "https://uri.amap.com/search?keyword=%E6%B7%B1%E5%9C%B3%E4%BA%BA%E6%89%8D%E5%85%AC%E5%9B%AD&city=440300&callnative=0"}, {"c": "night", "k": "FT", "n": "OIL Club · Coco Park", "w": "福田 (Futian)", "t": "Techno & House", "lat": 22.533, "lon": 114.059, "u": "https://uri.amap.com/search?keyword=COCO%20Park%20%E7%A6%8F%E7%94%B0&city=440300&callnative=0"}, {"c": "night", "k": "SK", "n": "Shekou · TAPS · Brown Sugar Jar", "w": "蛇口 (Shekou)", "t": "ruhiger", "lat": 22.488, "lon": 113.912, "u": "https://uri.amap.com/search?keyword=%E8%9B%87%E5%8F%A3%20%E6%B5%B7%E4%B8%8A%E4%B8%96%E7%95%8C&city=440300&callnative=0"}, {"c": "base", "k": "SZX", "n": "Flughafen Bao'an", "w": "7 km zur Messe", "t": "an Do 00:20", "lat": 22.639, "lon": 113.811, "u": "https://uri.amap.com/search?keyword=%E6%B7%B1%E5%9C%B3%E5%AE%9D%E5%AE%89%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA&city=440300&callnative=0"}, {"c": "base", "k": "FTS", "n": "福田站 (Futian, Bahnhof)", "w": "Zug nach Guangzhou", "t": "Sa mittags", "lat": 22.539, "lon": 114.055, "u": "https://uri.amap.com/search?keyword=%E7%A6%8F%E7%94%B0%E7%AB%99&city=440300&callnative=0"}, {"c": "base", "k": "NS", "n": "深圳北 (Shenzhen Nord)", "w": "Alternative", "t": "Zug nach Guangzhou", "lat": 22.609, "lon": 114.029, "u": "https://uri.amap.com/search?keyword=%E6%B7%B1%E5%9C%B3%E5%8C%97%E7%AB%99&city=440300&callnative=0"}],
     L0:113.75,A0:22.735,K:2286,KY:2470,r:19,font:'Sora,Arial,sans-serif',stroke:'#FFFFFF',txt:'#FFFFFF',lead:'#2F6BFF',txtc:{base:'#0E1B33'},
     col:{fair:'#2F6BFF',hotel:'#12245C',city:'#2ED8A8',night:'#7C6CFF',base:'#DCE5F0'},
     cat:{fair:'Messe',hotel:'Hotel',city:'Stadt',night:'Nacht',base:'Orientierung'},
@@ -4430,6 +4569,7 @@ body.hn{background:#F4EBD8;color:#2A1A12}
     [['guangzhou','.gmap.gzc .gm-wrap',.2],['hongkong','.gmap.hkc .gm-wrap',.3],['shenzhen','.gmap.szc .gm-wrap',.5]].forEach(function(q){ if(pg[0]===q[0]){ var w=document.querySelector(q[1]); if(w) requestAnimationFrame(function(){ w.scrollLeft=Math.max(0,(w.scrollWidth-w.clientWidth)*q[2]); }); } });
     if(pg[0]==='chengdu'){ var cw=document.querySelector('.cm-wrap'); if(cw) requestAnimationFrame(function(){ cw.scrollLeft=Math.max(0,(cw.scrollWidth-cw.clientWidth)*.5); }); }
     if(pg[0]==='shenzhen') requestAnimationFrame(window.scStart); else if(window.scStop) window.scStop();
+    if(pg[0]==='lijiang'&&window.lmFit) requestAnimationFrame(window.lmFit);
   }
   window.addEventListener('hashchange',route); route();
   document.addEventListener('click',function(e){
